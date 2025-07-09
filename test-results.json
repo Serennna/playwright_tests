@@ -1,0 +1,195 @@
+{
+  "config": {
+    "configFile": "/Users/57block/workspace/playwright_tests/playwright.config.js",
+    "rootDir": "/Users/57block/workspace/playwright_tests/tests",
+    "forbidOnly": false,
+    "fullyParallel": false,
+    "globalSetup": null,
+    "globalTeardown": null,
+    "globalTimeout": 0,
+    "grep": {},
+    "grepInvert": null,
+    "maxFailures": 0,
+    "metadata": {
+      "actualWorkers": 1
+    },
+    "preserveOutput": "always",
+    "reporter": [
+      [
+        "html",
+        {
+          "outputFolder": "playwright-report",
+          "open": "never"
+        }
+      ],
+      [
+        "json",
+        {
+          "outputFile": "test-results.json"
+        }
+      ],
+      [
+        "list",
+        null
+      ]
+    ],
+    "reportSlowTests": {
+      "max": 5,
+      "threshold": 300000
+    },
+    "quiet": false,
+    "projects": [
+      {
+        "outputDir": "/Users/57block/workspace/playwright_tests/test-results",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "id": "chromium",
+        "name": "chromium",
+        "testDir": "/Users/57block/workspace/playwright_tests/tests",
+        "testIgnore": [],
+        "testMatch": [
+          "/.*\\.spec\\.js$/"
+        ],
+        "timeout": 30000
+      },
+      {
+        "outputDir": "/Users/57block/workspace/playwright_tests/test-results",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "id": "firefox",
+        "name": "firefox",
+        "testDir": "/Users/57block/workspace/playwright_tests/tests",
+        "testIgnore": [],
+        "testMatch": [
+          "/.*\\.spec\\.js$/"
+        ],
+        "timeout": 30000
+      },
+      {
+        "outputDir": "/Users/57block/workspace/playwright_tests/test-results",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "id": "webkit",
+        "name": "webkit",
+        "testDir": "/Users/57block/workspace/playwright_tests/tests",
+        "testIgnore": [],
+        "testMatch": [
+          "/.*\\.spec\\.js$/"
+        ],
+        "timeout": 30000
+      },
+      {
+        "outputDir": "/Users/57block/workspace/playwright_tests/test-results",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "id": "debug",
+        "name": "debug",
+        "testDir": "/Users/57block/workspace/playwright_tests/tests",
+        "testIgnore": [],
+        "testMatch": [
+          "/.*\\.spec\\.js$/"
+        ],
+        "timeout": 30000
+      }
+    ],
+    "shard": null,
+    "updateSnapshots": "missing",
+    "updateSourceMethod": "patch",
+    "version": "1.53.2",
+    "workers": 2,
+    "webServer": null
+  },
+  "suites": [
+    {
+      "title": "debug.spec.js",
+      "file": "debug.spec.js",
+      "column": 0,
+      "line": 0,
+      "specs": [],
+      "suites": [
+        {
+          "title": "调试测试 - 元素定位",
+          "file": "debug.spec.js",
+          "line": 4,
+          "column": 6,
+          "specs": [
+            {
+              "title": "调试：手动探索模式",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "debug",
+                  "projectName": "debug",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 116430,
+                      "errors": [],
+                      "stdout": [
+                        {
+                          "text": "\n🔍 手动探索模式启动...\n"
+                        },
+                        {
+                          "text": "💡 可以在控制台中使用以下方法：\n"
+                        },
+                        {
+                          "text": "   - await loginPage.debugAllInputs()\n"
+                        },
+                        {
+                          "text": "   - await loginPage.debugElementAnalysis(\"选择器\", \"描述\")\n"
+                        },
+                        {
+                          "text": "   - await loginPage.debugPageSnapshot(\"名称\")\n"
+                        },
+                        {
+                          "text": "   - await loginPage.screenshot(\"名称\")\n"
+                        }
+                      ],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2025-07-09T08:46:44.973Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "d0c4411d9520030c5a85-97f56a586fa6657f98e6",
+              "file": "debug.spec.js",
+              "line": 98,
+              "column": 5
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "errors": [],
+  "stats": {
+    "startTime": "2025-07-09T08:46:42.995Z",
+    "duration": 122943.493,
+    "expected": 1,
+    "skipped": 0,
+    "unexpected": 0,
+    "flaky": 0
+  }
+}
