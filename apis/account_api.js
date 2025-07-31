@@ -108,6 +108,14 @@ class AccountApi extends BaseApi {
         }
     }
 
+
+    async deleteMultipleEmployees(employeeIds) {
+        const results = [];
+        for (const employeeId of employeeIds) {
+            const response = await this.deleteEmployee(employeeId);
+            results.push(response);
+        }
+    }
     /**
      * 设置员工为管理员
      */
