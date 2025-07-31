@@ -4,7 +4,15 @@
   "main": "index.js",
   "scripts": {
     "test": "playwright test",
-    "test:headed": "playwright test --headed"
+    "test:headed": "playwright test --headed",
+    "test:debug": "playwright test --debug",
+    "test:ui": "playwright test --ui",
+    "test:report": "playwright test && npm run show-report",
+    "show-report": "playwright show-report",
+    "clean-reports": "rm -rf playwright-report test-results.json junit-results.xml screenshots",
+    "test:clean": "npm run clean-reports && npm run test",
+    "test:api": "playwright test tests/api/",
+    "test:ui-only": "playwright test tests/ --ignore=tests/api/"
   },
   "keywords": [],
   "author": "",

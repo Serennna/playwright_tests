@@ -1,21 +1,22 @@
-const BasePage = require('./BasePage');
+const BasePage = require('../base_page');
 
-class LoginPage extends BasePage {
+class MenteeLoginPage extends BasePage {
     constructor(page) {
         super(page);
-        this.url = 'https://wcp.57blocks.com/auth/login';
+        this.url = 'https://ohhello-dev-909a7.web.app/mentee/sign_in';
         
         // Page elements selectors
         this.selectors = {
-            usernameInput: 'input[type="username"]',
-            passwordInput: 'input[type="password"]',
-            passwordToggle: 'span[class="icon-ico-visibility_off"], span[class="icon-ico-visibility"]',
-            signInButton: 'button:has-text("Sign in")',
-            forgotPasswordLink: 'a:has-text("Forgot Password")',
-            googleSignInButton: 'button:has-text("Sign in with Google")',
-            loginHeading: 'h1:has-text("Log in")',
-            emailLabel: 'text="Email/Account"',
-            passwordLabel: 'text="Password"'
+            usernameInput: '#email',
+            passwordInput: '#password',
+            passwordToggle: 'span[class="anticon-eye-invisible"], span[class="anticon-eye-visible"]',
+            signInButton: 'button:has-text("Sign In")',
+            forgotPasswordLink: 'a:has-text("Forgot?")',
+            signUpLink: 'h1:has-text("Sign Up")',
+            emailLabel: 'text="Your Email"',
+            passwordLabel: 'text="Password"',
+            menteeLabel:'text="Mentee Sign In"',
+            signInAsMentorLink:'button:has-text("Sign in as Mentor")'
         };
     }
 
@@ -26,7 +27,6 @@ class LoginPage extends BasePage {
 
     // Wait for the login page to load
     async waitForPageLoad() {
-        await this.waitForElement(this.selectors.loginHeading);
         await this.waitForElement(this.selectors.usernameInput);
         await this.waitForElement(this.selectors.passwordInput);
     }
@@ -56,11 +56,6 @@ class LoginPage extends BasePage {
     // Click the forgot password link
     async clickForgotPassword() {
         await this.click(this.selectors.forgotPasswordLink);
-    }
-
-    // Click the Google sign in button
-    async clickGoogleSignIn() {
-        await this.click(this.selectors.googleSignInButton);
     }
 
     // Get the type attribute of the password input
@@ -100,4 +95,4 @@ class LoginPage extends BasePage {
     }
 }
 
-module.exports = LoginPage; 
+module.exports = MenteeLoginPage; 

@@ -23,14 +23,20 @@
         }
       ],
       [
+        "list",
+        null
+      ],
+      [
         "json",
         {
           "outputFile": "test-results.json"
         }
       ],
       [
-        "list",
-        null
+        "junit",
+        {
+          "outputFile": "junit-results.xml"
+        }
       ]
     ],
     "reportSlowTests": {
@@ -40,7 +46,7 @@
     "quiet": false,
     "projects": [
       {
-        "outputDir": "/Users/57block/workspace/playwright_tests/test-results",
+        "outputDir": "/Users/57block/workspace/playwright_tests/screenshots",
         "repeatEach": 1,
         "retries": 0,
         "metadata": {
@@ -54,79 +60,31 @@
           "/.*\\.spec\\.js$/"
         ],
         "timeout": 30000
-      },
-      {
-        "outputDir": "/Users/57block/workspace/playwright_tests/test-results",
-        "repeatEach": 1,
-        "retries": 0,
-        "metadata": {
-          "actualWorkers": 1
-        },
-        "id": "firefox",
-        "name": "firefox",
-        "testDir": "/Users/57block/workspace/playwright_tests/tests",
-        "testIgnore": [],
-        "testMatch": [
-          "/.*\\.spec\\.js$/"
-        ],
-        "timeout": 30000
-      },
-      {
-        "outputDir": "/Users/57block/workspace/playwright_tests/test-results",
-        "repeatEach": 1,
-        "retries": 0,
-        "metadata": {
-          "actualWorkers": 1
-        },
-        "id": "webkit",
-        "name": "webkit",
-        "testDir": "/Users/57block/workspace/playwright_tests/tests",
-        "testIgnore": [],
-        "testMatch": [
-          "/.*\\.spec\\.js$/"
-        ],
-        "timeout": 30000
-      },
-      {
-        "outputDir": "/Users/57block/workspace/playwright_tests/test-results",
-        "repeatEach": 1,
-        "retries": 0,
-        "metadata": {
-          "actualWorkers": 1
-        },
-        "id": "debug",
-        "name": "debug",
-        "testDir": "/Users/57block/workspace/playwright_tests/tests",
-        "testIgnore": [],
-        "testMatch": [
-          "/.*\\.spec\\.js$/"
-        ],
-        "timeout": 30000
       }
     ],
     "shard": null,
     "updateSnapshots": "missing",
     "updateSourceMethod": "patch",
     "version": "1.53.2",
-    "workers": 2,
+    "workers": 1,
     "webServer": null
   },
   "suites": [
     {
-      "title": "debug.spec.js",
-      "file": "debug.spec.js",
+      "title": "account_setup.spec.js",
+      "file": "account_setup.spec.js",
       "column": 0,
       "line": 0,
       "specs": [],
       "suites": [
         {
-          "title": "调试测试 - 元素定位",
-          "file": "debug.spec.js",
-          "line": 4,
+          "title": "Admin - Account Setup Page Tests",
+          "file": "account_setup.spec.js",
+          "line": 9,
           "column": 6,
           "specs": [
             {
-              "title": "调试：手动探索模式",
+              "title": "setup - login as admin",
               "ok": true,
               "tags": [],
               "tests": [
@@ -134,38 +92,19 @@
                   "timeout": 30000,
                   "annotations": [],
                   "expectedStatus": "passed",
-                  "projectId": "debug",
-                  "projectName": "debug",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
                   "results": [
                     {
                       "workerIndex": 0,
                       "parallelIndex": 0,
                       "status": "passed",
-                      "duration": 116430,
+                      "duration": 19598,
                       "errors": [],
-                      "stdout": [
-                        {
-                          "text": "\n🔍 手动探索模式启动...\n"
-                        },
-                        {
-                          "text": "💡 可以在控制台中使用以下方法：\n"
-                        },
-                        {
-                          "text": "   - await loginPage.debugAllInputs()\n"
-                        },
-                        {
-                          "text": "   - await loginPage.debugElementAnalysis(\"选择器\", \"描述\")\n"
-                        },
-                        {
-                          "text": "   - await loginPage.debugPageSnapshot(\"名称\")\n"
-                        },
-                        {
-                          "text": "   - await loginPage.screenshot(\"名称\")\n"
-                        }
-                      ],
+                      "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2025-07-09T08:46:44.973Z",
+                      "startTime": "2025-07-31T08:18:49.792Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -173,9 +112,1496 @@
                   "status": "expected"
                 }
               ],
-              "id": "d0c4411d9520030c5a85-97f56a586fa6657f98e6",
-              "file": "debug.spec.js",
-              "line": 98,
+              "id": "4f7b6c9d0b9092274f20-15c05acb1e2a0a78ec0b",
+              "file": "account_setup.spec.js",
+              "line": 19,
+              "column": 5
+            },
+            {
+              "title": "Account Setup Page Elements are Visible",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 2709,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2025-07-31T08:19:14.370Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "4f7b6c9d0b9092274f20-7b8d0275ce0ee34b397d",
+              "file": "account_setup.spec.js",
+              "line": 55,
+              "column": 5
+            },
+            {
+              "title": "Search Functionality Works Correctly",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 10395,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2025-07-31T08:19:17.106Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "4f7b6c9d0b9092274f20-58084e26b3a06dfa1e5b",
+              "file": "account_setup.spec.js",
+              "line": 72,
+              "column": 5
+            },
+            {
+              "title": "Add employee modal opens and closes correctly",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 8691,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2025-07-31T08:19:27.555Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "4f7b6c9d0b9092274f20-bef332c9c694ebb0a4ad",
+              "file": "account_setup.spec.js",
+              "line": 81,
+              "column": 5
+            },
+            {
+              "title": "Add employee with valid data",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 7845,
+                      "errors": [],
+                      "stdout": [
+                        {
+                          "text": "Error reading pagination total: locator.isVisible: Unexpected token \"=\" while parsing css selector \".ant-pagination-total-text, li[class*=\"ant-pagination-total-text\"], .ant-pagination .ant-pagination-total-text, [class*=\"total\"], text=/Total.*items?/i\". Did you mean to CSS.escape it?\n"
+                        },
+                        {
+                          "text": "Using current page count as fallback\n"
+                        },
+                        {
+                          "text": "Initial total count: 5, Has pagination: true\n"
+                        },
+                        {
+                          "text": "Table has pagination, waiting for total count to increase...\n"
+                        },
+                        {
+                          "text": "Error reading pagination total: locator.isVisible: Unexpected token \"=\" while parsing css selector \".ant-pagination-total-text, li[class*=\"ant-pagination-total-text\"], .ant-pagination .ant-pagination-total-text, [class*=\"total\"], text=/Total.*items?/i\". Did you mean to CSS.escape it?\n"
+                        },
+                        {
+                          "text": "Using current page count as fallback\n"
+                        },
+                        {
+                          "text": "Error reading pagination total: locator.isVisible: Unexpected token \"=\" while parsing css selector \".ant-pagination-total-text, li[class*=\"ant-pagination-total-text\"], .ant-pagination .ant-pagination-total-text, [class*=\"total\"], text=/Total.*items?/i\". Did you mean to CSS.escape it?\n"
+                        },
+                        {
+                          "text": "Using current page count as fallback\n"
+                        },
+                        {
+                          "text": "Error reading pagination total: locator.isVisible: Unexpected token \"=\" while parsing css selector \".ant-pagination-total-text, li[class*=\"ant-pagination-total-text\"], .ant-pagination .ant-pagination-total-text, [class*=\"total\"], text=/Total.*items?/i\". Did you mean to CSS.escape it?\n"
+                        },
+                        {
+                          "text": "Using current page count as fallback\n"
+                        },
+                        {
+                          "text": "Final total count: 6\n"
+                        },
+                        {
+                          "text": "Searching for added employee via search functionality...\n"
+                        }
+                      ],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2025-07-31T08:19:36.250Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "4f7b6c9d0b9092274f20-8ffbc589b060633bbdbd",
+              "file": "account_setup.spec.js",
+              "line": 105,
+              "column": 5
+            },
+            {
+              "title": "Add employee with empty name with submit button disabled",
+              "ok": false,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "timedOut",
+                      "duration": 30102,
+                      "error": {
+                        "message": "\u001b[31mTest timeout of 30000ms exceeded.\u001b[39m",
+                        "stack": "\u001b[31mTest timeout of 30000ms exceeded.\u001b[39m"
+                      },
+                      "errors": [
+                        {
+                          "message": "\u001b[31mTest timeout of 30000ms exceeded.\u001b[39m"
+                        },
+                        {
+                          "location": {
+                            "file": "/Users/57block/workspace/playwright_tests/pages/base_page.js",
+                            "column": 25,
+                            "line": 19
+                          },
+                          "message": "Error: page.click: Test ended.\nCall log:\n\u001b[2m  - waiting for locator('button:has-text(\"Submit\")')\u001b[22m\n\u001b[2m    - locator resolved to <button disabled type=\"submit\" class=\"ant-btn css-1biqptv css-var-r0 ant-btn-default ant-btn-color-default ant-btn-variant-outlined h-10 flex-1 text-sm _custom-btn_1d7zy_1 _custom-btn-1_1d7zy_1 _custom-btn-primary_1d7zy_23\">…</button>\u001b[22m\n\u001b[2m  - attempting click action\u001b[22m\n\u001b[2m    2 × waiting for element to be visible, enabled and stable\u001b[22m\n\u001b[2m      - element is not stable\u001b[22m\n\u001b[2m    - retrying click action\u001b[22m\n\u001b[2m    - waiting 20ms\u001b[22m\n\u001b[2m    2 × waiting for element to be visible, enabled and stable\u001b[22m\n\u001b[2m      - element is not stable\u001b[22m\n\u001b[2m    - retrying click action\u001b[22m\n\u001b[2m      - waiting 100ms\u001b[22m\n\u001b[2m    52 × waiting for element to be visible, enabled and stable\u001b[22m\n\u001b[2m       - element is not enabled\u001b[22m\n\u001b[2m     - retrying click action\u001b[22m\n\u001b[2m       - waiting 500ms\u001b[22m\n\n\n\u001b[90m   at \u001b[39m../pages/base_page.js:19\n\n\u001b[0m \u001b[90m 17 |\u001b[39m     \u001b[90m// Click on the element\u001b[39m\n \u001b[90m 18 |\u001b[39m     \u001b[36masync\u001b[39m click(selector) {\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 19 |\u001b[39m         \u001b[36mawait\u001b[39m \u001b[36mthis\u001b[39m\u001b[33m.\u001b[39mpage\u001b[33m.\u001b[39mclick(selector)\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                         \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 20 |\u001b[39m     }\n \u001b[90m 21 |\u001b[39m\n \u001b[90m 22 |\u001b[39m     \u001b[90m// Enter text into the element\u001b[39m\u001b[0m\n\u001b[2m    at AccountSetupPage.click (/Users/57block/workspace/playwright_tests/pages/base_page.js:19:25)\u001b[22m\n\u001b[2m    at /Users/57block/workspace/playwright_tests/tests/account_setup.spec.js:172:32\u001b[22m"
+                        }
+                      ],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2025-07-31T08:19:44.101Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "screenshot",
+                          "contentType": "image/png",
+                          "path": "/Users/57block/workspace/playwright_tests/screenshots/account_setup-Admin---Acco-a1a84-with-submit-button-disabled-chromium/test-failed-1.png"
+                        },
+                        {
+                          "name": "error-context",
+                          "contentType": "text/markdown",
+                          "path": "/Users/57block/workspace/playwright_tests/screenshots/account_setup-Admin---Acco-a1a84-with-submit-button-disabled-chromium/error-context.md"
+                        }
+                      ]
+                    }
+                  ],
+                  "status": "unexpected"
+                }
+              ],
+              "id": "4f7b6c9d0b9092274f20-b4e7108db4a03fcaa1e0",
+              "file": "account_setup.spec.js",
+              "line": 163,
+              "column": 5
+            },
+            {
+              "title": "Add employee with empty name shows error message",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": -1,
+                      "parallelIndex": -1,
+                      "status": "skipped",
+                      "duration": 0,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2025-07-31T08:20:14.875Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "skipped"
+                }
+              ],
+              "id": "4f7b6c9d0b9092274f20-c3944946b4c9e90e059d",
+              "file": "account_setup.spec.js",
+              "line": 183,
+              "column": 5
+            },
+            {
+              "title": "Add employee with empty email shows error message",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": -1,
+                      "parallelIndex": -1,
+                      "status": "skipped",
+                      "duration": 0,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2025-07-31T08:20:14.876Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "skipped"
+                }
+              ],
+              "id": "4f7b6c9d0b9092274f20-2dc4f1dffc2111247029",
+              "file": "account_setup.spec.js",
+              "line": 200,
+              "column": 5
+            },
+            {
+              "title": "Add employee with invalid email format shows error",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": -1,
+                      "parallelIndex": -1,
+                      "status": "skipped",
+                      "duration": 0,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2025-07-31T08:20:14.876Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "skipped"
+                }
+              ],
+              "id": "4f7b6c9d0b9092274f20-29966e44fcd64fc477b0",
+              "file": "account_setup.spec.js",
+              "line": 220,
+              "column": 5
+            },
+            {
+              "title": "Add employee with existing email shows error",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": -1,
+                      "parallelIndex": -1,
+                      "status": "skipped",
+                      "duration": 0,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2025-07-31T08:20:14.877Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "skipped"
+                }
+              ],
+              "id": "4f7b6c9d0b9092274f20-f82e417e799ac656fbde",
+              "file": "account_setup.spec.js",
+              "line": 238,
+              "column": 5
+            },
+            {
+              "title": "Upload icon is clickable",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": -1,
+                      "parallelIndex": -1,
+                      "status": "skipped",
+                      "duration": 0,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2025-07-31T08:20:14.878Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "skipped"
+                }
+              ],
+              "id": "4f7b6c9d0b9092274f20-1112a6cdf3e9577ef767",
+              "file": "account_setup.spec.js",
+              "line": 260,
+              "column": 5
+            },
+            {
+              "title": "Download template icon is clickable",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": -1,
+                      "parallelIndex": -1,
+                      "status": "skipped",
+                      "duration": 0,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2025-07-31T08:20:14.878Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "skipped"
+                }
+              ],
+              "id": "4f7b6c9d0b9092274f20-4f93355092f09574c41b",
+              "file": "account_setup.spec.js",
+              "line": 273,
+              "column": 5
+            },
+            {
+              "title": "Add as admin button is functional",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": -1,
+                      "parallelIndex": -1,
+                      "status": "skipped",
+                      "duration": 0,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2025-07-31T08:20:14.879Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "skipped"
+                }
+              ],
+              "id": "4f7b6c9d0b9092274f20-c5e6ac64de47d6c3d949",
+              "file": "account_setup.spec.js",
+              "line": 285,
+              "column": 5
+            },
+            {
+              "title": "Remove admin button is functional",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": -1,
+                      "parallelIndex": -1,
+                      "status": "skipped",
+                      "duration": 0,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2025-07-31T08:20:14.880Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "skipped"
+                }
+              ],
+              "id": "4f7b6c9d0b9092274f20-489c8fa81e516166b82b",
+              "file": "account_setup.spec.js",
+              "line": 314,
+              "column": 5
+            },
+            {
+              "title": "Delete employees button opens modal",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": -1,
+                      "parallelIndex": -1,
+                      "status": "skipped",
+                      "duration": 0,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2025-07-31T08:20:14.881Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "skipped"
+                }
+              ],
+              "id": "4f7b6c9d0b9092274f20-1a00c78970f2a3aede42",
+              "file": "account_setup.spec.js",
+              "line": 332,
+              "column": 5
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "api/account_api.spec.js",
+      "file": "api/account_api.spec.js",
+      "column": 0,
+      "line": 0,
+      "specs": [],
+      "suites": [
+        {
+          "title": "Account API Tests",
+          "file": "api/account_api.spec.js",
+          "line": 8,
+          "column": 6,
+          "specs": [
+            {
+              "title": "API: Get employees list",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 1,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 1993,
+                      "errors": [],
+                      "stdout": [
+                        {
+                          "text": "[API] Using cookies for authentication\n"
+                        },
+                        {
+                          "text": "[API] GET https://ohhello-dev-909a7.web.app/api/v1/users?current=1&pageSize=10&keyword= (attempt 1/3)\n"
+                        },
+                        {
+                          "text": "[API] Response status: 401\n"
+                        },
+                        {
+                          "text": "[API] Response data: {\n  \"error\": {\n    \"id\": \"invalid token\",\n    \"code\": 401,\n    \"detail\": \"Invalid access token\",\n    \"status\": \"Unauthorized\"\n  }\n}\n"
+                        },
+                        {
+                          "text": "[API] Using cookies for authentication\n"
+                        },
+                        {
+                          "text": "[API] GET https://ohhello-dev-909a7.web.app/api/v1/users?current=1&pageSize=10&keyword= (attempt 2/3)\n"
+                        },
+                        {
+                          "text": "[API] Response status: 401\n"
+                        },
+                        {
+                          "text": "[API] Response data: {\n  \"error\": {\n    \"id\": \"invalid token\",\n    \"code\": 401,\n    \"detail\": \"Invalid access token\",\n    \"status\": \"Unauthorized\"\n  }\n}\n"
+                        },
+                        {
+                          "text": "[API] Using cookies for authentication\n"
+                        },
+                        {
+                          "text": "[API] GET https://ohhello-dev-909a7.web.app/api/v1/users?current=1&pageSize=10&keyword= (attempt 3/3)\n"
+                        },
+                        {
+                          "text": "[API] Response status: 401\n"
+                        },
+                        {
+                          "text": "[API] Response data: {\n  \"error\": {\n    \"id\": \"invalid token\",\n    \"code\": 401,\n    \"detail\": \"Invalid access token\",\n    \"status\": \"Unauthorized\"\n  }\n}\n"
+                        },
+                        {
+                          "text": "[API] Attempt 3 failed: API call failed: 401 Unauthorized\n"
+                        },
+                        {
+                          "text": "API test failed, this is expected if API endpoints are not implemented yet\n"
+                        },
+                        {
+                          "text": "Error: API call failed: 401 Unauthorized\n"
+                        }
+                      ],
+                      "stderr": [
+                        {
+                          "text": "Failed to get users from API: API call failed: 401 Unauthorized\n"
+                        }
+                      ],
+                      "retry": 0,
+                      "startTime": "2025-07-31T08:20:15.780Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "7a6cab4b31e01bcf15b4-90920ab6ca9bc2b558db",
+              "file": "api/account_api.spec.js",
+              "line": 36,
+              "column": 5
+            },
+            {
+              "title": "API: Add new employee",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 1,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 1402,
+                      "errors": [],
+                      "stdout": [
+                        {
+                          "text": "[API] Using cookies for authentication\n"
+                        },
+                        {
+                          "text": "[API] GET https://ohhello-dev-909a7.web.app/api/v1/users?current=1&pageSize=10&keyword= (attempt 1/3)\n"
+                        },
+                        {
+                          "text": "[API] Response status: 401\n"
+                        },
+                        {
+                          "text": "[API] Response data: {\n  \"error\": {\n    \"id\": \"invalid token\",\n    \"code\": 401,\n    \"detail\": \"Invalid access token\",\n    \"status\": \"Unauthorized\"\n  }\n}\n"
+                        },
+                        {
+                          "text": "[API] Using cookies for authentication\n"
+                        },
+                        {
+                          "text": "[API] GET https://ohhello-dev-909a7.web.app/api/v1/users?current=1&pageSize=10&keyword= (attempt 2/3)\n"
+                        },
+                        {
+                          "text": "[API] Response status: 401\n"
+                        },
+                        {
+                          "text": "[API] Response data: {\n  \"error\": {\n    \"id\": \"invalid token\",\n    \"code\": 401,\n    \"detail\": \"Invalid access token\",\n    \"status\": \"Unauthorized\"\n  }\n}\n"
+                        },
+                        {
+                          "text": "[API] Using cookies for authentication\n"
+                        },
+                        {
+                          "text": "[API] GET https://ohhello-dev-909a7.web.app/api/v1/users?current=1&pageSize=10&keyword= (attempt 3/3)\n"
+                        },
+                        {
+                          "text": "[API] Response status: 401\n"
+                        },
+                        {
+                          "text": "[API] Response data: {\n  \"error\": {\n    \"id\": \"invalid token\",\n    \"code\": 401,\n    \"detail\": \"Invalid access token\",\n    \"status\": \"Unauthorized\"\n  }\n}\n"
+                        },
+                        {
+                          "text": "[API] Attempt 3 failed: API call failed: 401 Unauthorized\n"
+                        },
+                        {
+                          "text": "API add employee test failed, this is expected if API endpoints are not implemented yet\n"
+                        },
+                        {
+                          "text": "Error: API call failed: 401 Unauthorized\n"
+                        }
+                      ],
+                      "stderr": [
+                        {
+                          "text": "Failed to get users from API: API call failed: 401 Unauthorized\n"
+                        }
+                      ],
+                      "retry": 0,
+                      "startTime": "2025-07-31T08:20:29.874Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "7a6cab4b31e01bcf15b4-45a82d6523c783ddc148",
+              "file": "api/account_api.spec.js",
+              "line": 57,
+              "column": 5
+            },
+            {
+              "title": "API: Find employee by email",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 1,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 1216,
+                      "errors": [],
+                      "stdout": [
+                        {
+                          "text": "[API] Using cookies for authentication\n"
+                        },
+                        {
+                          "text": "[API] POST https://ohhello-dev-909a7.web.app/api/v1undefined (attempt 1/3)\n"
+                        },
+                        {
+                          "text": "[API] Request data: {\n  \"name\": \"find-test-5vz5ma\",\n  \"email\": \"serena+find-test-5vz5ma@57blocks.com\"\n}\n"
+                        },
+                        {
+                          "text": "[API] Response status: 401\n"
+                        },
+                        {
+                          "text": "[API] Response data: {\n  \"error\": {\n    \"id\": \"invalid token\",\n    \"code\": 401,\n    \"detail\": \"Invalid access token\",\n    \"status\": \"Unauthorized\"\n  }\n}\n"
+                        },
+                        {
+                          "text": "[API] Using cookies for authentication\n"
+                        },
+                        {
+                          "text": "[API] POST https://ohhello-dev-909a7.web.app/api/v1undefined (attempt 2/3)\n"
+                        },
+                        {
+                          "text": "[API] Request data: {\n  \"name\": \"find-test-5vz5ma\",\n  \"email\": \"serena+find-test-5vz5ma@57blocks.com\"\n}\n"
+                        },
+                        {
+                          "text": "[API] Response status: 401\n"
+                        },
+                        {
+                          "text": "[API] Response data: {\n  \"error\": {\n    \"id\": \"invalid token\",\n    \"code\": 401,\n    \"detail\": \"Invalid access token\",\n    \"status\": \"Unauthorized\"\n  }\n}\n"
+                        },
+                        {
+                          "text": "[API] Using cookies for authentication\n"
+                        },
+                        {
+                          "text": "[API] POST https://ohhello-dev-909a7.web.app/api/v1undefined (attempt 3/3)\n"
+                        },
+                        {
+                          "text": "[API] Request data: {\n  \"name\": \"find-test-5vz5ma\",\n  \"email\": \"serena+find-test-5vz5ma@57blocks.com\"\n}\n"
+                        },
+                        {
+                          "text": "[API] Response status: 401\n"
+                        },
+                        {
+                          "text": "[API] Response data: {\n  \"error\": {\n    \"id\": \"invalid token\",\n    \"code\": 401,\n    \"detail\": \"Invalid access token\",\n    \"status\": \"Unauthorized\"\n  }\n}\n"
+                        },
+                        {
+                          "text": "[API] Attempt 3 failed: API call failed: 401 Unauthorized\n"
+                        }
+                      ],
+                      "stderr": [
+                        {
+                          "text": "Failed to add employee find-test-5vz5ma (serena+find-test-5vz5ma@57blocks.com) via API: API call failed: 401 Unauthorized\n"
+                        }
+                      ],
+                      "retry": 0,
+                      "startTime": "2025-07-31T08:20:31.279Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "7a6cab4b31e01bcf15b4-10d7d39632fec65d8743",
+              "file": "api/account_api.spec.js",
+              "line": 91,
+              "column": 5
+            },
+            {
+              "title": "API: Update employee information",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 1,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 967,
+                      "errors": [],
+                      "stdout": [
+                        {
+                          "text": "[API] Using cookies for authentication\n"
+                        },
+                        {
+                          "text": "[API] POST https://ohhello-dev-909a7.web.app/api/v1undefined (attempt 1/3)\n"
+                        },
+                        {
+                          "text": "[API] Request data: {\n  \"name\": \"update-test-z0klfx\",\n  \"email\": \"serena+update-test-z0klfx@57blocks.com\"\n}\n"
+                        },
+                        {
+                          "text": "[API] Response status: 401\n"
+                        },
+                        {
+                          "text": "[API] Response data: {\n  \"error\": {\n    \"id\": \"invalid token\",\n    \"code\": 401,\n    \"detail\": \"Invalid access token\",\n    \"status\": \"Unauthorized\"\n  }\n}\n"
+                        },
+                        {
+                          "text": "[API] Using cookies for authentication\n"
+                        },
+                        {
+                          "text": "[API] POST https://ohhello-dev-909a7.web.app/api/v1undefined (attempt 2/3)\n"
+                        },
+                        {
+                          "text": "[API] Request data: {\n  \"name\": \"update-test-z0klfx\",\n  \"email\": \"serena+update-test-z0klfx@57blocks.com\"\n}\n"
+                        },
+                        {
+                          "text": "[API] Response status: 401\n"
+                        },
+                        {
+                          "text": "[API] Response data: {\n  \"error\": {\n    \"id\": \"invalid token\",\n    \"code\": 401,\n    \"detail\": \"Invalid access token\",\n    \"status\": \"Unauthorized\"\n  }\n}\n"
+                        },
+                        {
+                          "text": "[API] Using cookies for authentication\n"
+                        },
+                        {
+                          "text": "[API] POST https://ohhello-dev-909a7.web.app/api/v1undefined (attempt 3/3)\n"
+                        },
+                        {
+                          "text": "[API] Request data: {\n  \"name\": \"update-test-z0klfx\",\n  \"email\": \"serena+update-test-z0klfx@57blocks.com\"\n}\n"
+                        },
+                        {
+                          "text": "[API] Response status: 401\n"
+                        },
+                        {
+                          "text": "[API] Response data: {\n  \"error\": {\n    \"id\": \"invalid token\",\n    \"code\": 401,\n    \"detail\": \"Invalid access token\",\n    \"status\": \"Unauthorized\"\n  }\n}\n"
+                        },
+                        {
+                          "text": "[API] Attempt 3 failed: API call failed: 401 Unauthorized\n"
+                        }
+                      ],
+                      "stderr": [
+                        {
+                          "text": "Failed to add employee update-test-z0klfx (serena+update-test-z0klfx@57blocks.com) via API: API call failed: 401 Unauthorized\n"
+                        }
+                      ],
+                      "retry": 0,
+                      "startTime": "2025-07-31T08:20:32.499Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "7a6cab4b31e01bcf15b4-4193be799620523a0621",
+              "file": "api/account_api.spec.js",
+              "line": 119,
+              "column": 5
+            },
+            {
+              "title": "API: Delete employee",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 1,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 1444,
+                      "errors": [],
+                      "stdout": [
+                        {
+                          "text": "[API] Using cookies for authentication\n"
+                        },
+                        {
+                          "text": "[API] POST https://ohhello-dev-909a7.web.app/api/v1undefined (attempt 1/3)\n"
+                        },
+                        {
+                          "text": "[API] Request data: {\n  \"name\": \"delete-test-7njgy2\",\n  \"email\": \"serena+delete-test-7njgy2@57blocks.com\"\n}\n"
+                        },
+                        {
+                          "text": "[API] Response status: 401\n"
+                        },
+                        {
+                          "text": "[API] Response data: {\n  \"error\": {\n    \"id\": \"invalid token\",\n    \"code\": 401,\n    \"detail\": \"Invalid access token\",\n    \"status\": \"Unauthorized\"\n  }\n}\n"
+                        },
+                        {
+                          "text": "[API] Using cookies for authentication\n"
+                        },
+                        {
+                          "text": "[API] POST https://ohhello-dev-909a7.web.app/api/v1undefined (attempt 2/3)\n"
+                        },
+                        {
+                          "text": "[API] Request data: {\n  \"name\": \"delete-test-7njgy2\",\n  \"email\": \"serena+delete-test-7njgy2@57blocks.com\"\n}\n"
+                        },
+                        {
+                          "text": "[API] Response status: 401\n"
+                        },
+                        {
+                          "text": "[API] Response data: {\n  \"error\": {\n    \"id\": \"invalid token\",\n    \"code\": 401,\n    \"detail\": \"Invalid access token\",\n    \"status\": \"Unauthorized\"\n  }\n}\n"
+                        },
+                        {
+                          "text": "[API] Using cookies for authentication\n"
+                        },
+                        {
+                          "text": "[API] POST https://ohhello-dev-909a7.web.app/api/v1undefined (attempt 3/3)\n"
+                        },
+                        {
+                          "text": "[API] Request data: {\n  \"name\": \"delete-test-7njgy2\",\n  \"email\": \"serena+delete-test-7njgy2@57blocks.com\"\n}\n"
+                        },
+                        {
+                          "text": "[API] Response status: 401\n"
+                        },
+                        {
+                          "text": "[API] Response data: {\n  \"error\": {\n    \"id\": \"invalid token\",\n    \"code\": 401,\n    \"detail\": \"Invalid access token\",\n    \"status\": \"Unauthorized\"\n  }\n}\n"
+                        },
+                        {
+                          "text": "[API] Attempt 3 failed: API call failed: 401 Unauthorized\n"
+                        }
+                      ],
+                      "stderr": [
+                        {
+                          "text": "Failed to add employee delete-test-7njgy2 (serena+delete-test-7njgy2@57blocks.com) via API: API call failed: 401 Unauthorized\n"
+                        }
+                      ],
+                      "retry": 0,
+                      "startTime": "2025-07-31T08:20:33.469Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "7a6cab4b31e01bcf15b4-d253cb7bcec5180f38da",
+              "file": "api/account_api.spec.js",
+              "line": 147,
+              "column": 5
+            },
+            {
+              "title": "API: Set employee as admin",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 1,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 1564,
+                      "errors": [],
+                      "stdout": [
+                        {
+                          "text": "[API] Using cookies for authentication\n"
+                        },
+                        {
+                          "text": "[API] POST https://ohhello-dev-909a7.web.app/api/v1undefined (attempt 1/3)\n"
+                        },
+                        {
+                          "text": "[API] Request data: {\n  \"name\": \"admin-test-jcvz47\",\n  \"email\": \"serena+admin-test-jcvz47@57blocks.com\"\n}\n"
+                        },
+                        {
+                          "text": "[API] Response status: 401\n"
+                        },
+                        {
+                          "text": "[API] Response data: {\n  \"error\": {\n    \"id\": \"invalid token\",\n    \"code\": 401,\n    \"detail\": \"Invalid access token\",\n    \"status\": \"Unauthorized\"\n  }\n}\n"
+                        },
+                        {
+                          "text": "[API] Using cookies for authentication\n"
+                        },
+                        {
+                          "text": "[API] POST https://ohhello-dev-909a7.web.app/api/v1undefined (attempt 2/3)\n"
+                        },
+                        {
+                          "text": "[API] Request data: {\n  \"name\": \"admin-test-jcvz47\",\n  \"email\": \"serena+admin-test-jcvz47@57blocks.com\"\n}\n"
+                        },
+                        {
+                          "text": "[API] Response status: 401\n"
+                        },
+                        {
+                          "text": "[API] Response data: {\n  \"error\": {\n    \"id\": \"invalid token\",\n    \"code\": 401,\n    \"detail\": \"Invalid access token\",\n    \"status\": \"Unauthorized\"\n  }\n}\n"
+                        },
+                        {
+                          "text": "[API] Using cookies for authentication\n"
+                        },
+                        {
+                          "text": "[API] POST https://ohhello-dev-909a7.web.app/api/v1undefined (attempt 3/3)\n"
+                        },
+                        {
+                          "text": "[API] Request data: {\n  \"name\": \"admin-test-jcvz47\",\n  \"email\": \"serena+admin-test-jcvz47@57blocks.com\"\n}\n"
+                        },
+                        {
+                          "text": "[API] Response status: 401\n"
+                        },
+                        {
+                          "text": "[API] Response data: {\n  \"error\": {\n    \"id\": \"invalid token\",\n    \"code\": 401,\n    \"detail\": \"Invalid access token\",\n    \"status\": \"Unauthorized\"\n  }\n}\n"
+                        },
+                        {
+                          "text": "[API] Attempt 3 failed: API call failed: 401 Unauthorized\n"
+                        }
+                      ],
+                      "stderr": [
+                        {
+                          "text": "Failed to add employee admin-test-jcvz47 (serena+admin-test-jcvz47@57blocks.com) via API: API call failed: 401 Unauthorized\n"
+                        }
+                      ],
+                      "retry": 0,
+                      "startTime": "2025-07-31T08:20:34.915Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "7a6cab4b31e01bcf15b4-cd6a05c323ea22d809f9",
+              "file": "api/account_api.spec.js",
+              "line": 173,
+              "column": 5
+            },
+            {
+              "title": "API: Batch operations",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 1,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 4398,
+                      "errors": [],
+                      "stdout": [
+                        {
+                          "text": "[API] Using cookies for authentication\n"
+                        },
+                        {
+                          "text": "[API] POST https://ohhello-dev-909a7.web.app/api/v1undefined (attempt 1/3)\n"
+                        },
+                        {
+                          "text": "[API] Request data: {\n  \"name\": \"batch-test-1\",\n  \"email\": \"serena+batch1@57blocks.com\"\n}\n"
+                        },
+                        {
+                          "text": "[API] Response status: 401\n"
+                        },
+                        {
+                          "text": "[API] Response data: {\n  \"error\": {\n    \"id\": \"invalid token\",\n    \"code\": 401,\n    \"detail\": \"Invalid access token\",\n    \"status\": \"Unauthorized\"\n  }\n}\n"
+                        },
+                        {
+                          "text": "[API] Using cookies for authentication\n"
+                        },
+                        {
+                          "text": "[API] POST https://ohhello-dev-909a7.web.app/api/v1undefined (attempt 2/3)\n"
+                        },
+                        {
+                          "text": "[API] Request data: {\n  \"name\": \"batch-test-1\",\n  \"email\": \"serena+batch1@57blocks.com\"\n}\n"
+                        },
+                        {
+                          "text": "[API] Response status: 401\n"
+                        },
+                        {
+                          "text": "[API] Response data: {\n  \"error\": {\n    \"id\": \"invalid token\",\n    \"code\": 401,\n    \"detail\": \"Invalid access token\",\n    \"status\": \"Unauthorized\"\n  }\n}\n"
+                        },
+                        {
+                          "text": "[API] Using cookies for authentication\n"
+                        },
+                        {
+                          "text": "[API] POST https://ohhello-dev-909a7.web.app/api/v1undefined (attempt 3/3)\n"
+                        },
+                        {
+                          "text": "[API] Request data: {\n  \"name\": \"batch-test-1\",\n  \"email\": \"serena+batch1@57blocks.com\"\n}\n"
+                        },
+                        {
+                          "text": "[API] Response status: 401\n"
+                        },
+                        {
+                          "text": "[API] Response data: {\n  \"error\": {\n    \"id\": \"invalid token\",\n    \"code\": 401,\n    \"detail\": \"Invalid access token\",\n    \"status\": \"Unauthorized\"\n  }\n}\n"
+                        },
+                        {
+                          "text": "[API] Attempt 3 failed: API call failed: 401 Unauthorized\n"
+                        },
+                        {
+                          "text": "[API] Using cookies for authentication\n"
+                        },
+                        {
+                          "text": "[API] POST https://ohhello-dev-909a7.web.app/api/v1undefined (attempt 1/3)\n"
+                        },
+                        {
+                          "text": "[API] Request data: {\n  \"name\": \"batch-test-2\",\n  \"email\": \"serena+batch2@57blocks.com\"\n}\n"
+                        },
+                        {
+                          "text": "[API] Response status: 401\n"
+                        },
+                        {
+                          "text": "[API] Response data: {\n  \"error\": {\n    \"id\": \"invalid token\",\n    \"code\": 401,\n    \"detail\": \"Invalid access token\",\n    \"status\": \"Unauthorized\"\n  }\n}\n"
+                        },
+                        {
+                          "text": "[API] Using cookies for authentication\n"
+                        },
+                        {
+                          "text": "[API] POST https://ohhello-dev-909a7.web.app/api/v1undefined (attempt 2/3)\n"
+                        },
+                        {
+                          "text": "[API] Request data: {\n  \"name\": \"batch-test-2\",\n  \"email\": \"serena+batch2@57blocks.com\"\n}\n"
+                        },
+                        {
+                          "text": "[API] Response status: 401\n"
+                        },
+                        {
+                          "text": "[API] Response data: {\n  \"error\": {\n    \"id\": \"invalid token\",\n    \"code\": 401,\n    \"detail\": \"Invalid access token\",\n    \"status\": \"Unauthorized\"\n  }\n}\n"
+                        },
+                        {
+                          "text": "[API] Using cookies for authentication\n"
+                        },
+                        {
+                          "text": "[API] POST https://ohhello-dev-909a7.web.app/api/v1undefined (attempt 3/3)\n"
+                        },
+                        {
+                          "text": "[API] Request data: {\n  \"name\": \"batch-test-2\",\n  \"email\": \"serena+batch2@57blocks.com\"\n}\n"
+                        },
+                        {
+                          "text": "[API] Response status: 401\n"
+                        },
+                        {
+                          "text": "[API] Response data: {\n  \"error\": {\n    \"id\": \"invalid token\",\n    \"code\": 401,\n    \"detail\": \"Invalid access token\",\n    \"status\": \"Unauthorized\"\n  }\n}\n"
+                        },
+                        {
+                          "text": "[API] Attempt 3 failed: API call failed: 401 Unauthorized\n"
+                        },
+                        {
+                          "text": "[API] Using cookies for authentication\n"
+                        },
+                        {
+                          "text": "[API] POST https://ohhello-dev-909a7.web.app/api/v1undefined (attempt 1/3)\n"
+                        },
+                        {
+                          "text": "[API] Request data: {\n  \"name\": \"batch-test-3\",\n  \"email\": \"serena+batch3@57blocks.com\"\n}\n"
+                        },
+                        {
+                          "text": "[API] Response status: 401\n"
+                        },
+                        {
+                          "text": "[API] Response data: {\n  \"error\": {\n    \"id\": \"invalid token\",\n    \"code\": 401,\n    \"detail\": \"Invalid access token\",\n    \"status\": \"Unauthorized\"\n  }\n}\n"
+                        },
+                        {
+                          "text": "[API] Using cookies for authentication\n"
+                        },
+                        {
+                          "text": "[API] POST https://ohhello-dev-909a7.web.app/api/v1undefined (attempt 2/3)\n"
+                        },
+                        {
+                          "text": "[API] Request data: {\n  \"name\": \"batch-test-3\",\n  \"email\": \"serena+batch3@57blocks.com\"\n}\n"
+                        },
+                        {
+                          "text": "[API] Response status: 401\n"
+                        },
+                        {
+                          "text": "[API] Response data: {\n  \"error\": {\n    \"id\": \"invalid token\",\n    \"code\": 401,\n    \"detail\": \"Invalid access token\",\n    \"status\": \"Unauthorized\"\n  }\n}\n"
+                        },
+                        {
+                          "text": "[API] Using cookies for authentication\n"
+                        },
+                        {
+                          "text": "[API] POST https://ohhello-dev-909a7.web.app/api/v1undefined (attempt 3/3)\n"
+                        },
+                        {
+                          "text": "[API] Request data: {\n  \"name\": \"batch-test-3\",\n  \"email\": \"serena+batch3@57blocks.com\"\n}\n"
+                        },
+                        {
+                          "text": "[API] Response status: 401\n"
+                        },
+                        {
+                          "text": "[API] Response data: {\n  \"error\": {\n    \"id\": \"invalid token\",\n    \"code\": 401,\n    \"detail\": \"Invalid access token\",\n    \"status\": \"Unauthorized\"\n  }\n}\n"
+                        },
+                        {
+                          "text": "[API] Attempt 3 failed: API call failed: 401 Unauthorized\n"
+                        },
+                        {
+                          "text": "✅ Batch add completed: 0/3 successful\n"
+                        },
+                        {
+                          "text": "API batch operations test failed, this is expected if API endpoints are not implemented yet\n"
+                        },
+                        {
+                          "text": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBeGreaterThan\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m\n\nExpected: > \u001b[32m0\u001b[39m\nReceived:   \u001b[31m0\u001b[39m\n"
+                        }
+                      ],
+                      "stderr": [
+                        {
+                          "text": "Failed to add employee batch-test-1 (serena+batch1@57blocks.com) via API: API call failed: 401 Unauthorized\n"
+                        },
+                        {
+                          "text": "Failed to add employee batch-test-2 (serena+batch2@57blocks.com) via API: API call failed: 401 Unauthorized\n"
+                        },
+                        {
+                          "text": "Failed to add employee batch-test-3 (serena+batch3@57blocks.com) via API: API call failed: 401 Unauthorized\n"
+                        }
+                      ],
+                      "retry": 0,
+                      "startTime": "2025-07-31T08:20:36.486Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "7a6cab4b31e01bcf15b4-fe0bffb2c5f464edf6b8",
+              "file": "api/account_api.spec.js",
+              "line": 200,
+              "column": 5
+            },
+            {
+              "title": "API: Wait for condition",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 1,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 2417,
+                      "errors": [],
+                      "stdout": [
+                        {
+                          "text": "[API] Using cookies for authentication\n"
+                        },
+                        {
+                          "text": "[API] GET https://ohhello-dev-909a7.web.app/api/v1/users?current=1&pageSize=10&keyword= (attempt 1/3)\n"
+                        },
+                        {
+                          "text": "[API] Response status: 401\n"
+                        },
+                        {
+                          "text": "[API] Response data: {\n  \"error\": {\n    \"id\": \"invalid token\",\n    \"code\": 401,\n    \"detail\": \"Invalid access token\",\n    \"status\": \"Unauthorized\"\n  }\n}\n"
+                        },
+                        {
+                          "text": "[API] Using cookies for authentication\n"
+                        },
+                        {
+                          "text": "[API] GET https://ohhello-dev-909a7.web.app/api/v1/users?current=1&pageSize=10&keyword= (attempt 2/3)\n"
+                        },
+                        {
+                          "text": "[API] Response status: 401\n"
+                        },
+                        {
+                          "text": "[API] Response data: {\n  \"error\": {\n    \"id\": \"invalid token\",\n    \"code\": 401,\n    \"detail\": \"Invalid access token\",\n    \"status\": \"Unauthorized\"\n  }\n}\n"
+                        },
+                        {
+                          "text": "[API] Using cookies for authentication\n"
+                        },
+                        {
+                          "text": "[API] GET https://ohhello-dev-909a7.web.app/api/v1/users?current=1&pageSize=10&keyword= (attempt 3/3)\n"
+                        },
+                        {
+                          "text": "[API] Response status: 401\n"
+                        },
+                        {
+                          "text": "[API] Response data: {\n  \"error\": {\n    \"id\": \"invalid token\",\n    \"code\": 401,\n    \"detail\": \"Invalid access token\",\n    \"status\": \"Unauthorized\"\n  }\n}\n"
+                        },
+                        {
+                          "text": "[API] Attempt 3 failed: API call failed: 401 Unauthorized\n"
+                        },
+                        {
+                          "text": "[API] Using cookies for authentication\n"
+                        },
+                        {
+                          "text": "[API] POST https://ohhello-dev-909a7.web.app/api/v1undefined (attempt 1/3)\n"
+                        },
+                        {
+                          "text": "[API] Request data: {\n  \"name\": \"wait-test-d4yopy\",\n  \"email\": \"serena+wait-test-d4yopy@57blocks.com\"\n}\n"
+                        },
+                        {
+                          "text": "[API] Response status: 401\n"
+                        },
+                        {
+                          "text": "[API] Response data: {\n  \"error\": {\n    \"id\": \"invalid token\",\n    \"code\": 401,\n    \"detail\": \"Invalid access token\",\n    \"status\": \"Unauthorized\"\n  }\n}\n"
+                        },
+                        {
+                          "text": "[API] Using cookies for authentication\n"
+                        },
+                        {
+                          "text": "[API] POST https://ohhello-dev-909a7.web.app/api/v1undefined (attempt 2/3)\n"
+                        },
+                        {
+                          "text": "[API] Request data: {\n  \"name\": \"wait-test-d4yopy\",\n  \"email\": \"serena+wait-test-d4yopy@57blocks.com\"\n}\n"
+                        },
+                        {
+                          "text": "[API] Response status: 401\n"
+                        },
+                        {
+                          "text": "[API] Response data: {\n  \"error\": {\n    \"id\": \"invalid token\",\n    \"code\": 401,\n    \"detail\": \"Invalid access token\",\n    \"status\": \"Unauthorized\"\n  }\n}\n"
+                        },
+                        {
+                          "text": "[API] Using cookies for authentication\n"
+                        },
+                        {
+                          "text": "[API] POST https://ohhello-dev-909a7.web.app/api/v1undefined (attempt 3/3)\n"
+                        },
+                        {
+                          "text": "[API] Request data: {\n  \"name\": \"wait-test-d4yopy\",\n  \"email\": \"serena+wait-test-d4yopy@57blocks.com\"\n}\n"
+                        },
+                        {
+                          "text": "[API] Response status: 401\n"
+                        },
+                        {
+                          "text": "[API] Response data: {\n  \"error\": {\n    \"id\": \"invalid token\",\n    \"code\": 401,\n    \"detail\": \"Invalid access token\",\n    \"status\": \"Unauthorized\"\n  }\n}\n"
+                        },
+                        {
+                          "text": "[API] Attempt 3 failed: API call failed: 401 Unauthorized\n"
+                        }
+                      ],
+                      "stderr": [
+                        {
+                          "text": "Failed to get users from API: API call failed: 401 Unauthorized\n"
+                        },
+                        {
+                          "text": "Could not get employee count from API: API call failed: 401 Unauthorized\n"
+                        },
+                        {
+                          "text": "Failed to add employee wait-test-d4yopy (serena+wait-test-d4yopy@57blocks.com) via API: API call failed: 401 Unauthorized\n"
+                        }
+                      ],
+                      "retry": 0,
+                      "startTime": "2025-07-31T08:20:40.886Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "7a6cab4b31e01bcf15b4-8ccea735ca682d606de0",
+              "file": "api/account_api.spec.js",
+              "line": 227,
+              "column": 5
+            },
+            {
+              "title": "API: Data validation",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 1,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 2,
+                      "errors": [],
+                      "stdout": [
+                        {
+                          "text": "✅ Data validation working correctly\n"
+                        },
+                        {
+                          "text": "[API] Using cookies for authentication\n"
+                        },
+                        {
+                          "text": "[API] GET https://ohhello-dev-909a7.web.app/api/v1/users?current=1&pageSize=10&keyword= (attempt 1/3)\n"
+                        },
+                        {
+                          "text": "[API] Response status: 401\n"
+                        },
+                        {
+                          "text": "[API] Response data: {\n  \"error\": {\n    \"id\": \"invalid token\",\n    \"code\": 401,\n    \"detail\": \"Invalid access token\",\n    \"status\": \"Unauthorized\"\n  }\n}\n"
+                        },
+                        {
+                          "text": "[API] Using cookies for authentication\n"
+                        },
+                        {
+                          "text": "[API] GET https://ohhello-dev-909a7.web.app/api/v1/users?current=1&pageSize=10&keyword= (attempt 2/3)\n"
+                        },
+                        {
+                          "text": "[API] Response status: 401\n"
+                        },
+                        {
+                          "text": "[API] Response data: {\n  \"error\": {\n    \"id\": \"invalid token\",\n    \"code\": 401,\n    \"detail\": \"Invalid access token\",\n    \"status\": \"Unauthorized\"\n  }\n}\n"
+                        },
+                        {
+                          "text": "[API] Using cookies for authentication\n"
+                        },
+                        {
+                          "text": "[API] GET https://ohhello-dev-909a7.web.app/api/v1/users?current=1&pageSize=10&keyword= (attempt 3/3)\n"
+                        },
+                        {
+                          "text": "[API] Response status: 401\n"
+                        },
+                        {
+                          "text": "[API] Response data: {\n  \"error\": {\n    \"id\": \"invalid token\",\n    \"code\": 401,\n    \"detail\": \"Invalid access token\",\n    \"status\": \"Unauthorized\"\n  }\n}\n"
+                        },
+                        {
+                          "text": "[API] Attempt 3 failed: API call failed: 401 Unauthorized\n"
+                        }
+                      ],
+                      "stderr": [
+                        {
+                          "text": "Failed to get users from API: API call failed: 401 Unauthorized\n"
+                        },
+                        {
+                          "text": "Failed to cleanup test employees: API call failed: 401 Unauthorized\n"
+                        }
+                      ],
+                      "retry": 0,
+                      "startTime": "2025-07-31T08:20:43.305Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "7a6cab4b31e01bcf15b4-864c2f6917cd1a38c757",
+              "file": "api/account_api.spec.js",
+              "line": 248,
               "column": 5
             }
           ]
@@ -185,11 +1611,11 @@
   ],
   "errors": [],
   "stats": {
-    "startTime": "2025-07-09T08:46:42.995Z",
-    "duration": 122943.493,
-    "expected": 1,
-    "skipped": 0,
-    "unexpected": 0,
+    "startTime": "2025-07-31T08:18:47.711Z",
+    "duration": 117842.788,
+    "expected": 14,
+    "skipped": 9,
+    "unexpected": 1,
     "flaky": 0
   }
 }

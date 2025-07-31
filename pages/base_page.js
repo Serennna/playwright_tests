@@ -174,6 +174,8 @@ class BasePage {
         
         console.log('─'.repeat(50));
     }
+
+
 }
 
 module.exports = BasePage; 
