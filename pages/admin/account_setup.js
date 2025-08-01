@@ -247,12 +247,17 @@ class AccountSetupPage extends BasePage {
     }
     
     async AddEmployees() {
-        // Generate random short code (4-6 characters)
-        const randomCode = Math.random().toString(36).substring(2, 8);
+        const ApiHelper = require('../../utils/api_helper');
+        
+        // Generate employee data using the utility
+        const employeeData = ApiHelper.generateEmployeeData();
         
         await this.click(this.selectors.addEmployeesButton);
-        await this.fill(this.selectors.addEmployeeNameInput, `test${randomCode}`);
-        await this.fill(this.selectors.addEmployeeEmailInput, `serena+${randomCode}@57blocks.com`);
+        await this.fill(this.selectors.addEmployeeNameInput, employeeData.name);
+        await this.fill(this.selectors.addEmployeeEmailInput, employeeData.email);
+        
+        // Return the generated data for test verification
+        return employeeData;
     }
 
     async AddAsAdmin() {

@@ -1,7 +1,7 @@
 {
   "config": {
-    "configFile": "/Users/57block/workspace/playwright_tests/playwright.config.js",
-    "rootDir": "/Users/57block/workspace/playwright_tests/tests",
+    "configFile": "/Users/57block/workspace/OhHello/playwright_tests/playwright.config.js",
+    "rootDir": "/Users/57block/workspace/OhHello/playwright_tests/tests",
     "forbidOnly": false,
     "fullyParallel": false,
     "globalSetup": null,
@@ -46,7 +46,7 @@
     "quiet": false,
     "projects": [
       {
-        "outputDir": "/Users/57block/workspace/playwright_tests/screenshots",
+        "outputDir": "/Users/57block/workspace/OhHello/playwright_tests/screenshots",
         "repeatEach": 1,
         "retries": 0,
         "metadata": {
@@ -54,7 +54,7 @@
         },
         "id": "chromium",
         "name": "chromium",
-        "testDir": "/Users/57block/workspace/playwright_tests/tests",
+        "testDir": "/Users/57block/workspace/OhHello/playwright_tests/tests",
         "testIgnore": [],
         "testMatch": [
           "/.*\\.spec\\.js$/"
@@ -80,43 +80,9 @@
         {
           "title": "Admin - Account Setup Page Tests",
           "file": "account_setup.spec.js",
-          "line": 9,
+          "line": 8,
           "column": 6,
           "specs": [
-            {
-              "title": "setup - login as admin",
-              "ok": true,
-              "tags": [],
-              "tests": [
-                {
-                  "timeout": 30000,
-                  "annotations": [],
-                  "expectedStatus": "passed",
-                  "projectId": "chromium",
-                  "projectName": "chromium",
-                  "results": [
-                    {
-                      "workerIndex": 0,
-                      "parallelIndex": 0,
-                      "status": "passed",
-                      "duration": 19598,
-                      "errors": [],
-                      "stdout": [],
-                      "stderr": [],
-                      "retry": 0,
-                      "startTime": "2025-07-31T08:18:49.792Z",
-                      "annotations": [],
-                      "attachments": []
-                    }
-                  ],
-                  "status": "expected"
-                }
-              ],
-              "id": "4f7b6c9d0b9092274f20-15c05acb1e2a0a78ec0b",
-              "file": "account_setup.spec.js",
-              "line": 19,
-              "column": 5
-            },
             {
               "title": "Account Setup Page Elements are Visible",
               "ok": true,
@@ -133,12 +99,12 @@
                       "workerIndex": 0,
                       "parallelIndex": 0,
                       "status": "passed",
-                      "duration": 2709,
+                      "duration": 3275,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2025-07-31T08:19:14.370Z",
+                      "startTime": "2025-08-01T09:19:07.422Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -148,7 +114,7 @@
               ],
               "id": "4f7b6c9d0b9092274f20-7b8d0275ce0ee34b397d",
               "file": "account_setup.spec.js",
-              "line": 55,
+              "line": 66,
               "column": 5
             },
             {
@@ -167,12 +133,12 @@
                       "workerIndex": 0,
                       "parallelIndex": 0,
                       "status": "passed",
-                      "duration": 10395,
+                      "duration": 2873,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2025-07-31T08:19:17.106Z",
+                      "startTime": "2025-08-01T09:19:23.972Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -182,7 +148,7 @@
               ],
               "id": "4f7b6c9d0b9092274f20-58084e26b3a06dfa1e5b",
               "file": "account_setup.spec.js",
-              "line": 72,
+              "line": 83,
               "column": 5
             },
             {
@@ -201,12 +167,12 @@
                       "workerIndex": 0,
                       "parallelIndex": 0,
                       "status": "passed",
-                      "duration": 8691,
+                      "duration": 9957,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2025-07-31T08:19:27.555Z",
+                      "startTime": "2025-08-01T09:19:26.848Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -216,82 +182,11 @@
               ],
               "id": "4f7b6c9d0b9092274f20-bef332c9c694ebb0a4ad",
               "file": "account_setup.spec.js",
-              "line": 81,
+              "line": 93,
               "column": 5
             },
             {
               "title": "Add employee with valid data",
-              "ok": true,
-              "tags": [],
-              "tests": [
-                {
-                  "timeout": 30000,
-                  "annotations": [],
-                  "expectedStatus": "passed",
-                  "projectId": "chromium",
-                  "projectName": "chromium",
-                  "results": [
-                    {
-                      "workerIndex": 0,
-                      "parallelIndex": 0,
-                      "status": "passed",
-                      "duration": 7845,
-                      "errors": [],
-                      "stdout": [
-                        {
-                          "text": "Error reading pagination total: locator.isVisible: Unexpected token \"=\" while parsing css selector \".ant-pagination-total-text, li[class*=\"ant-pagination-total-text\"], .ant-pagination .ant-pagination-total-text, [class*=\"total\"], text=/Total.*items?/i\". Did you mean to CSS.escape it?\n"
-                        },
-                        {
-                          "text": "Using current page count as fallback\n"
-                        },
-                        {
-                          "text": "Initial total count: 5, Has pagination: true\n"
-                        },
-                        {
-                          "text": "Table has pagination, waiting for total count to increase...\n"
-                        },
-                        {
-                          "text": "Error reading pagination total: locator.isVisible: Unexpected token \"=\" while parsing css selector \".ant-pagination-total-text, li[class*=\"ant-pagination-total-text\"], .ant-pagination .ant-pagination-total-text, [class*=\"total\"], text=/Total.*items?/i\". Did you mean to CSS.escape it?\n"
-                        },
-                        {
-                          "text": "Using current page count as fallback\n"
-                        },
-                        {
-                          "text": "Error reading pagination total: locator.isVisible: Unexpected token \"=\" while parsing css selector \".ant-pagination-total-text, li[class*=\"ant-pagination-total-text\"], .ant-pagination .ant-pagination-total-text, [class*=\"total\"], text=/Total.*items?/i\". Did you mean to CSS.escape it?\n"
-                        },
-                        {
-                          "text": "Using current page count as fallback\n"
-                        },
-                        {
-                          "text": "Error reading pagination total: locator.isVisible: Unexpected token \"=\" while parsing css selector \".ant-pagination-total-text, li[class*=\"ant-pagination-total-text\"], .ant-pagination .ant-pagination-total-text, [class*=\"total\"], text=/Total.*items?/i\". Did you mean to CSS.escape it?\n"
-                        },
-                        {
-                          "text": "Using current page count as fallback\n"
-                        },
-                        {
-                          "text": "Final total count: 6\n"
-                        },
-                        {
-                          "text": "Searching for added employee via search functionality...\n"
-                        }
-                      ],
-                      "stderr": [],
-                      "retry": 0,
-                      "startTime": "2025-07-31T08:19:36.250Z",
-                      "annotations": [],
-                      "attachments": []
-                    }
-                  ],
-                  "status": "expected"
-                }
-              ],
-              "id": "4f7b6c9d0b9092274f20-8ffbc589b060633bbdbd",
-              "file": "account_setup.spec.js",
-              "line": 105,
-              "column": 5
-            },
-            {
-              "title": "Add employee with empty name with submit button disabled",
               "ok": false,
               "tags": [],
               "tests": [
@@ -305,8 +200,129 @@
                     {
                       "workerIndex": 0,
                       "parallelIndex": 0,
+                      "status": "failed",
+                      "duration": 7764,
+                      "error": {
+                        "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoMatch\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m\n\nExpected pattern: \u001b[32m/^test\\w+$/\u001b[39m\nReceived string:  \u001b[31m\"\"\u001b[39m",
+                        "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoMatch\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m\n\nExpected pattern: \u001b[32m/^test\\w+$/\u001b[39m\nReceived string:  \u001b[31m\"\"\u001b[39m\n    at /Users/57block/workspace/OhHello/playwright_tests/tests/account_setup.spec.js:132:33",
+                        "location": {
+                          "file": "/Users/57block/workspace/OhHello/playwright_tests/tests/account_setup.spec.js",
+                          "column": 33,
+                          "line": 132
+                        },
+                        "snippet": "\u001b[0m \u001b[90m 130 |\u001b[39m         \u001b[36mconst\u001b[39m \u001b[33mNewEmployeeEmail\u001b[39m \u001b[33m=\u001b[39m \u001b[36mawait\u001b[39m accountSetupPage\u001b[33m.\u001b[39mpage\u001b[33m.\u001b[39minputValue(accountSetupPage\u001b[33m.\u001b[39mselectors\u001b[33m.\u001b[39maddEmployeeEmailInput)\u001b[33m;\u001b[39m\n \u001b[90m 131 |\u001b[39m         \n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 132 |\u001b[39m         expect(\u001b[33mNewEmployeeName\u001b[39m)\u001b[33m.\u001b[39mtoMatch(\u001b[35m/^test\\w+$/\u001b[39m)\u001b[33m;\u001b[39m \u001b[90m// Should start with 'test' followed by random characters\u001b[39m\n \u001b[90m     |\u001b[39m                                 \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 133 |\u001b[39m         expect(\u001b[33mNewEmployeeEmail\u001b[39m)\u001b[33m.\u001b[39mtoMatch(\u001b[35m/^serena\\+\\w+@57blocks\\.com$/\u001b[39m)\u001b[33m;\u001b[39m \u001b[90m// Should match the email pattern\u001b[39m\n \u001b[90m 134 |\u001b[39m         \n \u001b[90m 135 |\u001b[39m         \u001b[90m// Submit the form\u001b[39m\u001b[0m"
+                      },
+                      "errors": [
+                        {
+                          "location": {
+                            "file": "/Users/57block/workspace/OhHello/playwright_tests/tests/account_setup.spec.js",
+                            "column": 33,
+                            "line": 132
+                          },
+                          "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoMatch\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m\n\nExpected pattern: \u001b[32m/^test\\w+$/\u001b[39m\nReceived string:  \u001b[31m\"\"\u001b[39m\n\n\u001b[0m \u001b[90m 130 |\u001b[39m         \u001b[36mconst\u001b[39m \u001b[33mNewEmployeeEmail\u001b[39m \u001b[33m=\u001b[39m \u001b[36mawait\u001b[39m accountSetupPage\u001b[33m.\u001b[39mpage\u001b[33m.\u001b[39minputValue(accountSetupPage\u001b[33m.\u001b[39mselectors\u001b[33m.\u001b[39maddEmployeeEmailInput)\u001b[33m;\u001b[39m\n \u001b[90m 131 |\u001b[39m         \n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 132 |\u001b[39m         expect(\u001b[33mNewEmployeeName\u001b[39m)\u001b[33m.\u001b[39mtoMatch(\u001b[35m/^test\\w+$/\u001b[39m)\u001b[33m;\u001b[39m \u001b[90m// Should start with 'test' followed by random characters\u001b[39m\n \u001b[90m     |\u001b[39m                                 \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 133 |\u001b[39m         expect(\u001b[33mNewEmployeeEmail\u001b[39m)\u001b[33m.\u001b[39mtoMatch(\u001b[35m/^serena\\+\\w+@57blocks\\.com$/\u001b[39m)\u001b[33m;\u001b[39m \u001b[90m// Should match the email pattern\u001b[39m\n \u001b[90m 134 |\u001b[39m         \n \u001b[90m 135 |\u001b[39m         \u001b[90m// Submit the form\u001b[39m\u001b[0m\n\u001b[2m    at /Users/57block/workspace/OhHello/playwright_tests/tests/account_setup.spec.js:132:33\u001b[22m"
+                        },
+                        {
+                          "location": {
+                            "file": "/Users/57block/workspace/OhHello/playwright_tests/tests/account_setup.spec.js",
+                            "column": 47,
+                            "line": 281
+                          },
+                          "message": "TypeError: accountApi.getEmployees is not a function\n\n\u001b[0m \u001b[90m 279 |\u001b[39m     test\u001b[33m.\u001b[39mafterAll(\u001b[36masync\u001b[39m () \u001b[33m=>\u001b[39m {\n \u001b[90m 280 |\u001b[39m         \u001b[36mif\u001b[39m (context) {\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 281 |\u001b[39m             \u001b[36mconst\u001b[39m response \u001b[33m=\u001b[39m \u001b[36mawait\u001b[39m accountApi\u001b[33m.\u001b[39mgetEmployees(\u001b[35m1\u001b[39m\u001b[33m,\u001b[39m\u001b[35m100\u001b[39m\u001b[33m,\u001b[39m\u001b[32m'test'\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m     |\u001b[39m                                               \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 282 |\u001b[39m             \u001b[36mconst\u001b[39m employeeIds \u001b[33m=\u001b[39m response\u001b[33m.\u001b[39mdata\u001b[33m.\u001b[39mdata\u001b[33m.\u001b[39mmap(employee \u001b[33m=>\u001b[39m employee\u001b[33m.\u001b[39mid)\u001b[33m;\u001b[39m\n \u001b[90m 283 |\u001b[39m             \u001b[36mawait\u001b[39m accountApi\u001b[33m.\u001b[39mdeleteMultipleEmployees(employeeIds)\u001b[33m;\u001b[39m\n \u001b[90m 284 |\u001b[39m             \u001b[36mawait\u001b[39m context\u001b[33m.\u001b[39mclose()\u001b[33m;\u001b[39m\u001b[0m\n\u001b[2m    at /Users/57block/workspace/OhHello/playwright_tests/tests/account_setup.spec.js:281:47\u001b[22m"
+                        }
+                      ],
+                      "stdout": [
+                        {
+                          "text": "Error reading pagination total: locator.isVisible: Unexpected token \"=\" while parsing css selector \".ant-pagination-total-text, li[class*=\"ant-pagination-total-text\"], .ant-pagination .ant-pagination-total-text, [class*=\"total\"], text=/Total.*items?/i\". Did you mean to CSS.escape it?\n"
+                        },
+                        {
+                          "text": "Using current page count as fallback\n"
+                        },
+                        {
+                          "text": "Initial total count: 11, Has pagination: true\n"
+                        }
+                      ],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2025-08-01T09:19:36.822Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "screenshot",
+                          "contentType": "image/png",
+                          "path": "/Users/57block/workspace/OhHello/playwright_tests/screenshots/account_setup-Admin---Acco-6d50d-dd-employee-with-valid-data-chromium/test-failed-1.png"
+                        },
+                        {
+                          "name": "error-context",
+                          "contentType": "text/markdown",
+                          "path": "/Users/57block/workspace/OhHello/playwright_tests/screenshots/account_setup-Admin---Acco-6d50d-dd-employee-with-valid-data-chromium/error-context.md"
+                        }
+                      ],
+                      "errorLocation": {
+                        "file": "/Users/57block/workspace/OhHello/playwright_tests/tests/account_setup.spec.js",
+                        "column": 33,
+                        "line": 132
+                      }
+                    }
+                  ],
+                  "status": "unexpected"
+                }
+              ],
+              "id": "4f7b6c9d0b9092274f20-8ffbc589b060633bbdbd",
+              "file": "account_setup.spec.js",
+              "line": 118,
+              "column": 5
+            },
+            {
+              "title": "Add employee with empty fields shows submit button disabled",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 1,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 3393,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2025-08-01T09:19:46.737Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "4f7b6c9d0b9092274f20-68e85800e698573e8c9c",
+              "file": "account_setup.spec.js",
+              "line": 158,
+              "column": 5
+            },
+            {
+              "title": "Add employee with empty name shows error message",
+              "ok": false,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 1,
+                      "parallelIndex": 0,
                       "status": "timedOut",
-                      "duration": 30102,
+                      "duration": 30127,
                       "error": {
                         "message": "\u001b[31mTest timeout of 30000ms exceeded.\u001b[39m",
                         "stack": "\u001b[31mTest timeout of 30000ms exceeded.\u001b[39m"
@@ -317,28 +333,36 @@
                         },
                         {
                           "location": {
-                            "file": "/Users/57block/workspace/playwright_tests/pages/base_page.js",
-                            "column": 25,
-                            "line": 19
+                            "file": "/Users/57block/workspace/OhHello/playwright_tests/tests/account_setup.spec.js",
+                            "column": 47,
+                            "line": 281
                           },
-                          "message": "Error: page.click: Test ended.\nCall log:\n\u001b[2m  - waiting for locator('button:has-text(\"Submit\")')\u001b[22m\n\u001b[2m    - locator resolved to <button disabled type=\"submit\" class=\"ant-btn css-1biqptv css-var-r0 ant-btn-default ant-btn-color-default ant-btn-variant-outlined h-10 flex-1 text-sm _custom-btn_1d7zy_1 _custom-btn-1_1d7zy_1 _custom-btn-primary_1d7zy_23\">…</button>\u001b[22m\n\u001b[2m  - attempting click action\u001b[22m\n\u001b[2m    2 × waiting for element to be visible, enabled and stable\u001b[22m\n\u001b[2m      - element is not stable\u001b[22m\n\u001b[2m    - retrying click action\u001b[22m\n\u001b[2m    - waiting 20ms\u001b[22m\n\u001b[2m    2 × waiting for element to be visible, enabled and stable\u001b[22m\n\u001b[2m      - element is not stable\u001b[22m\n\u001b[2m    - retrying click action\u001b[22m\n\u001b[2m      - waiting 100ms\u001b[22m\n\u001b[2m    52 × waiting for element to be visible, enabled and stable\u001b[22m\n\u001b[2m       - element is not enabled\u001b[22m\n\u001b[2m     - retrying click action\u001b[22m\n\u001b[2m       - waiting 500ms\u001b[22m\n\n\n\u001b[90m   at \u001b[39m../pages/base_page.js:19\n\n\u001b[0m \u001b[90m 17 |\u001b[39m     \u001b[90m// Click on the element\u001b[39m\n \u001b[90m 18 |\u001b[39m     \u001b[36masync\u001b[39m click(selector) {\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 19 |\u001b[39m         \u001b[36mawait\u001b[39m \u001b[36mthis\u001b[39m\u001b[33m.\u001b[39mpage\u001b[33m.\u001b[39mclick(selector)\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                         \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 20 |\u001b[39m     }\n \u001b[90m 21 |\u001b[39m\n \u001b[90m 22 |\u001b[39m     \u001b[90m// Enter text into the element\u001b[39m\u001b[0m\n\u001b[2m    at AccountSetupPage.click (/Users/57block/workspace/playwright_tests/pages/base_page.js:19:25)\u001b[22m\n\u001b[2m    at /Users/57block/workspace/playwright_tests/tests/account_setup.spec.js:172:32\u001b[22m"
+                          "message": "TypeError: accountApi.getEmployees is not a function\n\n\u001b[0m \u001b[90m 279 |\u001b[39m     test\u001b[33m.\u001b[39mafterAll(\u001b[36masync\u001b[39m () \u001b[33m=>\u001b[39m {\n \u001b[90m 280 |\u001b[39m         \u001b[36mif\u001b[39m (context) {\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 281 |\u001b[39m             \u001b[36mconst\u001b[39m response \u001b[33m=\u001b[39m \u001b[36mawait\u001b[39m accountApi\u001b[33m.\u001b[39mgetEmployees(\u001b[35m1\u001b[39m\u001b[33m,\u001b[39m\u001b[35m100\u001b[39m\u001b[33m,\u001b[39m\u001b[32m'test'\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m     |\u001b[39m                                               \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 282 |\u001b[39m             \u001b[36mconst\u001b[39m employeeIds \u001b[33m=\u001b[39m response\u001b[33m.\u001b[39mdata\u001b[33m.\u001b[39mdata\u001b[33m.\u001b[39mmap(employee \u001b[33m=>\u001b[39m employee\u001b[33m.\u001b[39mid)\u001b[33m;\u001b[39m\n \u001b[90m 283 |\u001b[39m             \u001b[36mawait\u001b[39m accountApi\u001b[33m.\u001b[39mdeleteMultipleEmployees(employeeIds)\u001b[33m;\u001b[39m\n \u001b[90m 284 |\u001b[39m             \u001b[36mawait\u001b[39m context\u001b[33m.\u001b[39mclose()\u001b[33m;\u001b[39m\u001b[0m\n\u001b[2m    at /Users/57block/workspace/OhHello/playwright_tests/tests/account_setup.spec.js:281:47\u001b[22m"
+                        },
+                        {
+                          "location": {
+                            "file": "/Users/57block/workspace/OhHello/playwright_tests/pages/admin/account_setup.js",
+                            "column": 69,
+                            "line": 63
+                          },
+                          "message": "Error: locator.textContent: Test ended.\nCall log:\n\u001b[2m  - waiting for locator('div[class*=\"ant-form-item-explain-error\"]')\u001b[22m\n\n\n\u001b[90m   at \u001b[39m../pages/admin/account_setup.js:63\n\n\u001b[0m \u001b[90m 61 |\u001b[39m\n \u001b[90m 62 |\u001b[39m     \u001b[36masync\u001b[39m \u001b[33mGetAddEmployeeErrorMessage\u001b[39m() {\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 63 |\u001b[39m         \u001b[36mreturn\u001b[39m \u001b[36mawait\u001b[39m \u001b[36mthis\u001b[39m\u001b[33m.\u001b[39mpage\u001b[33m.\u001b[39mlocator(\u001b[36mthis\u001b[39m\u001b[33m.\u001b[39mselectors\u001b[33m.\u001b[39merrorMessage)\u001b[33m.\u001b[39mtextContent()\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                                                                     \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 64 |\u001b[39m     }\n \u001b[90m 65 |\u001b[39m\n \u001b[90m 66 |\u001b[39m     \u001b[36masync\u001b[39m \u001b[33mGetModalContent\u001b[39m() {\u001b[0m\n\u001b[2m    at AccountSetupPage.GetAddEmployeeErrorMessage (/Users/57block/workspace/OhHello/playwright_tests/pages/admin/account_setup.js:63:69)\u001b[22m\n\u001b[2m    at /Users/57block/workspace/OhHello/playwright_tests/tests/account_setup.spec.js:189:53\u001b[22m"
                         }
                       ],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2025-07-31T08:19:44.101Z",
+                      "startTime": "2025-08-01T09:19:59.157Z",
                       "annotations": [],
                       "attachments": [
                         {
                           "name": "screenshot",
                           "contentType": "image/png",
-                          "path": "/Users/57block/workspace/playwright_tests/screenshots/account_setup-Admin---Acco-a1a84-with-submit-button-disabled-chromium/test-failed-1.png"
+                          "path": "/Users/57block/workspace/OhHello/playwright_tests/screenshots/account_setup-Admin---Acco-799e2-ty-name-shows-error-message-chromium/test-failed-1.png"
                         },
                         {
                           "name": "error-context",
                           "contentType": "text/markdown",
-                          "path": "/Users/57block/workspace/playwright_tests/screenshots/account_setup-Admin---Acco-a1a84-with-submit-button-disabled-chromium/error-context.md"
+                          "path": "/Users/57block/workspace/OhHello/playwright_tests/screenshots/account_setup-Admin---Acco-799e2-ty-name-shows-error-message-chromium/error-context.md"
                         }
                       ]
                     }
@@ -346,48 +370,14 @@
                   "status": "unexpected"
                 }
               ],
-              "id": "4f7b6c9d0b9092274f20-b4e7108db4a03fcaa1e0",
-              "file": "account_setup.spec.js",
-              "line": 163,
-              "column": 5
-            },
-            {
-              "title": "Add employee with empty name shows error message",
-              "ok": true,
-              "tags": [],
-              "tests": [
-                {
-                  "timeout": 30000,
-                  "annotations": [],
-                  "expectedStatus": "passed",
-                  "projectId": "chromium",
-                  "projectName": "chromium",
-                  "results": [
-                    {
-                      "workerIndex": -1,
-                      "parallelIndex": -1,
-                      "status": "skipped",
-                      "duration": 0,
-                      "errors": [],
-                      "stdout": [],
-                      "stderr": [],
-                      "retry": 0,
-                      "startTime": "2025-07-31T08:20:14.875Z",
-                      "annotations": [],
-                      "attachments": []
-                    }
-                  ],
-                  "status": "skipped"
-                }
-              ],
               "id": "4f7b6c9d0b9092274f20-c3944946b4c9e90e059d",
               "file": "account_setup.spec.js",
-              "line": 183,
+              "line": 177,
               "column": 5
             },
             {
               "title": "Add employee with empty email shows error message",
-              "ok": true,
+              "ok": false,
               "tags": [],
               "tests": [
                 {
@@ -398,30 +388,65 @@
                   "projectName": "chromium",
                   "results": [
                     {
-                      "workerIndex": -1,
-                      "parallelIndex": -1,
-                      "status": "skipped",
-                      "duration": 0,
-                      "errors": [],
+                      "workerIndex": 2,
+                      "parallelIndex": 0,
+                      "status": "timedOut",
+                      "duration": 30144,
+                      "error": {
+                        "message": "\u001b[31mTest timeout of 30000ms exceeded.\u001b[39m",
+                        "stack": "\u001b[31mTest timeout of 30000ms exceeded.\u001b[39m"
+                      },
+                      "errors": [
+                        {
+                          "message": "\u001b[31mTest timeout of 30000ms exceeded.\u001b[39m"
+                        },
+                        {
+                          "location": {
+                            "file": "/Users/57block/workspace/OhHello/playwright_tests/tests/account_setup.spec.js",
+                            "column": 47,
+                            "line": 281
+                          },
+                          "message": "TypeError: accountApi.getEmployees is not a function\n\n\u001b[0m \u001b[90m 279 |\u001b[39m     test\u001b[33m.\u001b[39mafterAll(\u001b[36masync\u001b[39m () \u001b[33m=>\u001b[39m {\n \u001b[90m 280 |\u001b[39m         \u001b[36mif\u001b[39m (context) {\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 281 |\u001b[39m             \u001b[36mconst\u001b[39m response \u001b[33m=\u001b[39m \u001b[36mawait\u001b[39m accountApi\u001b[33m.\u001b[39mgetEmployees(\u001b[35m1\u001b[39m\u001b[33m,\u001b[39m\u001b[35m100\u001b[39m\u001b[33m,\u001b[39m\u001b[32m'test'\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m     |\u001b[39m                                               \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 282 |\u001b[39m             \u001b[36mconst\u001b[39m employeeIds \u001b[33m=\u001b[39m response\u001b[33m.\u001b[39mdata\u001b[33m.\u001b[39mdata\u001b[33m.\u001b[39mmap(employee \u001b[33m=>\u001b[39m employee\u001b[33m.\u001b[39mid)\u001b[33m;\u001b[39m\n \u001b[90m 283 |\u001b[39m             \u001b[36mawait\u001b[39m accountApi\u001b[33m.\u001b[39mdeleteMultipleEmployees(employeeIds)\u001b[33m;\u001b[39m\n \u001b[90m 284 |\u001b[39m             \u001b[36mawait\u001b[39m context\u001b[33m.\u001b[39mclose()\u001b[33m;\u001b[39m\u001b[0m\n\u001b[2m    at /Users/57block/workspace/OhHello/playwright_tests/tests/account_setup.spec.js:281:47\u001b[22m"
+                        },
+                        {
+                          "location": {
+                            "file": "/Users/57block/workspace/OhHello/playwright_tests/pages/base_page.js",
+                            "column": 25,
+                            "line": 19
+                          },
+                          "message": "Error: page.click: Test ended.\nCall log:\n\u001b[2m  - waiting for locator('button:has-text(\"Submit\")')\u001b[22m\n\u001b[2m    - locator resolved to <button disabled type=\"submit\" class=\"ant-btn css-1biqptv css-var-r0 ant-btn-default ant-btn-color-default ant-btn-variant-outlined h-10 flex-1 text-sm _custom-btn_1d7zy_1 _custom-btn-1_1d7zy_1 _custom-btn-primary_1d7zy_23\">…</button>\u001b[22m\n\u001b[2m  - attempting click action\u001b[22m\n\u001b[2m    2 × waiting for element to be visible, enabled and stable\u001b[22m\n\u001b[2m      - element is not enabled\u001b[22m\n\u001b[2m    - retrying click action\u001b[22m\n\u001b[2m    - waiting 20ms\u001b[22m\n\u001b[2m    2 × waiting for element to be visible, enabled and stable\u001b[22m\n\u001b[2m      - element is not enabled\u001b[22m\n\u001b[2m    - retrying click action\u001b[22m\n\u001b[2m      - waiting 100ms\u001b[22m\n\u001b[2m    51 × waiting for element to be visible, enabled and stable\u001b[22m\n\u001b[2m       - element is not enabled\u001b[22m\n\u001b[2m     - retrying click action\u001b[22m\n\u001b[2m       - waiting 500ms\u001b[22m\n\n\n\u001b[90m   at \u001b[39m../pages/base_page.js:19\n\n\u001b[0m \u001b[90m 17 |\u001b[39m     \u001b[90m// Click on the element\u001b[39m\n \u001b[90m 18 |\u001b[39m     \u001b[36masync\u001b[39m click(selector) {\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 19 |\u001b[39m         \u001b[36mawait\u001b[39m \u001b[36mthis\u001b[39m\u001b[33m.\u001b[39mpage\u001b[33m.\u001b[39mclick(selector)\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                         \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 20 |\u001b[39m     }\n \u001b[90m 21 |\u001b[39m\n \u001b[90m 22 |\u001b[39m     \u001b[90m// Enter text into the element\u001b[39m\u001b[0m\n\u001b[2m    at AccountSetupPage.click (/Users/57block/workspace/OhHello/playwright_tests/pages/base_page.js:19:25)\u001b[22m\n\u001b[2m    at /Users/57block/workspace/OhHello/playwright_tests/tests/account_setup.spec.js:206:32\u001b[22m"
+                        }
+                      ],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2025-07-31T08:20:14.876Z",
+                      "startTime": "2025-08-01T09:20:30.903Z",
                       "annotations": [],
-                      "attachments": []
+                      "attachments": [
+                        {
+                          "name": "screenshot",
+                          "contentType": "image/png",
+                          "path": "/Users/57block/workspace/OhHello/playwright_tests/screenshots/account_setup-Admin---Acco-ea0d9-y-email-shows-error-message-chromium/test-failed-1.png"
+                        },
+                        {
+                          "name": "error-context",
+                          "contentType": "text/markdown",
+                          "path": "/Users/57block/workspace/OhHello/playwright_tests/screenshots/account_setup-Admin---Acco-ea0d9-y-email-shows-error-message-chromium/error-context.md"
+                        }
+                      ]
                     }
                   ],
-                  "status": "skipped"
+                  "status": "unexpected"
                 }
               ],
               "id": "4f7b6c9d0b9092274f20-2dc4f1dffc2111247029",
               "file": "account_setup.spec.js",
-              "line": 200,
+              "line": 194,
               "column": 5
             },
             {
               "title": "Add employee with invalid email format shows error",
-              "ok": true,
+              "ok": false,
               "tags": [],
               "tests": [
                 {
@@ -432,30 +457,65 @@
                   "projectName": "chromium",
                   "results": [
                     {
-                      "workerIndex": -1,
-                      "parallelIndex": -1,
-                      "status": "skipped",
-                      "duration": 0,
-                      "errors": [],
+                      "workerIndex": 3,
+                      "parallelIndex": 0,
+                      "status": "timedOut",
+                      "duration": 30136,
+                      "error": {
+                        "message": "\u001b[31mTest timeout of 30000ms exceeded.\u001b[39m",
+                        "stack": "\u001b[31mTest timeout of 30000ms exceeded.\u001b[39m"
+                      },
+                      "errors": [
+                        {
+                          "message": "\u001b[31mTest timeout of 30000ms exceeded.\u001b[39m"
+                        },
+                        {
+                          "location": {
+                            "file": "/Users/57block/workspace/OhHello/playwright_tests/tests/account_setup.spec.js",
+                            "column": 47,
+                            "line": 281
+                          },
+                          "message": "TypeError: accountApi.getEmployees is not a function\n\n\u001b[0m \u001b[90m 279 |\u001b[39m     test\u001b[33m.\u001b[39mafterAll(\u001b[36masync\u001b[39m () \u001b[33m=>\u001b[39m {\n \u001b[90m 280 |\u001b[39m         \u001b[36mif\u001b[39m (context) {\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 281 |\u001b[39m             \u001b[36mconst\u001b[39m response \u001b[33m=\u001b[39m \u001b[36mawait\u001b[39m accountApi\u001b[33m.\u001b[39mgetEmployees(\u001b[35m1\u001b[39m\u001b[33m,\u001b[39m\u001b[35m100\u001b[39m\u001b[33m,\u001b[39m\u001b[32m'test'\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m     |\u001b[39m                                               \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 282 |\u001b[39m             \u001b[36mconst\u001b[39m employeeIds \u001b[33m=\u001b[39m response\u001b[33m.\u001b[39mdata\u001b[33m.\u001b[39mdata\u001b[33m.\u001b[39mmap(employee \u001b[33m=>\u001b[39m employee\u001b[33m.\u001b[39mid)\u001b[33m;\u001b[39m\n \u001b[90m 283 |\u001b[39m             \u001b[36mawait\u001b[39m accountApi\u001b[33m.\u001b[39mdeleteMultipleEmployees(employeeIds)\u001b[33m;\u001b[39m\n \u001b[90m 284 |\u001b[39m             \u001b[36mawait\u001b[39m context\u001b[33m.\u001b[39mclose()\u001b[33m;\u001b[39m\u001b[0m\n\u001b[2m    at /Users/57block/workspace/OhHello/playwright_tests/tests/account_setup.spec.js:281:47\u001b[22m"
+                        },
+                        {
+                          "location": {
+                            "file": "/Users/57block/workspace/OhHello/playwright_tests/pages/base_page.js",
+                            "column": 25,
+                            "line": 19
+                          },
+                          "message": "Error: page.click: Test ended.\nCall log:\n\u001b[2m  - waiting for locator('button:has-text(\"Submit\")')\u001b[22m\n\u001b[2m    - locator resolved to <button disabled type=\"submit\" class=\"ant-btn css-1biqptv css-var-r0 ant-btn-default ant-btn-color-default ant-btn-variant-outlined h-10 flex-1 text-sm _custom-btn_1d7zy_1 _custom-btn-1_1d7zy_1 _custom-btn-primary_1d7zy_23\">…</button>\u001b[22m\n\u001b[2m  - attempting click action\u001b[22m\n\u001b[2m    2 × waiting for element to be visible, enabled and stable\u001b[22m\n\u001b[2m      - element is not stable\u001b[22m\n\u001b[2m    - retrying click action\u001b[22m\n\u001b[2m    - waiting 20ms\u001b[22m\n\u001b[2m    2 × waiting for element to be visible, enabled and stable\u001b[22m\n\u001b[2m      - element is not stable\u001b[22m\n\u001b[2m    - retrying click action\u001b[22m\n\u001b[2m      - waiting 100ms\u001b[22m\n\u001b[2m    52 × waiting for element to be visible, enabled and stable\u001b[22m\n\u001b[2m       - element is not enabled\u001b[22m\n\u001b[2m     - retrying click action\u001b[22m\n\u001b[2m       - waiting 500ms\u001b[22m\n\n\n\u001b[90m   at \u001b[39m../pages/base_page.js:19\n\n\u001b[0m \u001b[90m 17 |\u001b[39m     \u001b[90m// Click on the element\u001b[39m\n \u001b[90m 18 |\u001b[39m     \u001b[36masync\u001b[39m click(selector) {\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 19 |\u001b[39m         \u001b[36mawait\u001b[39m \u001b[36mthis\u001b[39m\u001b[33m.\u001b[39mpage\u001b[33m.\u001b[39mclick(selector)\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                         \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 20 |\u001b[39m     }\n \u001b[90m 21 |\u001b[39m\n \u001b[90m 22 |\u001b[39m     \u001b[90m// Enter text into the element\u001b[39m\u001b[0m\n\u001b[2m    at AccountSetupPage.click (/Users/57block/workspace/OhHello/playwright_tests/pages/base_page.js:19:25)\u001b[22m\n\u001b[2m    at /Users/57block/workspace/OhHello/playwright_tests/tests/account_setup.spec.js:225:32\u001b[22m"
+                        }
+                      ],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2025-07-31T08:20:14.876Z",
+                      "startTime": "2025-08-01T09:21:11.444Z",
                       "annotations": [],
-                      "attachments": []
+                      "attachments": [
+                        {
+                          "name": "screenshot",
+                          "contentType": "image/png",
+                          "path": "/Users/57block/workspace/OhHello/playwright_tests/screenshots/account_setup-Admin---Acco-a8ef7-id-email-format-shows-error-chromium/test-failed-1.png"
+                        },
+                        {
+                          "name": "error-context",
+                          "contentType": "text/markdown",
+                          "path": "/Users/57block/workspace/OhHello/playwright_tests/screenshots/account_setup-Admin---Acco-a8ef7-id-email-format-shows-error-chromium/error-context.md"
+                        }
+                      ]
                     }
                   ],
-                  "status": "skipped"
+                  "status": "unexpected"
                 }
               ],
               "id": "4f7b6c9d0b9092274f20-29966e44fcd64fc477b0",
               "file": "account_setup.spec.js",
-              "line": 220,
+              "line": 214,
               "column": 5
             },
             {
               "title": "Add employee with existing email shows error",
-              "ok": true,
+              "ok": false,
               "tags": [],
               "tests": [
                 {
@@ -466,30 +526,80 @@
                   "projectName": "chromium",
                   "results": [
                     {
-                      "workerIndex": -1,
-                      "parallelIndex": -1,
-                      "status": "skipped",
-                      "duration": 0,
-                      "errors": [],
-                      "stdout": [],
+                      "workerIndex": 4,
+                      "parallelIndex": 0,
+                      "status": "failed",
+                      "duration": 4834,
+                      "error": {
+                        "message": "Error: locator.textContent: Error: strict mode violation: locator('div[class*=\"ant-message-notice-content\"]') resolved to 2 elements:\n    1) <div class=\"ant-message-notice ant-message-notice-success [&_.ant-message-notice-content]:border [&_.ant-message-notice-content]:border-[#FBC3CA] [&_.ant-message-notice-content]:bg-red-light font-medium text-base text-[rgba(0,0,0,.85)]\">…</div> aka locator('div').filter({ hasText: 'Account with the email' }).nth(2)\n    2) <div class=\"ant-message-notice-content\">…</div> aka locator('div').filter({ hasText: 'Account with the email' }).nth(3)\n\nCall log:\n\u001b[2m  - waiting for locator('div[class*=\"ant-message-notice-content\"]')\u001b[22m\n",
+                        "stack": "Error: locator.textContent: Error: strict mode violation: locator('div[class*=\"ant-message-notice-content\"]') resolved to 2 elements:\n    1) <div class=\"ant-message-notice ant-message-notice-success [&_.ant-message-notice-content]:border [&_.ant-message-notice-content]:border-[#FBC3CA] [&_.ant-message-notice-content]:bg-red-light font-medium text-base text-[rgba(0,0,0,.85)]\">…</div> aka locator('div').filter({ hasText: 'Account with the email' }).nth(2)\n    2) <div class=\"ant-message-notice-content\">…</div> aka locator('div').filter({ hasText: 'Account with the email' }).nth(3)\n\nCall log:\n\u001b[2m  - waiting for locator('div[class*=\"ant-message-notice-content\"]')\u001b[22m\n\n    at AccountSetupPage.GetNoticeMessage (/Users/57block/workspace/OhHello/playwright_tests/pages/admin/account_setup.js:59:70)\n    at /Users/57block/workspace/OhHello/playwright_tests/tests/account_setup.spec.js:249:53",
+                        "location": {
+                          "file": "/Users/57block/workspace/OhHello/playwright_tests/pages/admin/account_setup.js",
+                          "column": 70,
+                          "line": 59
+                        },
+                        "snippet": "\u001b[90m   at \u001b[39m../pages/admin/account_setup.js:59\n\n\u001b[0m \u001b[90m 57 |\u001b[39m\n \u001b[90m 58 |\u001b[39m     \u001b[36masync\u001b[39m \u001b[33mGetNoticeMessage\u001b[39m() {\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 59 |\u001b[39m         \u001b[36mreturn\u001b[39m \u001b[36mawait\u001b[39m \u001b[36mthis\u001b[39m\u001b[33m.\u001b[39mpage\u001b[33m.\u001b[39mlocator(\u001b[36mthis\u001b[39m\u001b[33m.\u001b[39mselectors\u001b[33m.\u001b[39mnoticeWrapper)\u001b[33m.\u001b[39mtextContent()\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                                                                      \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 60 |\u001b[39m     }\n \u001b[90m 61 |\u001b[39m\n \u001b[90m 62 |\u001b[39m     \u001b[36masync\u001b[39m \u001b[33mGetAddEmployeeErrorMessage\u001b[39m() {\u001b[0m"
+                      },
+                      "errors": [
+                        {
+                          "location": {
+                            "file": "/Users/57block/workspace/OhHello/playwright_tests/pages/admin/account_setup.js",
+                            "column": 70,
+                            "line": 59
+                          },
+                          "message": "Error: locator.textContent: Error: strict mode violation: locator('div[class*=\"ant-message-notice-content\"]') resolved to 2 elements:\n    1) <div class=\"ant-message-notice ant-message-notice-success [&_.ant-message-notice-content]:border [&_.ant-message-notice-content]:border-[#FBC3CA] [&_.ant-message-notice-content]:bg-red-light font-medium text-base text-[rgba(0,0,0,.85)]\">…</div> aka locator('div').filter({ hasText: 'Account with the email' }).nth(2)\n    2) <div class=\"ant-message-notice-content\">…</div> aka locator('div').filter({ hasText: 'Account with the email' }).nth(3)\n\nCall log:\n\u001b[2m  - waiting for locator('div[class*=\"ant-message-notice-content\"]')\u001b[22m\n\n\n\u001b[90m   at \u001b[39m../pages/admin/account_setup.js:59\n\n\u001b[0m \u001b[90m 57 |\u001b[39m\n \u001b[90m 58 |\u001b[39m     \u001b[36masync\u001b[39m \u001b[33mGetNoticeMessage\u001b[39m() {\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 59 |\u001b[39m         \u001b[36mreturn\u001b[39m \u001b[36mawait\u001b[39m \u001b[36mthis\u001b[39m\u001b[33m.\u001b[39mpage\u001b[33m.\u001b[39mlocator(\u001b[36mthis\u001b[39m\u001b[33m.\u001b[39mselectors\u001b[33m.\u001b[39mnoticeWrapper)\u001b[33m.\u001b[39mtextContent()\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                                                                      \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 60 |\u001b[39m     }\n \u001b[90m 61 |\u001b[39m\n \u001b[90m 62 |\u001b[39m     \u001b[36masync\u001b[39m \u001b[33mGetAddEmployeeErrorMessage\u001b[39m() {\u001b[0m\n\u001b[2m    at AccountSetupPage.GetNoticeMessage (/Users/57block/workspace/OhHello/playwright_tests/pages/admin/account_setup.js:59:70)\u001b[22m\n\u001b[2m    at /Users/57block/workspace/OhHello/playwright_tests/tests/account_setup.spec.js:249:53\u001b[22m"
+                        },
+                        {
+                          "location": {
+                            "file": "/Users/57block/workspace/OhHello/playwright_tests/tests/account_setup.spec.js",
+                            "column": 47,
+                            "line": 281
+                          },
+                          "message": "TypeError: accountApi.getEmployees is not a function\n\n\u001b[0m \u001b[90m 279 |\u001b[39m     test\u001b[33m.\u001b[39mafterAll(\u001b[36masync\u001b[39m () \u001b[33m=>\u001b[39m {\n \u001b[90m 280 |\u001b[39m         \u001b[36mif\u001b[39m (context) {\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 281 |\u001b[39m             \u001b[36mconst\u001b[39m response \u001b[33m=\u001b[39m \u001b[36mawait\u001b[39m accountApi\u001b[33m.\u001b[39mgetEmployees(\u001b[35m1\u001b[39m\u001b[33m,\u001b[39m\u001b[35m100\u001b[39m\u001b[33m,\u001b[39m\u001b[32m'test'\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m     |\u001b[39m                                               \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 282 |\u001b[39m             \u001b[36mconst\u001b[39m employeeIds \u001b[33m=\u001b[39m response\u001b[33m.\u001b[39mdata\u001b[33m.\u001b[39mdata\u001b[33m.\u001b[39mmap(employee \u001b[33m=>\u001b[39m employee\u001b[33m.\u001b[39mid)\u001b[33m;\u001b[39m\n \u001b[90m 283 |\u001b[39m             \u001b[36mawait\u001b[39m accountApi\u001b[33m.\u001b[39mdeleteMultipleEmployees(employeeIds)\u001b[33m;\u001b[39m\n \u001b[90m 284 |\u001b[39m             \u001b[36mawait\u001b[39m context\u001b[33m.\u001b[39mclose()\u001b[33m;\u001b[39m\u001b[0m\n\u001b[2m    at /Users/57block/workspace/OhHello/playwright_tests/tests/account_setup.spec.js:281:47\u001b[22m"
+                        }
+                      ],
+                      "stdout": [
+                        {
+                          "text": "Error reading pagination total: locator.isVisible: Unexpected token \"=\" while parsing css selector \".ant-pagination-total-text, li[class*=\"ant-pagination-total-text\"], .ant-pagination .ant-pagination-total-text, [class*=\"total\"], text=/Total.*items?/i\". Did you mean to CSS.escape it?\n"
+                        },
+                        {
+                          "text": "Using current page count as fallback\n"
+                        }
+                      ],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2025-07-31T08:20:14.877Z",
+                      "startTime": "2025-08-01T09:21:52.318Z",
                       "annotations": [],
-                      "attachments": []
+                      "attachments": [
+                        {
+                          "name": "screenshot",
+                          "contentType": "image/png",
+                          "path": "/Users/57block/workspace/OhHello/playwright_tests/screenshots/account_setup-Admin---Acco-94422--existing-email-shows-error-chromium/test-failed-1.png"
+                        },
+                        {
+                          "name": "error-context",
+                          "contentType": "text/markdown",
+                          "path": "/Users/57block/workspace/OhHello/playwright_tests/screenshots/account_setup-Admin---Acco-94422--existing-email-shows-error-chromium/error-context.md"
+                        }
+                      ],
+                      "errorLocation": {
+                        "file": "/Users/57block/workspace/OhHello/playwright_tests/pages/admin/account_setup.js",
+                        "column": 70,
+                        "line": 59
+                      }
                     }
                   ],
-                  "status": "skipped"
+                  "status": "unexpected"
                 }
               ],
               "id": "4f7b6c9d0b9092274f20-f82e417e799ac656fbde",
               "file": "account_setup.spec.js",
-              "line": 238,
+              "line": 233,
               "column": 5
             },
             {
               "title": "Upload icon is clickable",
-              "ok": true,
+              "ok": false,
               "tags": [],
               "tests": [
                 {
@@ -500,30 +610,73 @@
                   "projectName": "chromium",
                   "results": [
                     {
-                      "workerIndex": -1,
-                      "parallelIndex": -1,
-                      "status": "skipped",
-                      "duration": 0,
-                      "errors": [],
+                      "workerIndex": 5,
+                      "parallelIndex": 0,
+                      "status": "failed",
+                      "duration": 2924,
+                      "error": {
+                        "message": "Error: page.waitForSelector: selector: expected string, got undefined",
+                        "stack": "Error: page.waitForSelector: selector: expected string, got undefined\n    at AccountSetupPage.waitForElement (/Users/57block/workspace/OhHello/playwright_tests/pages/base_page.js:14:25)\n    at /Users/57block/workspace/OhHello/playwright_tests/tests/account_setup.spec.js:261:32",
+                        "location": {
+                          "file": "/Users/57block/workspace/OhHello/playwright_tests/pages/base_page.js",
+                          "column": 25,
+                          "line": 14
+                        },
+                        "snippet": "\u001b[90m   at \u001b[39m../pages/base_page.js:14\n\n\u001b[0m \u001b[90m 12 |\u001b[39m     \u001b[90m// Wait for the element to be visible\u001b[39m\n \u001b[90m 13 |\u001b[39m     \u001b[36masync\u001b[39m waitForElement(selector\u001b[33m,\u001b[39m timeout \u001b[33m=\u001b[39m \u001b[35m30000\u001b[39m) {\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 14 |\u001b[39m         \u001b[36mawait\u001b[39m \u001b[36mthis\u001b[39m\u001b[33m.\u001b[39mpage\u001b[33m.\u001b[39mwaitForSelector(selector\u001b[33m,\u001b[39m { timeout })\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                         \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 15 |\u001b[39m     }\n \u001b[90m 16 |\u001b[39m\n \u001b[90m 17 |\u001b[39m     \u001b[90m// Click on the element\u001b[39m\u001b[0m"
+                      },
+                      "errors": [
+                        {
+                          "location": {
+                            "file": "/Users/57block/workspace/OhHello/playwright_tests/pages/base_page.js",
+                            "column": 25,
+                            "line": 14
+                          },
+                          "message": "Error: page.waitForSelector: selector: expected string, got undefined\n\n\u001b[90m   at \u001b[39m../pages/base_page.js:14\n\n\u001b[0m \u001b[90m 12 |\u001b[39m     \u001b[90m// Wait for the element to be visible\u001b[39m\n \u001b[90m 13 |\u001b[39m     \u001b[36masync\u001b[39m waitForElement(selector\u001b[33m,\u001b[39m timeout \u001b[33m=\u001b[39m \u001b[35m30000\u001b[39m) {\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 14 |\u001b[39m         \u001b[36mawait\u001b[39m \u001b[36mthis\u001b[39m\u001b[33m.\u001b[39mpage\u001b[33m.\u001b[39mwaitForSelector(selector\u001b[33m,\u001b[39m { timeout })\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                         \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 15 |\u001b[39m     }\n \u001b[90m 16 |\u001b[39m\n \u001b[90m 17 |\u001b[39m     \u001b[90m// Click on the element\u001b[39m\u001b[0m\n\u001b[2m    at AccountSetupPage.waitForElement (/Users/57block/workspace/OhHello/playwright_tests/pages/base_page.js:14:25)\u001b[22m\n\u001b[2m    at /Users/57block/workspace/OhHello/playwright_tests/tests/account_setup.spec.js:261:32\u001b[22m"
+                        },
+                        {
+                          "location": {
+                            "file": "/Users/57block/workspace/OhHello/playwright_tests/tests/account_setup.spec.js",
+                            "column": 47,
+                            "line": 281
+                          },
+                          "message": "TypeError: accountApi.getEmployees is not a function\n\n\u001b[0m \u001b[90m 279 |\u001b[39m     test\u001b[33m.\u001b[39mafterAll(\u001b[36masync\u001b[39m () \u001b[33m=>\u001b[39m {\n \u001b[90m 280 |\u001b[39m         \u001b[36mif\u001b[39m (context) {\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 281 |\u001b[39m             \u001b[36mconst\u001b[39m response \u001b[33m=\u001b[39m \u001b[36mawait\u001b[39m accountApi\u001b[33m.\u001b[39mgetEmployees(\u001b[35m1\u001b[39m\u001b[33m,\u001b[39m\u001b[35m100\u001b[39m\u001b[33m,\u001b[39m\u001b[32m'test'\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m     |\u001b[39m                                               \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 282 |\u001b[39m             \u001b[36mconst\u001b[39m employeeIds \u001b[33m=\u001b[39m response\u001b[33m.\u001b[39mdata\u001b[33m.\u001b[39mdata\u001b[33m.\u001b[39mmap(employee \u001b[33m=>\u001b[39m employee\u001b[33m.\u001b[39mid)\u001b[33m;\u001b[39m\n \u001b[90m 283 |\u001b[39m             \u001b[36mawait\u001b[39m accountApi\u001b[33m.\u001b[39mdeleteMultipleEmployees(employeeIds)\u001b[33m;\u001b[39m\n \u001b[90m 284 |\u001b[39m             \u001b[36mawait\u001b[39m context\u001b[33m.\u001b[39mclose()\u001b[33m;\u001b[39m\u001b[0m\n\u001b[2m    at /Users/57block/workspace/OhHello/playwright_tests/tests/account_setup.spec.js:281:47\u001b[22m"
+                        }
+                      ],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2025-07-31T08:20:14.878Z",
+                      "startTime": "2025-08-01T09:22:07.482Z",
                       "annotations": [],
-                      "attachments": []
+                      "attachments": [
+                        {
+                          "name": "screenshot",
+                          "contentType": "image/png",
+                          "path": "/Users/57block/workspace/OhHello/playwright_tests/screenshots/account_setup-Admin---Acco-91a66-ts-Upload-icon-is-clickable-chromium/test-failed-1.png"
+                        },
+                        {
+                          "name": "error-context",
+                          "contentType": "text/markdown",
+                          "path": "/Users/57block/workspace/OhHello/playwright_tests/screenshots/account_setup-Admin---Acco-91a66-ts-Upload-icon-is-clickable-chromium/error-context.md"
+                        }
+                      ],
+                      "errorLocation": {
+                        "file": "/Users/57block/workspace/OhHello/playwright_tests/pages/base_page.js",
+                        "column": 25,
+                        "line": 14
+                      }
                     }
                   ],
-                  "status": "skipped"
+                  "status": "unexpected"
                 }
               ],
               "id": "4f7b6c9d0b9092274f20-1112a6cdf3e9577ef767",
               "file": "account_setup.spec.js",
-              "line": 260,
+              "line": 258,
               "column": 5
             },
             {
               "title": "Download template icon is clickable",
-              "ok": true,
+              "ok": false,
               "tags": [],
               "tests": [
                 {
@@ -534,127 +687,68 @@
                   "projectName": "chromium",
                   "results": [
                     {
-                      "workerIndex": -1,
-                      "parallelIndex": -1,
-                      "status": "skipped",
-                      "duration": 0,
-                      "errors": [],
+                      "workerIndex": 6,
+                      "parallelIndex": 0,
+                      "status": "failed",
+                      "duration": 2623,
+                      "error": {
+                        "message": "Error: page.waitForSelector: selector: expected string, got undefined",
+                        "stack": "Error: page.waitForSelector: selector: expected string, got undefined\n    at AccountSetupPage.waitForElement (/Users/57block/workspace/OhHello/playwright_tests/pages/base_page.js:14:25)\n    at /Users/57block/workspace/OhHello/playwright_tests/tests/account_setup.spec.js:270:32",
+                        "location": {
+                          "file": "/Users/57block/workspace/OhHello/playwright_tests/pages/base_page.js",
+                          "column": 25,
+                          "line": 14
+                        },
+                        "snippet": "\u001b[90m   at \u001b[39m../pages/base_page.js:14\n\n\u001b[0m \u001b[90m 12 |\u001b[39m     \u001b[90m// Wait for the element to be visible\u001b[39m\n \u001b[90m 13 |\u001b[39m     \u001b[36masync\u001b[39m waitForElement(selector\u001b[33m,\u001b[39m timeout \u001b[33m=\u001b[39m \u001b[35m30000\u001b[39m) {\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 14 |\u001b[39m         \u001b[36mawait\u001b[39m \u001b[36mthis\u001b[39m\u001b[33m.\u001b[39mpage\u001b[33m.\u001b[39mwaitForSelector(selector\u001b[33m,\u001b[39m { timeout })\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                         \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 15 |\u001b[39m     }\n \u001b[90m 16 |\u001b[39m\n \u001b[90m 17 |\u001b[39m     \u001b[90m// Click on the element\u001b[39m\u001b[0m"
+                      },
+                      "errors": [
+                        {
+                          "location": {
+                            "file": "/Users/57block/workspace/OhHello/playwright_tests/pages/base_page.js",
+                            "column": 25,
+                            "line": 14
+                          },
+                          "message": "Error: page.waitForSelector: selector: expected string, got undefined\n\n\u001b[90m   at \u001b[39m../pages/base_page.js:14\n\n\u001b[0m \u001b[90m 12 |\u001b[39m     \u001b[90m// Wait for the element to be visible\u001b[39m\n \u001b[90m 13 |\u001b[39m     \u001b[36masync\u001b[39m waitForElement(selector\u001b[33m,\u001b[39m timeout \u001b[33m=\u001b[39m \u001b[35m30000\u001b[39m) {\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 14 |\u001b[39m         \u001b[36mawait\u001b[39m \u001b[36mthis\u001b[39m\u001b[33m.\u001b[39mpage\u001b[33m.\u001b[39mwaitForSelector(selector\u001b[33m,\u001b[39m { timeout })\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                         \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 15 |\u001b[39m     }\n \u001b[90m 16 |\u001b[39m\n \u001b[90m 17 |\u001b[39m     \u001b[90m// Click on the element\u001b[39m\u001b[0m\n\u001b[2m    at AccountSetupPage.waitForElement (/Users/57block/workspace/OhHello/playwright_tests/pages/base_page.js:14:25)\u001b[22m\n\u001b[2m    at /Users/57block/workspace/OhHello/playwright_tests/tests/account_setup.spec.js:270:32\u001b[22m"
+                        },
+                        {
+                          "location": {
+                            "file": "/Users/57block/workspace/OhHello/playwright_tests/tests/account_setup.spec.js",
+                            "column": 47,
+                            "line": 281
+                          },
+                          "message": "TypeError: accountApi.getEmployees is not a function\n\n\u001b[0m \u001b[90m 279 |\u001b[39m     test\u001b[33m.\u001b[39mafterAll(\u001b[36masync\u001b[39m () \u001b[33m=>\u001b[39m {\n \u001b[90m 280 |\u001b[39m         \u001b[36mif\u001b[39m (context) {\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 281 |\u001b[39m             \u001b[36mconst\u001b[39m response \u001b[33m=\u001b[39m \u001b[36mawait\u001b[39m accountApi\u001b[33m.\u001b[39mgetEmployees(\u001b[35m1\u001b[39m\u001b[33m,\u001b[39m\u001b[35m100\u001b[39m\u001b[33m,\u001b[39m\u001b[32m'test'\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m     |\u001b[39m                                               \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 282 |\u001b[39m             \u001b[36mconst\u001b[39m employeeIds \u001b[33m=\u001b[39m response\u001b[33m.\u001b[39mdata\u001b[33m.\u001b[39mdata\u001b[33m.\u001b[39mmap(employee \u001b[33m=>\u001b[39m employee\u001b[33m.\u001b[39mid)\u001b[33m;\u001b[39m\n \u001b[90m 283 |\u001b[39m             \u001b[36mawait\u001b[39m accountApi\u001b[33m.\u001b[39mdeleteMultipleEmployees(employeeIds)\u001b[33m;\u001b[39m\n \u001b[90m 284 |\u001b[39m             \u001b[36mawait\u001b[39m context\u001b[33m.\u001b[39mclose()\u001b[33m;\u001b[39m\u001b[0m\n\u001b[2m    at /Users/57block/workspace/OhHello/playwright_tests/tests/account_setup.spec.js:281:47\u001b[22m"
+                        }
+                      ],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2025-07-31T08:20:14.878Z",
+                      "startTime": "2025-08-01T09:22:21.738Z",
                       "annotations": [],
-                      "attachments": []
+                      "attachments": [
+                        {
+                          "name": "screenshot",
+                          "contentType": "image/png",
+                          "path": "/Users/57block/workspace/OhHello/playwright_tests/screenshots/account_setup-Admin---Acco-9ef9a--template-icon-is-clickable-chromium/test-failed-1.png"
+                        },
+                        {
+                          "name": "error-context",
+                          "contentType": "text/markdown",
+                          "path": "/Users/57block/workspace/OhHello/playwright_tests/screenshots/account_setup-Admin---Acco-9ef9a--template-icon-is-clickable-chromium/error-context.md"
+                        }
+                      ],
+                      "errorLocation": {
+                        "file": "/Users/57block/workspace/OhHello/playwright_tests/pages/base_page.js",
+                        "column": 25,
+                        "line": 14
+                      }
                     }
                   ],
-                  "status": "skipped"
+                  "status": "unexpected"
                 }
               ],
               "id": "4f7b6c9d0b9092274f20-4f93355092f09574c41b",
               "file": "account_setup.spec.js",
-              "line": 273,
-              "column": 5
-            },
-            {
-              "title": "Add as admin button is functional",
-              "ok": true,
-              "tags": [],
-              "tests": [
-                {
-                  "timeout": 30000,
-                  "annotations": [],
-                  "expectedStatus": "passed",
-                  "projectId": "chromium",
-                  "projectName": "chromium",
-                  "results": [
-                    {
-                      "workerIndex": -1,
-                      "parallelIndex": -1,
-                      "status": "skipped",
-                      "duration": 0,
-                      "errors": [],
-                      "stdout": [],
-                      "stderr": [],
-                      "retry": 0,
-                      "startTime": "2025-07-31T08:20:14.879Z",
-                      "annotations": [],
-                      "attachments": []
-                    }
-                  ],
-                  "status": "skipped"
-                }
-              ],
-              "id": "4f7b6c9d0b9092274f20-c5e6ac64de47d6c3d949",
-              "file": "account_setup.spec.js",
-              "line": 285,
-              "column": 5
-            },
-            {
-              "title": "Remove admin button is functional",
-              "ok": true,
-              "tags": [],
-              "tests": [
-                {
-                  "timeout": 30000,
-                  "annotations": [],
-                  "expectedStatus": "passed",
-                  "projectId": "chromium",
-                  "projectName": "chromium",
-                  "results": [
-                    {
-                      "workerIndex": -1,
-                      "parallelIndex": -1,
-                      "status": "skipped",
-                      "duration": 0,
-                      "errors": [],
-                      "stdout": [],
-                      "stderr": [],
-                      "retry": 0,
-                      "startTime": "2025-07-31T08:20:14.880Z",
-                      "annotations": [],
-                      "attachments": []
-                    }
-                  ],
-                  "status": "skipped"
-                }
-              ],
-              "id": "4f7b6c9d0b9092274f20-489c8fa81e516166b82b",
-              "file": "account_setup.spec.js",
-              "line": 314,
-              "column": 5
-            },
-            {
-              "title": "Delete employees button opens modal",
-              "ok": true,
-              "tags": [],
-              "tests": [
-                {
-                  "timeout": 30000,
-                  "annotations": [],
-                  "expectedStatus": "passed",
-                  "projectId": "chromium",
-                  "projectName": "chromium",
-                  "results": [
-                    {
-                      "workerIndex": -1,
-                      "parallelIndex": -1,
-                      "status": "skipped",
-                      "duration": 0,
-                      "errors": [],
-                      "stdout": [],
-                      "stderr": [],
-                      "retry": 0,
-                      "startTime": "2025-07-31T08:20:14.881Z",
-                      "annotations": [],
-                      "attachments": []
-                    }
-                  ],
-                  "status": "skipped"
-                }
-              ],
-              "id": "4f7b6c9d0b9092274f20-1a00c78970f2a3aede42",
-              "file": "account_setup.spec.js",
-              "line": 332,
+              "line": 265,
               "column": 5
             }
           ]
@@ -687,65 +781,26 @@
                   "projectName": "chromium",
                   "results": [
                     {
-                      "workerIndex": 1,
+                      "workerIndex": 7,
                       "parallelIndex": 0,
                       "status": "passed",
-                      "duration": 1993,
+                      "duration": 5,
                       "errors": [],
                       "stdout": [
-                        {
-                          "text": "[API] Using cookies for authentication\n"
-                        },
-                        {
-                          "text": "[API] GET https://ohhello-dev-909a7.web.app/api/v1/users?current=1&pageSize=10&keyword= (attempt 1/3)\n"
-                        },
-                        {
-                          "text": "[API] Response status: 401\n"
-                        },
-                        {
-                          "text": "[API] Response data: {\n  \"error\": {\n    \"id\": \"invalid token\",\n    \"code\": 401,\n    \"detail\": \"Invalid access token\",\n    \"status\": \"Unauthorized\"\n  }\n}\n"
-                        },
-                        {
-                          "text": "[API] Using cookies for authentication\n"
-                        },
-                        {
-                          "text": "[API] GET https://ohhello-dev-909a7.web.app/api/v1/users?current=1&pageSize=10&keyword= (attempt 2/3)\n"
-                        },
-                        {
-                          "text": "[API] Response status: 401\n"
-                        },
-                        {
-                          "text": "[API] Response data: {\n  \"error\": {\n    \"id\": \"invalid token\",\n    \"code\": 401,\n    \"detail\": \"Invalid access token\",\n    \"status\": \"Unauthorized\"\n  }\n}\n"
-                        },
-                        {
-                          "text": "[API] Using cookies for authentication\n"
-                        },
-                        {
-                          "text": "[API] GET https://ohhello-dev-909a7.web.app/api/v1/users?current=1&pageSize=10&keyword= (attempt 3/3)\n"
-                        },
-                        {
-                          "text": "[API] Response status: 401\n"
-                        },
-                        {
-                          "text": "[API] Response data: {\n  \"error\": {\n    \"id\": \"invalid token\",\n    \"code\": 401,\n    \"detail\": \"Invalid access token\",\n    \"status\": \"Unauthorized\"\n  }\n}\n"
-                        },
-                        {
-                          "text": "[API] Attempt 3 failed: API call failed: 401 Unauthorized\n"
-                        },
                         {
                           "text": "API test failed, this is expected if API endpoints are not implemented yet\n"
                         },
                         {
-                          "text": "Error: API call failed: 401 Unauthorized\n"
+                          "text": "Error: Cannot read properties of undefined (reading 'admin')\n"
                         }
                       ],
                       "stderr": [
                         {
-                          "text": "Failed to get users from API: API call failed: 401 Unauthorized\n"
+                          "text": "Failed to get users from API: Cannot read properties of undefined (reading 'admin')\n"
                         }
                       ],
                       "retry": 0,
-                      "startTime": "2025-07-31T08:20:15.780Z",
+                      "startTime": "2025-08-01T09:22:34.678Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -771,65 +826,26 @@
                   "projectName": "chromium",
                   "results": [
                     {
-                      "workerIndex": 1,
+                      "workerIndex": 7,
                       "parallelIndex": 0,
                       "status": "passed",
-                      "duration": 1402,
+                      "duration": 6,
                       "errors": [],
                       "stdout": [
-                        {
-                          "text": "[API] Using cookies for authentication\n"
-                        },
-                        {
-                          "text": "[API] GET https://ohhello-dev-909a7.web.app/api/v1/users?current=1&pageSize=10&keyword= (attempt 1/3)\n"
-                        },
-                        {
-                          "text": "[API] Response status: 401\n"
-                        },
-                        {
-                          "text": "[API] Response data: {\n  \"error\": {\n    \"id\": \"invalid token\",\n    \"code\": 401,\n    \"detail\": \"Invalid access token\",\n    \"status\": \"Unauthorized\"\n  }\n}\n"
-                        },
-                        {
-                          "text": "[API] Using cookies for authentication\n"
-                        },
-                        {
-                          "text": "[API] GET https://ohhello-dev-909a7.web.app/api/v1/users?current=1&pageSize=10&keyword= (attempt 2/3)\n"
-                        },
-                        {
-                          "text": "[API] Response status: 401\n"
-                        },
-                        {
-                          "text": "[API] Response data: {\n  \"error\": {\n    \"id\": \"invalid token\",\n    \"code\": 401,\n    \"detail\": \"Invalid access token\",\n    \"status\": \"Unauthorized\"\n  }\n}\n"
-                        },
-                        {
-                          "text": "[API] Using cookies for authentication\n"
-                        },
-                        {
-                          "text": "[API] GET https://ohhello-dev-909a7.web.app/api/v1/users?current=1&pageSize=10&keyword= (attempt 3/3)\n"
-                        },
-                        {
-                          "text": "[API] Response status: 401\n"
-                        },
-                        {
-                          "text": "[API] Response data: {\n  \"error\": {\n    \"id\": \"invalid token\",\n    \"code\": 401,\n    \"detail\": \"Invalid access token\",\n    \"status\": \"Unauthorized\"\n  }\n}\n"
-                        },
-                        {
-                          "text": "[API] Attempt 3 failed: API call failed: 401 Unauthorized\n"
-                        },
                         {
                           "text": "API add employee test failed, this is expected if API endpoints are not implemented yet\n"
                         },
                         {
-                          "text": "Error: API call failed: 401 Unauthorized\n"
+                          "text": "Error: Cannot read properties of undefined (reading 'admin')\n"
                         }
                       ],
                       "stderr": [
                         {
-                          "text": "Failed to get users from API: API call failed: 401 Unauthorized\n"
+                          "text": "Failed to get users from API: Cannot read properties of undefined (reading 'admin')\n"
                         }
                       ],
                       "retry": 0,
-                      "startTime": "2025-07-31T08:20:29.874Z",
+                      "startTime": "2025-08-01T09:22:43.311Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -855,68 +871,19 @@
                   "projectName": "chromium",
                   "results": [
                     {
-                      "workerIndex": 1,
+                      "workerIndex": 7,
                       "parallelIndex": 0,
                       "status": "passed",
-                      "duration": 1216,
+                      "duration": 1,
                       "errors": [],
-                      "stdout": [
-                        {
-                          "text": "[API] Using cookies for authentication\n"
-                        },
-                        {
-                          "text": "[API] POST https://ohhello-dev-909a7.web.app/api/v1undefined (attempt 1/3)\n"
-                        },
-                        {
-                          "text": "[API] Request data: {\n  \"name\": \"find-test-5vz5ma\",\n  \"email\": \"serena+find-test-5vz5ma@57blocks.com\"\n}\n"
-                        },
-                        {
-                          "text": "[API] Response status: 401\n"
-                        },
-                        {
-                          "text": "[API] Response data: {\n  \"error\": {\n    \"id\": \"invalid token\",\n    \"code\": 401,\n    \"detail\": \"Invalid access token\",\n    \"status\": \"Unauthorized\"\n  }\n}\n"
-                        },
-                        {
-                          "text": "[API] Using cookies for authentication\n"
-                        },
-                        {
-                          "text": "[API] POST https://ohhello-dev-909a7.web.app/api/v1undefined (attempt 2/3)\n"
-                        },
-                        {
-                          "text": "[API] Request data: {\n  \"name\": \"find-test-5vz5ma\",\n  \"email\": \"serena+find-test-5vz5ma@57blocks.com\"\n}\n"
-                        },
-                        {
-                          "text": "[API] Response status: 401\n"
-                        },
-                        {
-                          "text": "[API] Response data: {\n  \"error\": {\n    \"id\": \"invalid token\",\n    \"code\": 401,\n    \"detail\": \"Invalid access token\",\n    \"status\": \"Unauthorized\"\n  }\n}\n"
-                        },
-                        {
-                          "text": "[API] Using cookies for authentication\n"
-                        },
-                        {
-                          "text": "[API] POST https://ohhello-dev-909a7.web.app/api/v1undefined (attempt 3/3)\n"
-                        },
-                        {
-                          "text": "[API] Request data: {\n  \"name\": \"find-test-5vz5ma\",\n  \"email\": \"serena+find-test-5vz5ma@57blocks.com\"\n}\n"
-                        },
-                        {
-                          "text": "[API] Response status: 401\n"
-                        },
-                        {
-                          "text": "[API] Response data: {\n  \"error\": {\n    \"id\": \"invalid token\",\n    \"code\": 401,\n    \"detail\": \"Invalid access token\",\n    \"status\": \"Unauthorized\"\n  }\n}\n"
-                        },
-                        {
-                          "text": "[API] Attempt 3 failed: API call failed: 401 Unauthorized\n"
-                        }
-                      ],
+                      "stdout": [],
                       "stderr": [
                         {
-                          "text": "Failed to add employee find-test-5vz5ma (serena+find-test-5vz5ma@57blocks.com) via API: API call failed: 401 Unauthorized\n"
+                          "text": "Failed to add employee find-test-obpod9 (serena+find-test-obpod9@57blocks.com) via API: Cannot read properties of undefined (reading 'employees')\n"
                         }
                       ],
                       "retry": 0,
-                      "startTime": "2025-07-31T08:20:31.279Z",
+                      "startTime": "2025-08-01T09:22:43.320Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -942,68 +909,19 @@
                   "projectName": "chromium",
                   "results": [
                     {
-                      "workerIndex": 1,
+                      "workerIndex": 7,
                       "parallelIndex": 0,
                       "status": "passed",
-                      "duration": 967,
+                      "duration": 1,
                       "errors": [],
-                      "stdout": [
-                        {
-                          "text": "[API] Using cookies for authentication\n"
-                        },
-                        {
-                          "text": "[API] POST https://ohhello-dev-909a7.web.app/api/v1undefined (attempt 1/3)\n"
-                        },
-                        {
-                          "text": "[API] Request data: {\n  \"name\": \"update-test-z0klfx\",\n  \"email\": \"serena+update-test-z0klfx@57blocks.com\"\n}\n"
-                        },
-                        {
-                          "text": "[API] Response status: 401\n"
-                        },
-                        {
-                          "text": "[API] Response data: {\n  \"error\": {\n    \"id\": \"invalid token\",\n    \"code\": 401,\n    \"detail\": \"Invalid access token\",\n    \"status\": \"Unauthorized\"\n  }\n}\n"
-                        },
-                        {
-                          "text": "[API] Using cookies for authentication\n"
-                        },
-                        {
-                          "text": "[API] POST https://ohhello-dev-909a7.web.app/api/v1undefined (attempt 2/3)\n"
-                        },
-                        {
-                          "text": "[API] Request data: {\n  \"name\": \"update-test-z0klfx\",\n  \"email\": \"serena+update-test-z0klfx@57blocks.com\"\n}\n"
-                        },
-                        {
-                          "text": "[API] Response status: 401\n"
-                        },
-                        {
-                          "text": "[API] Response data: {\n  \"error\": {\n    \"id\": \"invalid token\",\n    \"code\": 401,\n    \"detail\": \"Invalid access token\",\n    \"status\": \"Unauthorized\"\n  }\n}\n"
-                        },
-                        {
-                          "text": "[API] Using cookies for authentication\n"
-                        },
-                        {
-                          "text": "[API] POST https://ohhello-dev-909a7.web.app/api/v1undefined (attempt 3/3)\n"
-                        },
-                        {
-                          "text": "[API] Request data: {\n  \"name\": \"update-test-z0klfx\",\n  \"email\": \"serena+update-test-z0klfx@57blocks.com\"\n}\n"
-                        },
-                        {
-                          "text": "[API] Response status: 401\n"
-                        },
-                        {
-                          "text": "[API] Response data: {\n  \"error\": {\n    \"id\": \"invalid token\",\n    \"code\": 401,\n    \"detail\": \"Invalid access token\",\n    \"status\": \"Unauthorized\"\n  }\n}\n"
-                        },
-                        {
-                          "text": "[API] Attempt 3 failed: API call failed: 401 Unauthorized\n"
-                        }
-                      ],
+                      "stdout": [],
                       "stderr": [
                         {
-                          "text": "Failed to add employee update-test-z0klfx (serena+update-test-z0klfx@57blocks.com) via API: API call failed: 401 Unauthorized\n"
+                          "text": "Failed to add employee update-test-ghxkht (serena+update-test-ghxkht@57blocks.com) via API: Cannot read properties of undefined (reading 'employees')\n"
                         }
                       ],
                       "retry": 0,
-                      "startTime": "2025-07-31T08:20:32.499Z",
+                      "startTime": "2025-08-01T09:22:43.324Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -1029,68 +947,19 @@
                   "projectName": "chromium",
                   "results": [
                     {
-                      "workerIndex": 1,
+                      "workerIndex": 7,
                       "parallelIndex": 0,
                       "status": "passed",
-                      "duration": 1444,
+                      "duration": 3,
                       "errors": [],
-                      "stdout": [
-                        {
-                          "text": "[API] Using cookies for authentication\n"
-                        },
-                        {
-                          "text": "[API] POST https://ohhello-dev-909a7.web.app/api/v1undefined (attempt 1/3)\n"
-                        },
-                        {
-                          "text": "[API] Request data: {\n  \"name\": \"delete-test-7njgy2\",\n  \"email\": \"serena+delete-test-7njgy2@57blocks.com\"\n}\n"
-                        },
-                        {
-                          "text": "[API] Response status: 401\n"
-                        },
-                        {
-                          "text": "[API] Response data: {\n  \"error\": {\n    \"id\": \"invalid token\",\n    \"code\": 401,\n    \"detail\": \"Invalid access token\",\n    \"status\": \"Unauthorized\"\n  }\n}\n"
-                        },
-                        {
-                          "text": "[API] Using cookies for authentication\n"
-                        },
-                        {
-                          "text": "[API] POST https://ohhello-dev-909a7.web.app/api/v1undefined (attempt 2/3)\n"
-                        },
-                        {
-                          "text": "[API] Request data: {\n  \"name\": \"delete-test-7njgy2\",\n  \"email\": \"serena+delete-test-7njgy2@57blocks.com\"\n}\n"
-                        },
-                        {
-                          "text": "[API] Response status: 401\n"
-                        },
-                        {
-                          "text": "[API] Response data: {\n  \"error\": {\n    \"id\": \"invalid token\",\n    \"code\": 401,\n    \"detail\": \"Invalid access token\",\n    \"status\": \"Unauthorized\"\n  }\n}\n"
-                        },
-                        {
-                          "text": "[API] Using cookies for authentication\n"
-                        },
-                        {
-                          "text": "[API] POST https://ohhello-dev-909a7.web.app/api/v1undefined (attempt 3/3)\n"
-                        },
-                        {
-                          "text": "[API] Request data: {\n  \"name\": \"delete-test-7njgy2\",\n  \"email\": \"serena+delete-test-7njgy2@57blocks.com\"\n}\n"
-                        },
-                        {
-                          "text": "[API] Response status: 401\n"
-                        },
-                        {
-                          "text": "[API] Response data: {\n  \"error\": {\n    \"id\": \"invalid token\",\n    \"code\": 401,\n    \"detail\": \"Invalid access token\",\n    \"status\": \"Unauthorized\"\n  }\n}\n"
-                        },
-                        {
-                          "text": "[API] Attempt 3 failed: API call failed: 401 Unauthorized\n"
-                        }
-                      ],
+                      "stdout": [],
                       "stderr": [
                         {
-                          "text": "Failed to add employee delete-test-7njgy2 (serena+delete-test-7njgy2@57blocks.com) via API: API call failed: 401 Unauthorized\n"
+                          "text": "Failed to add employee delete-test-x190su (serena+delete-test-x190su@57blocks.com) via API: Cannot read properties of undefined (reading 'employees')\n"
                         }
                       ],
                       "retry": 0,
-                      "startTime": "2025-07-31T08:20:33.469Z",
+                      "startTime": "2025-08-01T09:22:43.328Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -1116,68 +985,19 @@
                   "projectName": "chromium",
                   "results": [
                     {
-                      "workerIndex": 1,
+                      "workerIndex": 7,
                       "parallelIndex": 0,
                       "status": "passed",
-                      "duration": 1564,
+                      "duration": 1,
                       "errors": [],
-                      "stdout": [
-                        {
-                          "text": "[API] Using cookies for authentication\n"
-                        },
-                        {
-                          "text": "[API] POST https://ohhello-dev-909a7.web.app/api/v1undefined (attempt 1/3)\n"
-                        },
-                        {
-                          "text": "[API] Request data: {\n  \"name\": \"admin-test-jcvz47\",\n  \"email\": \"serena+admin-test-jcvz47@57blocks.com\"\n}\n"
-                        },
-                        {
-                          "text": "[API] Response status: 401\n"
-                        },
-                        {
-                          "text": "[API] Response data: {\n  \"error\": {\n    \"id\": \"invalid token\",\n    \"code\": 401,\n    \"detail\": \"Invalid access token\",\n    \"status\": \"Unauthorized\"\n  }\n}\n"
-                        },
-                        {
-                          "text": "[API] Using cookies for authentication\n"
-                        },
-                        {
-                          "text": "[API] POST https://ohhello-dev-909a7.web.app/api/v1undefined (attempt 2/3)\n"
-                        },
-                        {
-                          "text": "[API] Request data: {\n  \"name\": \"admin-test-jcvz47\",\n  \"email\": \"serena+admin-test-jcvz47@57blocks.com\"\n}\n"
-                        },
-                        {
-                          "text": "[API] Response status: 401\n"
-                        },
-                        {
-                          "text": "[API] Response data: {\n  \"error\": {\n    \"id\": \"invalid token\",\n    \"code\": 401,\n    \"detail\": \"Invalid access token\",\n    \"status\": \"Unauthorized\"\n  }\n}\n"
-                        },
-                        {
-                          "text": "[API] Using cookies for authentication\n"
-                        },
-                        {
-                          "text": "[API] POST https://ohhello-dev-909a7.web.app/api/v1undefined (attempt 3/3)\n"
-                        },
-                        {
-                          "text": "[API] Request data: {\n  \"name\": \"admin-test-jcvz47\",\n  \"email\": \"serena+admin-test-jcvz47@57blocks.com\"\n}\n"
-                        },
-                        {
-                          "text": "[API] Response status: 401\n"
-                        },
-                        {
-                          "text": "[API] Response data: {\n  \"error\": {\n    \"id\": \"invalid token\",\n    \"code\": 401,\n    \"detail\": \"Invalid access token\",\n    \"status\": \"Unauthorized\"\n  }\n}\n"
-                        },
-                        {
-                          "text": "[API] Attempt 3 failed: API call failed: 401 Unauthorized\n"
-                        }
-                      ],
+                      "stdout": [],
                       "stderr": [
                         {
-                          "text": "Failed to add employee admin-test-jcvz47 (serena+admin-test-jcvz47@57blocks.com) via API: API call failed: 401 Unauthorized\n"
+                          "text": "Failed to add employee admin-test-v2cqzd (serena+admin-test-v2cqzd@57blocks.com) via API: Cannot read properties of undefined (reading 'employees')\n"
                         }
                       ],
                       "retry": 0,
-                      "startTime": "2025-07-31T08:20:34.915Z",
+                      "startTime": "2025-08-01T09:22:43.335Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -1203,156 +1023,12 @@
                   "projectName": "chromium",
                   "results": [
                     {
-                      "workerIndex": 1,
+                      "workerIndex": 7,
                       "parallelIndex": 0,
                       "status": "passed",
-                      "duration": 4398,
+                      "duration": 26,
                       "errors": [],
                       "stdout": [
-                        {
-                          "text": "[API] Using cookies for authentication\n"
-                        },
-                        {
-                          "text": "[API] POST https://ohhello-dev-909a7.web.app/api/v1undefined (attempt 1/3)\n"
-                        },
-                        {
-                          "text": "[API] Request data: {\n  \"name\": \"batch-test-1\",\n  \"email\": \"serena+batch1@57blocks.com\"\n}\n"
-                        },
-                        {
-                          "text": "[API] Response status: 401\n"
-                        },
-                        {
-                          "text": "[API] Response data: {\n  \"error\": {\n    \"id\": \"invalid token\",\n    \"code\": 401,\n    \"detail\": \"Invalid access token\",\n    \"status\": \"Unauthorized\"\n  }\n}\n"
-                        },
-                        {
-                          "text": "[API] Using cookies for authentication\n"
-                        },
-                        {
-                          "text": "[API] POST https://ohhello-dev-909a7.web.app/api/v1undefined (attempt 2/3)\n"
-                        },
-                        {
-                          "text": "[API] Request data: {\n  \"name\": \"batch-test-1\",\n  \"email\": \"serena+batch1@57blocks.com\"\n}\n"
-                        },
-                        {
-                          "text": "[API] Response status: 401\n"
-                        },
-                        {
-                          "text": "[API] Response data: {\n  \"error\": {\n    \"id\": \"invalid token\",\n    \"code\": 401,\n    \"detail\": \"Invalid access token\",\n    \"status\": \"Unauthorized\"\n  }\n}\n"
-                        },
-                        {
-                          "text": "[API] Using cookies for authentication\n"
-                        },
-                        {
-                          "text": "[API] POST https://ohhello-dev-909a7.web.app/api/v1undefined (attempt 3/3)\n"
-                        },
-                        {
-                          "text": "[API] Request data: {\n  \"name\": \"batch-test-1\",\n  \"email\": \"serena+batch1@57blocks.com\"\n}\n"
-                        },
-                        {
-                          "text": "[API] Response status: 401\n"
-                        },
-                        {
-                          "text": "[API] Response data: {\n  \"error\": {\n    \"id\": \"invalid token\",\n    \"code\": 401,\n    \"detail\": \"Invalid access token\",\n    \"status\": \"Unauthorized\"\n  }\n}\n"
-                        },
-                        {
-                          "text": "[API] Attempt 3 failed: API call failed: 401 Unauthorized\n"
-                        },
-                        {
-                          "text": "[API] Using cookies for authentication\n"
-                        },
-                        {
-                          "text": "[API] POST https://ohhello-dev-909a7.web.app/api/v1undefined (attempt 1/3)\n"
-                        },
-                        {
-                          "text": "[API] Request data: {\n  \"name\": \"batch-test-2\",\n  \"email\": \"serena+batch2@57blocks.com\"\n}\n"
-                        },
-                        {
-                          "text": "[API] Response status: 401\n"
-                        },
-                        {
-                          "text": "[API] Response data: {\n  \"error\": {\n    \"id\": \"invalid token\",\n    \"code\": 401,\n    \"detail\": \"Invalid access token\",\n    \"status\": \"Unauthorized\"\n  }\n}\n"
-                        },
-                        {
-                          "text": "[API] Using cookies for authentication\n"
-                        },
-                        {
-                          "text": "[API] POST https://ohhello-dev-909a7.web.app/api/v1undefined (attempt 2/3)\n"
-                        },
-                        {
-                          "text": "[API] Request data: {\n  \"name\": \"batch-test-2\",\n  \"email\": \"serena+batch2@57blocks.com\"\n}\n"
-                        },
-                        {
-                          "text": "[API] Response status: 401\n"
-                        },
-                        {
-                          "text": "[API] Response data: {\n  \"error\": {\n    \"id\": \"invalid token\",\n    \"code\": 401,\n    \"detail\": \"Invalid access token\",\n    \"status\": \"Unauthorized\"\n  }\n}\n"
-                        },
-                        {
-                          "text": "[API] Using cookies for authentication\n"
-                        },
-                        {
-                          "text": "[API] POST https://ohhello-dev-909a7.web.app/api/v1undefined (attempt 3/3)\n"
-                        },
-                        {
-                          "text": "[API] Request data: {\n  \"name\": \"batch-test-2\",\n  \"email\": \"serena+batch2@57blocks.com\"\n}\n"
-                        },
-                        {
-                          "text": "[API] Response status: 401\n"
-                        },
-                        {
-                          "text": "[API] Response data: {\n  \"error\": {\n    \"id\": \"invalid token\",\n    \"code\": 401,\n    \"detail\": \"Invalid access token\",\n    \"status\": \"Unauthorized\"\n  }\n}\n"
-                        },
-                        {
-                          "text": "[API] Attempt 3 failed: API call failed: 401 Unauthorized\n"
-                        },
-                        {
-                          "text": "[API] Using cookies for authentication\n"
-                        },
-                        {
-                          "text": "[API] POST https://ohhello-dev-909a7.web.app/api/v1undefined (attempt 1/3)\n"
-                        },
-                        {
-                          "text": "[API] Request data: {\n  \"name\": \"batch-test-3\",\n  \"email\": \"serena+batch3@57blocks.com\"\n}\n"
-                        },
-                        {
-                          "text": "[API] Response status: 401\n"
-                        },
-                        {
-                          "text": "[API] Response data: {\n  \"error\": {\n    \"id\": \"invalid token\",\n    \"code\": 401,\n    \"detail\": \"Invalid access token\",\n    \"status\": \"Unauthorized\"\n  }\n}\n"
-                        },
-                        {
-                          "text": "[API] Using cookies for authentication\n"
-                        },
-                        {
-                          "text": "[API] POST https://ohhello-dev-909a7.web.app/api/v1undefined (attempt 2/3)\n"
-                        },
-                        {
-                          "text": "[API] Request data: {\n  \"name\": \"batch-test-3\",\n  \"email\": \"serena+batch3@57blocks.com\"\n}\n"
-                        },
-                        {
-                          "text": "[API] Response status: 401\n"
-                        },
-                        {
-                          "text": "[API] Response data: {\n  \"error\": {\n    \"id\": \"invalid token\",\n    \"code\": 401,\n    \"detail\": \"Invalid access token\",\n    \"status\": \"Unauthorized\"\n  }\n}\n"
-                        },
-                        {
-                          "text": "[API] Using cookies for authentication\n"
-                        },
-                        {
-                          "text": "[API] POST https://ohhello-dev-909a7.web.app/api/v1undefined (attempt 3/3)\n"
-                        },
-                        {
-                          "text": "[API] Request data: {\n  \"name\": \"batch-test-3\",\n  \"email\": \"serena+batch3@57blocks.com\"\n}\n"
-                        },
-                        {
-                          "text": "[API] Response status: 401\n"
-                        },
-                        {
-                          "text": "[API] Response data: {\n  \"error\": {\n    \"id\": \"invalid token\",\n    \"code\": 401,\n    \"detail\": \"Invalid access token\",\n    \"status\": \"Unauthorized\"\n  }\n}\n"
-                        },
-                        {
-                          "text": "[API] Attempt 3 failed: API call failed: 401 Unauthorized\n"
-                        },
                         {
                           "text": "✅ Batch add completed: 0/3 successful\n"
                         },
@@ -1365,17 +1041,17 @@
                       ],
                       "stderr": [
                         {
-                          "text": "Failed to add employee batch-test-1 (serena+batch1@57blocks.com) via API: API call failed: 401 Unauthorized\n"
+                          "text": "Failed to add employee batch-test-1 (serena+batch1@57blocks.com) via API: Cannot read properties of undefined (reading 'employees')\n"
                         },
                         {
-                          "text": "Failed to add employee batch-test-2 (serena+batch2@57blocks.com) via API: API call failed: 401 Unauthorized\n"
+                          "text": "Failed to add employee batch-test-2 (serena+batch2@57blocks.com) via API: Cannot read properties of undefined (reading 'employees')\n"
                         },
                         {
-                          "text": "Failed to add employee batch-test-3 (serena+batch3@57blocks.com) via API: API call failed: 401 Unauthorized\n"
+                          "text": "Failed to add employee batch-test-3 (serena+batch3@57blocks.com) via API: Cannot read properties of undefined (reading 'employees')\n"
                         }
                       ],
                       "retry": 0,
-                      "startTime": "2025-07-31T08:20:36.486Z",
+                      "startTime": "2025-08-01T09:22:43.340Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -1401,113 +1077,25 @@
                   "projectName": "chromium",
                   "results": [
                     {
-                      "workerIndex": 1,
+                      "workerIndex": 7,
                       "parallelIndex": 0,
                       "status": "passed",
-                      "duration": 2417,
+                      "duration": 2,
                       "errors": [],
-                      "stdout": [
-                        {
-                          "text": "[API] Using cookies for authentication\n"
-                        },
-                        {
-                          "text": "[API] GET https://ohhello-dev-909a7.web.app/api/v1/users?current=1&pageSize=10&keyword= (attempt 1/3)\n"
-                        },
-                        {
-                          "text": "[API] Response status: 401\n"
-                        },
-                        {
-                          "text": "[API] Response data: {\n  \"error\": {\n    \"id\": \"invalid token\",\n    \"code\": 401,\n    \"detail\": \"Invalid access token\",\n    \"status\": \"Unauthorized\"\n  }\n}\n"
-                        },
-                        {
-                          "text": "[API] Using cookies for authentication\n"
-                        },
-                        {
-                          "text": "[API] GET https://ohhello-dev-909a7.web.app/api/v1/users?current=1&pageSize=10&keyword= (attempt 2/3)\n"
-                        },
-                        {
-                          "text": "[API] Response status: 401\n"
-                        },
-                        {
-                          "text": "[API] Response data: {\n  \"error\": {\n    \"id\": \"invalid token\",\n    \"code\": 401,\n    \"detail\": \"Invalid access token\",\n    \"status\": \"Unauthorized\"\n  }\n}\n"
-                        },
-                        {
-                          "text": "[API] Using cookies for authentication\n"
-                        },
-                        {
-                          "text": "[API] GET https://ohhello-dev-909a7.web.app/api/v1/users?current=1&pageSize=10&keyword= (attempt 3/3)\n"
-                        },
-                        {
-                          "text": "[API] Response status: 401\n"
-                        },
-                        {
-                          "text": "[API] Response data: {\n  \"error\": {\n    \"id\": \"invalid token\",\n    \"code\": 401,\n    \"detail\": \"Invalid access token\",\n    \"status\": \"Unauthorized\"\n  }\n}\n"
-                        },
-                        {
-                          "text": "[API] Attempt 3 failed: API call failed: 401 Unauthorized\n"
-                        },
-                        {
-                          "text": "[API] Using cookies for authentication\n"
-                        },
-                        {
-                          "text": "[API] POST https://ohhello-dev-909a7.web.app/api/v1undefined (attempt 1/3)\n"
-                        },
-                        {
-                          "text": "[API] Request data: {\n  \"name\": \"wait-test-d4yopy\",\n  \"email\": \"serena+wait-test-d4yopy@57blocks.com\"\n}\n"
-                        },
-                        {
-                          "text": "[API] Response status: 401\n"
-                        },
-                        {
-                          "text": "[API] Response data: {\n  \"error\": {\n    \"id\": \"invalid token\",\n    \"code\": 401,\n    \"detail\": \"Invalid access token\",\n    \"status\": \"Unauthorized\"\n  }\n}\n"
-                        },
-                        {
-                          "text": "[API] Using cookies for authentication\n"
-                        },
-                        {
-                          "text": "[API] POST https://ohhello-dev-909a7.web.app/api/v1undefined (attempt 2/3)\n"
-                        },
-                        {
-                          "text": "[API] Request data: {\n  \"name\": \"wait-test-d4yopy\",\n  \"email\": \"serena+wait-test-d4yopy@57blocks.com\"\n}\n"
-                        },
-                        {
-                          "text": "[API] Response status: 401\n"
-                        },
-                        {
-                          "text": "[API] Response data: {\n  \"error\": {\n    \"id\": \"invalid token\",\n    \"code\": 401,\n    \"detail\": \"Invalid access token\",\n    \"status\": \"Unauthorized\"\n  }\n}\n"
-                        },
-                        {
-                          "text": "[API] Using cookies for authentication\n"
-                        },
-                        {
-                          "text": "[API] POST https://ohhello-dev-909a7.web.app/api/v1undefined (attempt 3/3)\n"
-                        },
-                        {
-                          "text": "[API] Request data: {\n  \"name\": \"wait-test-d4yopy\",\n  \"email\": \"serena+wait-test-d4yopy@57blocks.com\"\n}\n"
-                        },
-                        {
-                          "text": "[API] Response status: 401\n"
-                        },
-                        {
-                          "text": "[API] Response data: {\n  \"error\": {\n    \"id\": \"invalid token\",\n    \"code\": 401,\n    \"detail\": \"Invalid access token\",\n    \"status\": \"Unauthorized\"\n  }\n}\n"
-                        },
-                        {
-                          "text": "[API] Attempt 3 failed: API call failed: 401 Unauthorized\n"
-                        }
-                      ],
+                      "stdout": [],
                       "stderr": [
                         {
-                          "text": "Failed to get users from API: API call failed: 401 Unauthorized\n"
+                          "text": "Failed to get users from API: Cannot read properties of undefined (reading 'admin')\n"
                         },
                         {
-                          "text": "Could not get employee count from API: API call failed: 401 Unauthorized\n"
+                          "text": "Could not get employee count from API: Cannot read properties of undefined (reading 'admin')\n"
                         },
                         {
-                          "text": "Failed to add employee wait-test-d4yopy (serena+wait-test-d4yopy@57blocks.com) via API: API call failed: 401 Unauthorized\n"
+                          "text": "Failed to add employee wait-test-98io58 (serena+wait-test-98io58@57blocks.com) via API: Cannot read properties of undefined (reading 'employees')\n"
                         }
                       ],
                       "retry": 0,
-                      "startTime": "2025-07-31T08:20:40.886Z",
+                      "startTime": "2025-08-01T09:22:43.369Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -1533,65 +1121,26 @@
                   "projectName": "chromium",
                   "results": [
                     {
-                      "workerIndex": 1,
+                      "workerIndex": 7,
                       "parallelIndex": 0,
                       "status": "passed",
-                      "duration": 2,
+                      "duration": 4,
                       "errors": [],
                       "stdout": [
                         {
                           "text": "✅ Data validation working correctly\n"
-                        },
-                        {
-                          "text": "[API] Using cookies for authentication\n"
-                        },
-                        {
-                          "text": "[API] GET https://ohhello-dev-909a7.web.app/api/v1/users?current=1&pageSize=10&keyword= (attempt 1/3)\n"
-                        },
-                        {
-                          "text": "[API] Response status: 401\n"
-                        },
-                        {
-                          "text": "[API] Response data: {\n  \"error\": {\n    \"id\": \"invalid token\",\n    \"code\": 401,\n    \"detail\": \"Invalid access token\",\n    \"status\": \"Unauthorized\"\n  }\n}\n"
-                        },
-                        {
-                          "text": "[API] Using cookies for authentication\n"
-                        },
-                        {
-                          "text": "[API] GET https://ohhello-dev-909a7.web.app/api/v1/users?current=1&pageSize=10&keyword= (attempt 2/3)\n"
-                        },
-                        {
-                          "text": "[API] Response status: 401\n"
-                        },
-                        {
-                          "text": "[API] Response data: {\n  \"error\": {\n    \"id\": \"invalid token\",\n    \"code\": 401,\n    \"detail\": \"Invalid access token\",\n    \"status\": \"Unauthorized\"\n  }\n}\n"
-                        },
-                        {
-                          "text": "[API] Using cookies for authentication\n"
-                        },
-                        {
-                          "text": "[API] GET https://ohhello-dev-909a7.web.app/api/v1/users?current=1&pageSize=10&keyword= (attempt 3/3)\n"
-                        },
-                        {
-                          "text": "[API] Response status: 401\n"
-                        },
-                        {
-                          "text": "[API] Response data: {\n  \"error\": {\n    \"id\": \"invalid token\",\n    \"code\": 401,\n    \"detail\": \"Invalid access token\",\n    \"status\": \"Unauthorized\"\n  }\n}\n"
-                        },
-                        {
-                          "text": "[API] Attempt 3 failed: API call failed: 401 Unauthorized\n"
                         }
                       ],
                       "stderr": [
                         {
-                          "text": "Failed to get users from API: API call failed: 401 Unauthorized\n"
+                          "text": "Failed to get users from API: Cannot read properties of undefined (reading 'admin')\n"
                         },
                         {
-                          "text": "Failed to cleanup test employees: API call failed: 401 Unauthorized\n"
+                          "text": "Failed to cleanup test employees: Cannot read properties of undefined (reading 'admin')\n"
                         }
                       ],
                       "retry": 0,
-                      "startTime": "2025-07-31T08:20:43.305Z",
+                      "startTime": "2025-08-01T09:22:43.378Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -1611,11 +1160,11 @@
   ],
   "errors": [],
   "stats": {
-    "startTime": "2025-07-31T08:18:47.711Z",
-    "duration": 117842.788,
-    "expected": 14,
-    "skipped": 9,
-    "unexpected": 1,
+    "startTime": "2025-08-01T09:19:06.296Z",
+    "duration": 217490.867,
+    "expected": 13,
+    "skipped": 0,
+    "unexpected": 7,
     "flaky": 0
   }
 }

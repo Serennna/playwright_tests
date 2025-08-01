@@ -3,6 +3,7 @@ const MenteeLoginPage = require('../pages/mentee_login_page');
 const AccountSetupPage = require('../pages/admin/account_setup');
 const AccountApi = require('../apis/account_api');
 const { mentee_login_data } = require('../config/test_data');
+const AccountSetupAPI = require('../helpers/account_setup_api');
 
 test.describe('Admin - Account Setup Page Tests', () => {
     let context;
@@ -22,7 +23,7 @@ test.describe('Admin - Account Setup Page Tests', () => {
         
         // 初始化页面对象
         accountSetupPage = new AccountSetupPage(page);
-        accountApi = new AccountApi(page);
+        accountApi = new AccountSetupAPI(mentee_login_data.email, mentee_login_data.password);
     });
 
     test.beforeEach(async ({ browser }, testInfo) => {
@@ -121,15 +122,18 @@ test.describe('Admin - Account Setup Page Tests', () => {
         
         console.log(`Initial total count: ${initialTotalCount}, Has pagination: ${hasPagination}`);
         
-        // Use the AddEmployees method which includes random data generation
-        await accountSetupPage.AddEmployees();
+        // Use the AddEmployees method which generates and fills data, then returns the generated data
+        const generatedEmployeeData = await accountSetupPage.AddEmployees();
         
-        // Verify the form is filled
-        const NewEmployeeName = await accountSetupPage.page.inputValue(accountSetupPage.selectors.addEmployeeNameInput);
-        const NewEmployeeEmail = await accountSetupPage.page.inputValue(accountSetupPage.selectors.addEmployeeEmailInput);
+        console.log(`Generated employee data: Name=${generatedEmployeeData.name}, Email=${generatedEmployeeData.email}`);
         
-        expect(NewEmployeeName).toMatch(/^test\w+$/); // Should start with 'test' followed by random characters
-        expect(NewEmployeeEmail).toMatch(/^serena\+\w+@57blocks\.com$/); // Should match the email pattern
+        // Verify the form is filled with the expected generated data
+        const filledName = await accountSetupPage.page.inputValue(accountSetupPage.selectors.addEmployeeNameInput);
+        const filledEmail = await accountSetupPage.page.inputValue(accountSetupPage.selectors.addEmployeeEmailInput);
+        
+        // Use exact match since we know the generated data
+        expect(filledName).toBe(generatedEmployeeData.name);
+        expect(filledEmail).toBe(generatedEmployeeData.email);
         
         // Submit the form
         await accountSetupPage.click(accountSetupPage.selectors.addEmployeeModalConfirm);
@@ -140,18 +144,16 @@ test.describe('Admin - Account Setup Page Tests', () => {
             timeout: 10000 
         });
 
+        // Verify the total count increased
         const expectedCount = initialTotalCount + 1;
-        const tableUpdated = await accountSetupPage.waitForTableUpdate(expectedCount);
-        expect(tableUpdated).toBe(true);
+        const tableUpdated = await accountApi.getUsersTotal();
+        expect(tableUpdated).toBe(expectedCount);
         
-        // Verify the specific employee is added to the antd table (only check if on current page)
-        const response = await accountApi.getEmployees();
+        // Verify the specific employee is added via API query using the extracted data
+        const response = await accountApi.queryUsers(1, 1000, generatedEmployeeData.email);
         expect(response.status).toBe(200);
-        expect(response.data.data[0].user.email).toBe(NewEmployeeEmail);
-        expect(response.data.data[0].user.username).toBe(NewEmployeeName);
-        
-
-      
+        expect(response.data.data[0].user.email).toBe(generatedEmployeeData.email);
+        expect(response.data.data[0].user.username).toBe(generatedEmployeeData.name);
     });
 
     test('Add employee with empty fields shows submit button disabled', async () => {

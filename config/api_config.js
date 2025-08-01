@@ -1,33 +1,26 @@
-// API 配置文件
+// api_config.js
+
+// Define BASE_URL as a constant first
+const BASE_URL = 'https://ohhello-dev-909a7.web.app/api/v1';
+
 module.exports = {
     // API 基础 URL 配置
-    baseUrl: {
-        development: 'https://ohhello-dev-909a7.web.app/api/v1',
-        production: 'https://ohhello.ai/api'
-    },
-
-    // 获取当前环境的 API URL
-    getCurrentApiUrl() {
-        const env = process.env.NODE_ENV || 'development';
-        return this.baseUrl[env] || this.baseUrl.development;
-    },
+    BASE_URL: BASE_URL,
 
     // API 端点配置
-    endpoints: {
+    urls: {
         admin:{
-            getUsers: (current, pageSize,keyword) => `/users?current=${current}&pageSize=${pageSize}&keyword=${keyword}`,
-            setUserAdmin: (id) => `/roles/admins`,
+            users:`${BASE_URL}/users`,
+            setUserAdmin:`${BASE_URL}/roles/admins`,
         },
         employee:{
-            employees: (current, pageSize,keyword) => `/employees?current=${current}&pageSize=${pageSize}&keyword=${keyword}`,
-            employeeById: (id) => `/employees/${id}`,
-            employeeByEmail: (email) => `/employees?email=${encodeURIComponent(email)}`,
-            setEmployeeAdmin: (id) => `/employees/${id}/admin`,
+        },
+        mentor:{
         },
         auth: {
-            login: '/auth/login',
-            logout: '/auth/logout',
-            profile: '/auth/profile'
+            login: `${BASE_URL}/auth/login`,
+            logout: `${BASE_URL}/auth/logout`,
+            profile: `${BASE_URL}/auth/profile`
         }
     },
 

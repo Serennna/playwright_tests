@@ -8,6 +8,19 @@ class ApiHelper {
     }
 
     /**
+     * 生成测试员工数据
+     * @param {string} prefix - 名称前缀，默认为'test'
+     * @returns {Object} 包含name和email的对象
+     */
+    static generateEmployeeData(prefix = 'test') {
+        const randomCode = Math.random().toString(36).substring(2, 8);
+        return {
+            name: `${prefix}${randomCode}`,
+            email: `serena+${randomCode}@57blocks.com`
+        };
+    }
+
+    /**
      * 批量 API 操作助手
      */
     
