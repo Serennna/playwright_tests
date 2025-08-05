@@ -56,7 +56,7 @@ class AccountSetupPage extends BasePage {
     }
 
     async GetNoticeMessage() {
-        return await this.page.locator(this.selectors.noticeWrapper).textContent();
+        return await this.page.locator(this.selectors.noticeWrapper).first().textContent();
     }
 
     async GetAddEmployeeErrorMessage() {
@@ -246,18 +246,41 @@ class AccountSetupPage extends BasePage {
         await this.page.keyboard.press('Enter');
     }
     
-    async AddEmployees() {
+    async AddEmployees(customData = null) {
         const ApiHelper = require('../../utils/api_helper');
         
-        // Generate employee data using the utility
-        const employeeData = ApiHelper.generateEmployeeData();
+        // Use custom data if provided, otherwise generate random data
+        const employeeData = customData || ApiHelper.generateEmployeeData();
         
         await this.click(this.selectors.addEmployeesButton);
+        await this.waitForElement(this.selectors.addEmployeeNameInput);
         await this.fill(this.selectors.addEmployeeNameInput, employeeData.name);
         await this.fill(this.selectors.addEmployeeEmailInput, employeeData.email);
         
         // Return the generated data for test verification
         return employeeData;
+    }
+
+    // 提交添加员工表单
+    async submitAddEmployeeForm() {
+        await this.click(this.selectors.addEmployeeModalConfirm);
+        
+        // Wait for modal to close
+        await this.page.waitForSelector(this.selectors.addEmployeeNameInput, { 
+            state: 'hidden',
+            timeout: 10000 
+        });
+    }
+
+    // 取消添加员工操作
+    async cancelAddEmployee() {
+        await this.click(this.selectors.addEmployeeModalCancel);
+        
+        // Wait for modal to close
+        await this.page.waitForSelector(this.selectors.addEmployeeNameInput, { 
+            state: 'hidden',
+            timeout: 5000 
+        });
     }
 
     async AddAsAdmin() {

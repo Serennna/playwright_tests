@@ -12,10 +12,13 @@ module.exports = {
         admin:{
             users:`${BASE_URL}/users`,
             setUserAdmin:`${BASE_URL}/roles/admins`,
+            viewAll:`${BASE_URL}/aggregator/mentor`,
+            allocationMode:`${BASE_URL}/credit/allocation/mode`,
         },
         employee:{
         },
-        mentor:{
+        mentors:{
+            findMentors:`${BASE_URL}/users/mentors`,
         },
         auth: {
             login: `${BASE_URL}/auth/login`,

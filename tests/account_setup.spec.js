@@ -1,15 +1,14 @@
 const { test, expect } = require('@playwright/test');
 const MenteeLoginPage = require('../pages/mentee_login_page');
 const AccountSetupPage = require('../pages/admin/account_setup');
-const AccountApi = require('../apis/account_api');
 const { mentee_login_data } = require('../config/test_data');
-const AccountSetupAPI = require('../helpers/account_setup_api');
+const AdminApi = require('../helpers/admin_api');
 
 test.describe('Admin - Account Setup Page Tests', () => {
     let context;
     let page;
     let accountSetupPage;
-    let accountApi;
+    let adminApi;
     
     test.beforeAll(async ({ browser }) => {
         // 创建共享的浏览器上下文
@@ -23,7 +22,8 @@ test.describe('Admin - Account Setup Page Tests', () => {
         
         // 初始化页面对象
         accountSetupPage = new AccountSetupPage(page);
-        accountApi = new AccountSetupAPI(mentee_login_data.email, mentee_login_data.password);
+        adminApi = new AdminApi(mentee_login_data.email, mentee_login_data.password);
+        await accountApi.login();
     });
 
     test.beforeEach(async ({ browser }, testInfo) => {
@@ -117,10 +117,9 @@ test.describe('Admin - Account Setup Page Tests', () => {
 
     test('Add employee with valid data', async () => {
         // Get initial total employee count (handles pagination)
-        const initialTotalCount = await accountSetupPage.getTotalEmployeeCount();
-        const hasPagination = await accountSetupPage.hasPagination();
-        
-        console.log(`Initial total count: ${initialTotalCount}, Has pagination: ${hasPagination}`);
+        const initialTotalCount = await adminApi.getUsersTotal();
+
+        console.log(`Initial total count: ${initialTotalCount}`);
         
         // Use the AddEmployees method which generates and fills data, then returns the generated data
         const generatedEmployeeData = await accountSetupPage.AddEmployees();
@@ -135,25 +134,24 @@ test.describe('Admin - Account Setup Page Tests', () => {
         expect(filledName).toBe(generatedEmployeeData.name);
         expect(filledEmail).toBe(generatedEmployeeData.email);
         
-        // Submit the form
-        await accountSetupPage.click(accountSetupPage.selectors.addEmployeeModalConfirm);
-        
-        // Wait for modal to close (assuming successful submission)
-        await accountSetupPage.page.waitForSelector(accountSetupPage.selectors.addEmployeeNameInput, { 
-            state: 'hidden',
-            timeout: 10000 
-        });
+        // Submit the form using the new method
+        await accountSetupPage.submitAddEmployeeForm();
 
         // Verify the total count increased
         const expectedCount = initialTotalCount + 1;
-        const tableUpdated = await accountApi.getUsersTotal();
-        expect(tableUpdated).toBe(expectedCount);
+        const tableUpdated = await adminApi.getUsersTotal();
+        console.log(`Table updated: ${tableUpdated}`);
+        console.log(`Expected count: ${expectedCount}`);
+        expect(tableUpdated).toEqual(expectedCount);
         
         // Verify the specific employee is added via API query using the extracted data
-        const response = await accountApi.queryUsers(1, 1000, generatedEmployeeData.email);
-        expect(response.status).toBe(200);
-        expect(response.data.data[0].user.email).toBe(generatedEmployeeData.email);
-        expect(response.data.data[0].user.username).toBe(generatedEmployeeData.name);
+        const employeeExists = await adminApi.verifyEmployeeExists(generatedEmployeeData.email);
+        expect(employeeExists).toBe(true);
+        
+        const employeeData = await adminApi.getEmployeeByEmail(generatedEmployeeData.email);
+        expect(employeeData).toBeTruthy();
+        expect(employeeData.user.email).toBe(generatedEmployeeData.email);
+        expect(employeeData.user.username).toBe(generatedEmployeeData.name);
     });
 
     test('Add employee with empty fields shows submit button disabled', async () => {
@@ -233,7 +231,7 @@ test.describe('Admin - Account Setup Page Tests', () => {
 
     test('Add employee with existing email shows error', async () => {
         
-        const initialTotalCount = await accountSetupPage.getTotalEmployeeCount();
+        const initialTotalCount = await adminApi.getUsersTotal();
         
         // Open add employee modal
         await accountSetupPage.click(accountSetupPage.selectors.addEmployeesButton);
@@ -248,19 +246,19 @@ test.describe('Admin - Account Setup Page Tests', () => {
         
         // Check for error message
         const errorMessage = await accountSetupPage.GetNoticeMessage();
-        expect(errorMessage).toBeTruthy();
         expect(errorMessage).toContain('Account with the email already exists.');
         
         // Verify total count is not increased
-        const finalTotalCount = await accountSetupPage.getTotalEmployeeCount();
+        const finalTotalCount = await adminApi.getUsersTotal();
         expect(finalTotalCount).toBe(initialTotalCount);
     });
 
     test('Upload icon is clickable', async () => {
         await accountSetupPage.click(accountSetupPage.selectors.uploadIcon);
         // verify the modal is visible
-        await accountSetupPage.waitForElement(accountSetupPage.selectors.uploadModal);
-        expect(await accountSetupPage.isVisible(accountSetupPage.selectors.uploadModal)).toBe(true);
+        const modal = await accountSetupPage.page.locator(accountSetupPage.selectors.modalTitle).textContent();
+        expect(modal).toBeTruthy();
+        expect(modal).toContain('File Upload');
     });
 
     test('Download template icon is clickable', async () => {
@@ -268,7 +266,6 @@ test.describe('Admin - Account Setup Page Tests', () => {
         // Test if download template icon can be clicked
         await accountSetupPage.click(accountSetupPage.selectors.downloadTemplateIcon);
         // verify the modal is visible
-        await accountSetupPage.waitForElement(accountSetupPage.selectors.downloadModal);
         expect(await accountSetupPage.isVisible(accountSetupPage.selectors.noticeWrapper)).toBe(true);
         const errorMessage = await accountSetupPage.GetNoticeMessage();
         expect(errorMessage).toBeTruthy();
@@ -279,9 +276,7 @@ test.describe('Admin - Account Setup Page Tests', () => {
     // 清理共享的浏览器上下文
     test.afterAll(async () => {
         if (context) {
-            const response = await accountApi.getEmployees(1,100,'test');
-            const employeeIds = response.data.data.map(employee => employee.id);
-            await accountApi.deleteMultipleEmployees(employeeIds);
+            await adminApi.cleanupTestEmployees();
             await context.close();
         }
     });

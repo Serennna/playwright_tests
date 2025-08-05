@@ -1,5 +1,5 @@
 const { test, expect } = require('@playwright/test');
-const AccountApi = require('../../apis/account_api');
+const AccountApi = require('../../helpers/admin_api');
 const MenteeLoginPage = require('../../pages/mentee_login_page');
 const { mentee_login_data } = require('../../config/test_data');
 
@@ -10,23 +10,24 @@ test.describe('Account API Tests', () => {
     let page;
 
     test.beforeAll(async ({ browser }) => {
-        const context = await browser.newContext();
-        page = await context.newPage();
+        // const context = await browser.newContext();
+        // page = await context.newPage();
 
-        // 登录以获取认证信息
-        const loginPage = new MenteeLoginPage(page);
-        await loginPage.loginWithRole(mentee_login_data.email, mentee_login_data.password, 'admin');
-        await page.waitForLoadState('networkidle');
+        // // 登录以获取认证信息
+        // const loginPage = new MenteeLoginPage(page);
+        // await loginPage.loginWithRole(mentee_login_data.email, mentee_login_data.password, 'admin');
+        // await page.waitForLoadState('networkidle');
 
         // 初始化 API 客户端
-        accountApi = new AccountApi(page);
+        accountApi = new AccountApi('serena+mentee@57blocks.com', 'Ohhello123456');
+        await accountApi.login();
     });
 
     test.afterAll(async () => {
         // 清理测试数据
         if (accountApi) {
             try {
-                await accountApi.cleanupTestEmployees();
+                // await accountApi.cleanupTestEmployees();
             } catch (error) {
                 console.log('Cleanup failed:', error.message);
             }
@@ -34,24 +35,19 @@ test.describe('Account API Tests', () => {
     });
 
     test('API: Get employees list', async () => {
-        try {
-            const response = await accountApi.getEmployees();
-            
-            expect(response.status).toBe(200);
-            expect(response.data).toBeTruthy();
-            
-            console.log(`✅ Successfully retrieved employees list`);
-            
-            // 验证数据结构
-            if (Array.isArray(response.data) && response.data.length > 0) {
-                const firstEmployee = response.data[0];
-                const errors = accountApi.validateEmployeeData(firstEmployee);
-                expect(errors.length).toBe(0);
-            }
-        } catch (error) {
-            console.log('API test failed, this is expected if API endpoints are not implemented yet');
-            console.log('Error:', error.message);
-        }
+    
+        const response = await accountApi.queryUsers(1, 100)
+        // const response = await accountApi.getUsersTotal();
+        console.log(`[Info]Response: ${response.data}`)  
+        const userTotal = await accountApi.getUsersTotal();
+        console.log(`[Info]User total: ${userTotal}`)
+        expect(response.status).toBe(200);
+        expect(response.data).toBeTruthy();
+        expect(response.data.data.pageResult.total).toBe(26);
+
+        
+        console.log(`✅ Successfully retrieved employees list`);
+
     });
 
     test('API: Add new employee', async () => {
@@ -144,29 +140,13 @@ test.describe('Account API Tests', () => {
         }
     });
 
-    test('API: Delete employee', async () => {
-        try {
-            // 先添加一个测试员工
-            const testResult = await accountApi.createTestEmployee('delete-test');
-            
-            if (testResult.success && testResult.response.data && testResult.response.data.id) {
-                const employeeId = testResult.response.data.id;
-                const employeeEmail = testResult.employee.email;
-                
-                // 删除员工
-                const deleteResponse = await accountApi.deleteEmployee(employeeId);
-                expect(deleteResponse.status).toBeGreaterThanOrEqual(200);
-                expect(deleteResponse.status).toBeLessThan(300);
-
-                // 验证员工已被删除
-                const exists = await accountApi.verifyEmployeeExists(employeeEmail);
-                expect(exists).toBe(false);
-
-                console.log(`✅ Successfully deleted employee: ${employeeEmail}`);
-            }
-        } catch (error) {
-            console.log('API delete employee test failed, this is expected if API endpoints are not implemented yet');
-            console.log('Error:', error.message);
+    test('API: Delete Test employees', async () => {
+        const response = await accountApi.queryUsers(1,100,'test');
+        const data = response.data
+        console.log(`[Info]Delete user response: ${data}`)
+        if (data.data.length > 0) {
+        const employeeIds = data.data.map(employee => employee.user.id);
+        await accountApi.deleteMultipleEmployees(employeeIds);
         }
     });
 

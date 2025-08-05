@@ -11,7 +11,12 @@ class BaseAPI {
     this.idToken = null;
     this.axiosInstance = axios.create();
   }
-
+  async init() {
+    if (!this.idToken) {
+      await this.login();
+    }
+  }
+  
   async login() {
     try {
       const res = await axios.post(FIREBASE_LOGIN_URL, {
@@ -37,21 +42,35 @@ class BaseAPI {
 
   async request(method, url, data = null) {
     if (!this.idToken) throw new Error('🚨 未登录，无法调用接口');
-
+  
     try {
-      const res = await this.axiosInstance({
+      const config = {
         method,
         url,
-        data
-      });
-      return res.data;
+        headers: {
+          Authorization: `${this.idToken}`, // ✅ 每次请求都显式加 token
+        },
+      };
+  
+      if (method === 'GET' && data) {
+        config.params = data;
+      } else if (data) {
+        config.data = data;
+      }
+  
+      console.log('[Debug] 当前请求 header:', config.headers);
+      const res = await this.axiosInstance(config);
+      return res;
     } catch (err) {
       console.error(`❌ API 请求失败：${method} ${url}`, err.response?.data || err.message);
       throw err;
     }
   }
+  
+  
 
   get(url, params) {
+    console.log(`[Info]GET request: ${url} ${params}`)
     return this.request('GET', url, params);
   }
 
