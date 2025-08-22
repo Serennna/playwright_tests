@@ -27,6 +27,7 @@ test.describe('Admin - Credits Page Tests', () => {
     });
 
     test.beforeEach(async ({ browser }, testInfo) => {
+        
         try {
             // 每个测试前导航到账户设置页面
             await creditsPage.goto(creditsPage.url);
@@ -63,31 +64,29 @@ test.describe('Admin - Credits Page Tests', () => {
         const isFCFSModeSelected = await adminApi.getAllocationMode();
         expect(isFCFSModeSelected).toBe('fcfs');
         expect(await creditsPage.page.isVisible(creditsPage.selectors.totalUnallocatedColumn)).toBe(false);
-        });
+        
+    });
 
         test.step('switch to cherry-pick mode', async () => {
         await creditsPage.clickCherryPickButton();
         // modal not found
-        await expect(creditsPage.page.locator(creditsPage.selectors.modalTitle)).toContainText('Switch to Cherry-pick');
-        await expect(creditsPage.page.locator(creditsPage.selectors.modalContent)).toContainText('Are you sure you want to switch to the "Cherry-pick" mode?');
+        await expect(creditsPage.page.locator(creditsPage.selectors.modalTitle)).toBeVisible();
+        await expect(creditsPage.page.locator(creditsPage.selectors.modalTitle)).toContainText('Cherry-pick');
+        await expect(creditsPage.page.locator(creditsPage.selectors.modalContent)).toContainText('Are you sure you want to switch to the “Cherry-pick” mode?');
         await expect(creditsPage.page.locator(creditsPage.selectors.modalContent)).toContainText('You need to manually assign credits to selected mentees in your organization.');
-        await creditsPage.page.click(creditsPage.selectors.confirmButton);
+        await creditsPage.clickConfirmButton();
         await creditsPage.waitForLoad();
         expect(await creditsPage.page.isVisible(creditsPage.selectors.modalTitle)).toBe(false);
         });
 
         test.step('verify total unallocated column displayed', async () => {
-        const isCherryPickModeSelected = await adminApi.getAllocationMode();
+        const isCherryPickModeSelected = await adminApi.getAllocationMode('Cherry-pick',5000);
         expect(isCherryPickModeSelected).toBe('Cherry-pick');
         expect(await creditsPage.page.isVisible(creditsPage.selectors.totalUnallocatedColumn)).toBe(true);
         expect(await creditsPage.page.isVisible(creditsPage.selectors.monthlyQuotaInput)).toBe(true);
         });
     });
 
-    test('Cherry-pick mode', async () => {
-        await creditsPage.click(creditsPage.selectors.cherryPickButton);
-        await creditsPage.waitForLoad();
-    });
 
     test.afterAll(async () => {
             const response = await adminApi.setAllocationMode('fcfs');

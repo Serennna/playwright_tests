@@ -160,20 +160,36 @@ class AdminAPI extends BaseAPI {
     }
   }
 // Credits API
-  async getAllocationMode() {
-    const response = await this.get(urls.admin.allocationMode)
+async getAllocationMode(expectedMode = null, timeout = 5000, interval = 500) {
+  const start = Date.now();
+
+  while (true) {
+    const response = await this.get(urls.admin.allocationMode);
+
     if (response.status === 200) {
-      const mode =  response.data.data.mode
-      if (mode === 1) {
-        return 'fcfs'
-      } else{
-        return 'cherry-pick'
-      }
+      const mode = response.data.data.mode === 1 ? 'fcfs' : 'cherry-pick';
+
+      // 如果没有指定 expectedMode，就直接返回当前值
+      if (!expectedMode) return mode;
+
+      // 如果拿到的是目标值，直接返回
+      if (mode === expectedMode) return mode;
     } else {
-      console.log('[Error]Error getting credit mode:', response.status)
-      return null
+      console.log('[Error] Error getting credit mode:', response.status);
     }
+
+    // 超时检测
+    if (Date.now() - start > timeout) {
+      throw new Error(
+        `Timed out after ${timeout}ms waiting for allocation mode to be "${expectedMode}"`
+      );
+    }
+
+    // 等待一小会再继续
+    await new Promise((resolve) => setTimeout(resolve, interval));
   }
+}
+
 
   async setAllocationMode(mode = 'fcfs') {
     const modeMap = {

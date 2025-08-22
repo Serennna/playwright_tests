@@ -9,7 +9,7 @@ class CreditsPage extends BasePage {
         // Page elements selectors
         this.selectors = {
             fcfsButton: 'button:has-text("First-come, first-served")',
-            cherryPickButton: 'button:has-text("Cherry-pick")',
+            cherryPickButton: 'span:has-text("Cherry-pick")',
             viewUsageLink: 'a:has-text("View Usage History")',
             viewAcquisitionLink: 'a:has-text("View Acquisition History")',
             
@@ -19,8 +19,8 @@ class CreditsPage extends BasePage {
             totalUnallocatedColumn:'div:has-text("Total Unallocated")',
             
             // add employee
-            confirmButton: 'span:has-text("Confirm")',
-            cancelButton: 'span:has-text("Cancel")',
+            confirmButton: 'button:has-text("Confirm")',
+            cancelButton: 'butoon:has-text("Cancel")',
             closeIcon: '.ant-modal button[aria-label="Close"], .ant-modal .ant-modal-close, .ant-modal button[class*="close"]',
             
             // antd table elements
@@ -38,7 +38,7 @@ class CreditsPage extends BasePage {
             noticeWrapper: 'div[class*="ant-message-notice-content"]',
 
             // modal
-            modalTitle: 'div[class*="ant-modal-confirm-title"]',
+            modalTitle: 'span[class*="ant-modal-confirm-title"]',
             modalContent: 'div[class*="ant-modal-confirm-content"]',
             modalCancelButton: 'span:has-text("Cancel")',
         };
@@ -63,6 +63,14 @@ class CreditsPage extends BasePage {
     async clickViewUsageLink() {
         await this.page.click(this.selectors.viewUsageLink);
     }
+
+    async clickConfirmButton() {
+        const confirmButton = this.page.getByRole('button', { name: 'Confirm' });
+        await expect(confirmButton).toBeVisible({ timeout: 5000 });
+        await expect(confirmButton).toBeEnabled();
+        await confirmButton.click();
+      }
+      
 
     async clickViewAcquisitionLink() {
         await this.page.click(this.selectors.viewAcquisitionLink);
