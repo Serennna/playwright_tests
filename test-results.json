@@ -71,20 +71,20 @@
   },
   "suites": [
     {
-      "title": "role_permissions.spec.js",
-      "file": "role_permissions.spec.js",
+      "title": "admin_help.spec.js",
+      "file": "admin_help.spec.js",
       "column": 0,
       "line": 0,
       "specs": [],
       "suites": [
         {
-          "title": "Admin - Role Permissions Tests",
-          "file": "role_permissions.spec.js",
-          "line": 6,
+          "title": "Admin - Help Page - Tests",
+          "file": "admin_help.spec.js",
+          "line": 7,
           "column": 6,
           "specs": [
             {
-              "title": "User with only one mentee role do not display role switch button",
+              "title": "Admin can submit contact support",
               "ok": true,
               "tags": [],
               "tests": [
@@ -96,15 +96,15 @@
                   "projectName": "chromium",
                   "results": [
                     {
-                      "workerIndex": 31,
+                      "workerIndex": 53,
                       "parallelIndex": 0,
                       "status": "passed",
-                      "duration": 11207,
+                      "duration": 1808,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2025-08-25T07:37:18.608Z",
+                      "startTime": "2025-08-25T09:28:34.012Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -112,8 +112,8 @@
                   "status": "expected"
                 }
               ],
-              "id": "4e0bb6ac80d0c47eb2d1-ffeabb0cda57239fa730",
-              "file": "role_permissions.spec.js",
+              "id": "e59d25e7a9d868eede0b-3885df0ed5002a21f317",
+              "file": "admin_help.spec.js",
               "line": 74,
               "column": 5
             }
@@ -124,8 +124,8 @@
   ],
   "errors": [],
   "stats": {
-    "startTime": "2025-08-25T07:37:14.433Z",
-    "duration": 19837.68499999866,
+    "startTime": "2025-08-25T09:28:30.589Z",
+    "duration": 19620.588999997824,
     "expected": 1,
     "skipped": 0,
     "unexpected": 0,

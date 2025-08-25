@@ -18,7 +18,7 @@ test.describe('Admin - Account Setup Page Tests', () => {
         // 登录
         const loginPage = new MenteeLoginPage(page);
         await loginPage.loginWithRole(mentee_login_data.email, mentee_login_data.password, 'admin');
-        await page.waitForLoadState('networkidle');
+        await page.waitForURL(`${BASE_URL_UI}/admin/dashboard`);
         
         // 初始化页面对象
         accountSetupPage = new AccountSetupPage(page);

@@ -6,8 +6,6 @@ const { BASE_URL_UI } = require('../config/api_config');
 test.describe('Admin - Role Permissions Tests', () => {
     let context;
     let page;
-    let creditsPage;
-    let adminApi;
     
     test.beforeAll(async ({ browser }) => {
         // 创建共享的浏览器上下文

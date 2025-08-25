@@ -11,6 +11,7 @@ const mentor_login_data = {
 const admin_user = {
     email: 'serena+onlyadmin@57blocks.com',
     password: 'Qq123456',
+    name:'onlyadmin'
 }
 
 const owner_user = {

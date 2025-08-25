@@ -1,9 +1,11 @@
 const BasePage = require('../base_page');
+const { BASE_URL_UI } = require('../../config/api_config');
+
 
 class AccountSetupPage extends BasePage {
     constructor(page) {
         super(page);
-        this.url = 'https://ohhello-dev-909a7.web.app/admin/account';
+        this.url = `${BASE_URL_UI}/admin/account`;
         
         // Page elements selectors
         this.selectors = {
