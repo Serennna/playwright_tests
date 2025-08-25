@@ -26,7 +26,7 @@ test.describe('Admin - Account Setup Page Tests', () => {
         await accountApi.login();
     });
 
-    test.beforeEach(async ({ browser }, testInfo) => {
+    test.beforeEach(async ({ browser },) => {
         try {
             // 每个测试前导航到账户设置页面
             await accountSetupPage.goto(accountSetupPage.url);
@@ -60,8 +60,6 @@ test.describe('Admin - Account Setup Page Tests', () => {
             await accountSetupPage.waitForLoad();
         }
     });
-    
-
 
     test('Account Setup Page Elements are Visible', async () => {
         // Check if the Account Setup label is visible
@@ -272,7 +270,6 @@ test.describe('Admin - Account Setup Page Tests', () => {
         expect(errorMessage).toContain('Download Successful!');
  
     });
-
     // 清理共享的浏览器上下文
     test.afterAll(async () => {
         if (context) {

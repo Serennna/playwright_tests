@@ -2,17 +2,20 @@
 
 // Define BASE_URL as a constant first
 const BASE_URL = 'https://ohhello-dev-909a7.web.app/api/v1';
+const BASE_URL_UI = 'https://ohhello-dev-909a7.web.app';
 
 module.exports = {
     // API 基础 URL 配置
     BASE_URL: BASE_URL,
-
+    BASE_URL_UI: BASE_URL_UI,
     // API 端点配置
     urls: {
         admin:{
             users:`${BASE_URL}/users`,
             setUserAdmin:`${BASE_URL}/roles/admins`,
             viewAll:`${BASE_URL}/aggregator/mentor`,
+            credits:`${BASE_URL}/admin/credits`,
+            subscription:`${BASE_URL}/admin/subscription`,
             allocationMode:`${BASE_URL}/credit/allocation/mode`,
         },
         employee:{
