@@ -43,6 +43,14 @@ class CreditsPage extends BasePage {
             modalTitle: 'span[class*="ant-modal-confirm-title"]',
             modalContent: 'div[class*="ant-modal-confirm-content"]',
             modalCancelButton: 'span:has-text("Cancel")',
+
+            // cherry-pick mode
+            addQuotaButton: page.locator('div:nth-child(3) > .h-\\[30px\\]').first(),
+            minusQuotaButton: page.locator('.h-\\[30px\\]').first(),
+            totalUnallocatedColumn: page.getByText('Total Unallocated'),
+
+
+
         };
     }
 

@@ -174,8 +174,10 @@ class BasePage {
         
         console.log('─'.repeat(50));
     }
-
-
+    async getNoticeMessage(){
+        const noticeMessage = await this.page.locator('div[class*="ant-message-notice-content"]').first().textContent();
+        return noticeMessage;
+    }
 }
 
 module.exports = BasePage; 
