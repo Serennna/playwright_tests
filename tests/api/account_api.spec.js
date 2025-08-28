@@ -1,7 +1,5 @@
 const { test, expect } = require('@playwright/test');
-const AccountApi = require('../../helpers/admin_api');
-const MenteeLoginPage = require('../../pages/mentee_login_page');
-const { mentee_login_data } = require('../../config/test_data');
+const AccountApi = require('../../helpers/admin_api');      
 
 test.describe.configure({ mode: 'serial' });
 

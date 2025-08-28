@@ -1,9 +1,9 @@
 const BasePage = require('./base_page');
 
-class MenteeLoginPage extends BasePage {
-    constructor(page) {
+class LoginPage extends BasePage {
+    constructor(page, role = 'mentee') {
         super(page);
-        this.url = 'https://ohhello-dev-909a7.web.app/mentee/sign_in';
+        this.url = `https://ohhello-dev-909a7.web.app/${role}/sign_in`;
         
         // Page elements selectors
         this.selectors = {
@@ -131,4 +131,4 @@ class MenteeLoginPage extends BasePage {
     }
 }
 
-module.exports = MenteeLoginPage; 
+module.exports = LoginPage; 

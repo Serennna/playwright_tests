@@ -71,20 +71,20 @@
   },
   "suites": [
     {
-      "title": "credits.spec.js",
-      "file": "credits.spec.js",
+      "title": "mentor_settings.spec.js",
+      "file": "mentor_settings.spec.js",
       "column": 0,
       "line": 0,
       "specs": [],
       "suites": [
         {
-          "title": "Admin - Credits Page Tests",
-          "file": "credits.spec.js",
-          "line": 6,
+          "title": "Mentor - Settings Page - Tests",
+          "file": "mentor_settings.spec.js",
+          "line": 7,
           "column": 6,
           "specs": [
             {
-              "title": "Switch to cherry-pick mode and work with cherry-pick mode",
+              "title": "Mentor can access Settings page and elements are visible",
               "ok": true,
               "tags": [],
               "tests": [
@@ -96,25 +96,25 @@
                   "projectName": "chromium",
                   "results": [
                     {
-                      "workerIndex": 8,
+                      "workerIndex": 16,
                       "parallelIndex": 0,
                       "status": "passed",
-                      "duration": 13389,
+                      "duration": 1578,
                       "errors": [],
-                      "stdout": [
-                        {
-                          "text": "✅ 登录成功，Token 截断： eyJhbGciOiJSUzI1NiIs...\n"
-                        },
-                        {
-                          "text": "[Debug] 当前请求 header: {\n  Authorization: \u001b[32m'eyJhbGciOiJSUzI1NiIsImtpZCI6IjkyZTg4M2NjNDY2M2E2MzMyYWRhNmJjMWU0N2YzZmY1ZTRjOGI1ZDciLCJ0eXAiOiJKV1QifQ.eyJpc3MiOiJodHRwczovL3NlY3VyZXRva2VuLmdvb2dsZS5jb20vb2hoZWxsby1kZXYtOTA5YTciLCJhdWQiOiJvaGhlbGxvLWRldi05MDlhNyIsImF1dGhfdGltZSI6MTc1NjI4MjcxNCwidXNlcl9pZCI6Ik1aQ2xWNG50OGxmSzVhV1AwaFNEcFM5d3plTTIiLCJzdWIiOiJNWkNsVjRudDhsZks1YVdQMGhTRHBTOXd6ZU0yIiwiaWF0IjoxNzU2MjgyNzE0LCJleHAiOjE3NTYyODYzMTQsImVtYWlsIjoic2VyZW5hK21lbnRlZUA1N2Jsb2Nrcy5jb20iLCJlbWFpbF92ZXJpZmllZCI6dHJ1ZSwiZmlyZWJhc2UiOnsiaWRlbnRpdGllcyI6eyJlbWFpbCI6WyJzZXJlbmErbWVudGVlQDU3YmxvY2tzLmNvbSJdfSwic2lnbl9pbl9wcm92aWRlciI6InBhc3N3b3JkIn19.L3I0vpMjwsMkZwcmUqSVF9obU7KulK02pKqkA4e3cct4vzdjlxz10w6ZL0UM0EP-pr9gTnlWFPXdkU3N3RaIKM1tItt2QeZqhOZUpWETFvGqgIvLervGpiY1IRPXuktDUdBkRz40ZPaQIVsHJ2mrvklBpAYiTQIb9-medzH7s7AZnpfFKPKYUWG3Up3t0WCHGZGrW2mKadtkSioebdmcn9eDmjZlVEddrbL3vJTvzVINS_9425LbJGHWWRMobI2dSF_GPEfyYLZZvgMyAnlLQqiVZV7fjSrTKT_nE4Ss8I3ZHleHab7wUPgsz0KDROBMU96hwHBgdD_z3KnPKisfRA'\u001b[39m\n}\n"
-                        },
-                        {
-                          "text": "[Info]Set credit mode to default mode: {\n  status: \u001b[33m200\u001b[39m,\n  statusText: \u001b[32m'OK'\u001b[39m,\n  headers: Object [AxiosHeaders] {\n    connection: \u001b[32m'keep-alive'\u001b[39m,\n    \u001b[32m'content-length'\u001b[39m: \u001b[32m'2'\u001b[39m,\n    \u001b[32m'cache-control'\u001b[39m: \u001b[32m'private'\u001b[39m,\n    \u001b[32m'content-type'\u001b[39m: \u001b[32m'application/json; charset=utf-8'\u001b[39m,\n    server: \u001b[32m'Google Frontend'\u001b[39m,\n    \u001b[32m'strict-transport-security'\u001b[39m: \u001b[32m'max-age=31556926; includeSubDomains; preload'\u001b[39m,\n    \u001b[32m'x-cloud-trace-context'\u001b[39m: \u001b[32m'be38b4341af7c6cdedb3968ee0fce9c4'\u001b[39m,\n    \u001b[32m'x-country-code'\u001b[39m: \u001b[32m'HK'\u001b[39m,\n    \u001b[32m'accept-ranges'\u001b[39m: \u001b[32m'bytes'\u001b[39m,\n    date: \u001b[32m'Wed, 27 Aug 2025 08:18:48 GMT'\u001b[39m,\n    \u001b[32m'x-served-by'\u001b[39m: \u001b[32m'cache-hkg17920-HKG'\u001b[39m,\n    \u001b[32m'x-cache'\u001b[39m: \u001b[32m'MISS'\u001b[39m,\n    \u001b[32m'x-cache-hits'\u001b[39m: \u001b[32m'0'\u001b[39m,\n    \u001b[32m'x-timer'\u001b[39m: \u001b[32m'S1756282728.806647,VS0,VE334'\u001b[39m,\n    vary: \u001b[32m'cookie,need-authorization, x-fh-requested-host, accept-encoding'\u001b[39m,\n    \u001b[32m'alt-svc'\u001b[39m: \u001b[32m'h3=\":443\";ma=86400,h3-29=\":443\";ma=86400,h3-27=\":443\";ma=86400'\u001b[39m\n  },\n  config: {\n    transitional: {\n      silentJSONParsing: \u001b[33mtrue\u001b[39m,\n      forcedJSONParsing: \u001b[33mtrue\u001b[39m,\n      clarifyTimeoutError: \u001b[33mfalse\u001b[39m\n    },\n    adapter: [ \u001b[32m'xhr'\u001b[39m, \u001b[32m'http'\u001b[39m, \u001b[32m'fetch'\u001b[39m ],\n    transformRequest: [ \u001b[36m[Function: transformRequest]\u001b[39m ],\n    transformResponse: [ \u001b[36m[Function: transformResponse]\u001b[39m ],\n    timeout: \u001b[33m0\u001b[39m,\n    xsrfCookieName: \u001b[32m'XSRF-TOKEN'\u001b[39m,\n    xsrfHeaderName: \u001b[32m'X-XSRF-TOKEN'\u001b[39m,\n    maxContentLength: \u001b[33m-1\u001b[39m,\n    maxBodyLength: \u001b[33m-1\u001b[39m,\n    env: { FormData: \u001b[36m[Function [FormData]]\u001b[39m, Blob: \u001b[36m[class Blob]\u001b[39m },\n    validateStatus: \u001b[36m[Function: validateStatus]\u001b[39m,\n    headers: Object [AxiosHeaders] {\n      Accept: \u001b[32m'application/json, text/plain, */*'\u001b[39m,\n      \u001b[32m'Content-Type'\u001b[39m: \u001b[32m'application/json'\u001b[39m,\n      Authorization: \u001b[32m'eyJhbGciOiJSUzI1NiIsImtpZCI6IjkyZTg4M2NjNDY2M2E2MzMyYWRhNmJjMWU0N2YzZmY1ZTRjOGI1ZDciLCJ0eXAiOiJKV1QifQ.eyJpc3MiOiJodHRwczovL3NlY3VyZXRva2VuLmdvb2dsZS5jb20vb2hoZWxsby1kZXYtOTA5YTciLCJhdWQiOiJvaGhlbGxvLWRldi05MDlhNyIsImF1dGhfdGltZSI6MTc1NjI4MjcxNCwidXNlcl9pZCI6Ik1aQ2xWNG50OGxmSzVhV1AwaFNEcFM5d3plTTIiLCJzdWIiOiJNWkNsVjRudDhsZks1YVdQMGhTRHBTOXd6ZU0yIiwiaWF0IjoxNzU2MjgyNzE0LCJleHAiOjE3NTYyODYzMTQsImVtYWlsIjoic2VyZW5hK21lbnRlZUA1N2Jsb2Nrcy5jb20iLCJlbWFpbF92ZXJpZmllZCI6dHJ1ZSwiZmlyZWJhc2UiOnsiaWRlbnRpdGllcyI6eyJlbWFpbCI6WyJzZXJlbmErbWVudGVlQDU3YmxvY2tzLmNvbSJdfSwic2lnbl9pbl9wcm92aWRlciI6InBhc3N3b3JkIn19.L3I0vpMjwsMkZwcmUqSVF9obU7KulK02pKqkA4e3cct4vzdjlxz10w6ZL0UM0EP-pr9gTnlWFPXdkU3N3RaIKM1tItt2QeZqhOZUpWETFvGqgIvLervGpiY1IRPXuktDUdBkRz40ZPaQIVsHJ2mrvklBpAYiTQIb9-medzH7s7AZnpfFKPKYUWG3Up3t0WCHGZGrW2mKadtkSioebdmcn9eDmjZlVEddrbL3vJTvzVINS_9425LbJGHWWRMobI2dSF_GPEfyYLZZvgMyAnlLQqiVZV7fjSrTKT_nE4Ss8I3ZHleHab7wUPgsz0KDROBMU96hwHBgdD_z3KnPKisfRA'\u001b[39m,\n      \u001b[32m'User-Agent'\u001b[39m: \u001b[32m'axios/1.11.0'\u001b[39m,\n      \u001b[32m'Content-Length'\u001b[39m: \u001b[32m'10'\u001b[39m,\n      \u001b[32m'Accept-Encoding'\u001b[39m: \u001b[32m'gzip, compress, deflate, br'\u001b[39m\n    },\n    method: \u001b[32m'put'\u001b[39m,\n    url: \u001b[32m'https://ohhello-dev-909a7.web.app/api/v1/credit/allocation/mode'\u001b[39m,\n    data: \u001b[32m'{\"mode\":1}'\u001b[39m,\n    allowAbsoluteUrls: \u001b[33mtrue\u001b[39m\n  },\n  request: \u001b[36m<ref *1>\u001b[39m ClientRequest {\n    _events: [Object: null prototype] {\n      abort: \u001b[36m[Function (anonymous)]\u001b[39m,\n      aborted: \u001b[36m[Function (anonymous)]\u001b[39m,\n      connect: \u001b[36m[Function (anonymous)]\u001b[39m,\n      error: \u001b[36m[Function (anonymous)]\u001b[39m,\n      socket: \u001b[36m[Function (anonymous)]\u001b[39m,\n      timeout: \u001b[36m[Function (anonymous)]\u001b[39m,\n      finish: \u001b[36m[Function: requestOnFinish]\u001b[39m\n    },\n    _eventsCount: \u001b[33m7\u001b[39m,\n    _maxListeners: \u001b[90mundefined\u001b[39m,\n    outputData: [],\n    outputSize: \u001b[33m0\u001b[39m,\n    writable: \u001b[33mtrue\u001b[39m,\n    destroyed: \u001b[33mtrue\u001b[39m,\n    _last: \u001b[33mfalse\u001b[39m,\n    chunkedEncoding: \u001b[33mfalse\u001b[39m,\n    shouldKeepAlive: \u001b[33mtrue\u001b[39m,\n    maxRequestsOnConnectionReached: \u001b[33mfalse\u001b[39m,\n    _defaultKeepAlive: \u001b[33mtrue\u001b[39m,\n    useChunkedEncodingByDefault: \u001b[33mtrue\u001b[39m,\n    sendDate: \u001b[33mfalse\u001b[39m,\n    _removedConnection: \u001b[33mfalse\u001b[39m,\n    _removedContLen: \u001b[33mfalse\u001b[39m,\n    _removedTE: \u001b[33mfalse\u001b[39m,\n    strictContentLength: \u001b[33mfalse\u001b[39m,\n    _contentLength: \u001b[32m'10'\u001b[39m,\n    _hasBody: \u001b[33mtrue\u001b[39m,\n    _trailer: \u001b[32m''\u001b[39m,\n    finished: \u001b[33mtrue\u001b[39m,\n    _headerSent: \u001b[33mtrue\u001b[39m,\n    _closed: \u001b[33mtrue\u001b[39m,\n    socket: TLSSocket {\n      _tlsOptions: \u001b[36m[Object]\u001b[39m,\n      _secureEstablished: \u001b[33mtrue\u001b[39m,\n      _securePending: \u001b[33mfalse\u001b[39m,\n      _newSessionPending: \u001b[33mfalse\u001b[39m,\n      _controlReleased: \u001b[33mtrue\u001b[39m,\n      secureConnecting: \u001b[33mfalse\u001b[39m,\n      _SNICallback: \u001b[1mnull\u001b[22m,\n      servername: \u001b[32m'ohhello-dev-909a7.web.app'\u001b[39m,\n      alpnProtocol: \u001b[33mfalse\u001b[39m,\n      authorized: \u001b[33mtrue\u001b[39m,\n      authorizationError: \u001b[1mnull\u001b[22m,\n      encrypted: \u001b[33mtrue\u001b[39m,\n      _events: \u001b[36m[Object: null prototype]\u001b[39m,\n      _eventsCount: \u001b[33m9\u001b[39m,\n      connecting: \u001b[33mfalse\u001b[39m,\n      _hadError: \u001b[33mfalse\u001b[39m,\n      _parent: \u001b[1mnull\u001b[22m,\n      _host: \u001b[32m'ohhello-dev-909a7.web.app'\u001b[39m,\n      _closeAfterHandlingError: \u001b[33mfalse\u001b[39m,\n      _readableState: \u001b[36m[ReadableState]\u001b[39m,\n      _writableState: \u001b[36m[WritableState]\u001b[39m,\n      allowHalfOpen: \u001b[33mfalse\u001b[39m,\n      _maxListeners: \u001b[90mundefined\u001b[39m,\n      _sockname: \u001b[1mnull\u001b[22m,\n      _pendingData: \u001b[1mnull\u001b[22m,\n      _pendingEncoding: \u001b[32m''\u001b[39m,\n      server: \u001b[90mundefined\u001b[39m,\n      _server: \u001b[1mnull\u001b[22m,\n      ssl: \u001b[36m[TLSWrap]\u001b[39m,\n      _requestCert: \u001b[33mtrue\u001b[39m,\n      _rejectUnauthorized: \u001b[33mtrue\u001b[39m,\n      timeout: \u001b[33m5000\u001b[39m,\n      parser: \u001b[1mnull\u001b[22m,\n      _httpMessage: \u001b[1mnull\u001b[22m,\n      [\u001b[32mSymbol(alpncallback)\u001b[39m]: \u001b[1mnull\u001b[22m,\n      [\u001b[32mSymbol(res)\u001b[39m]: \u001b[36m[TLSWrap]\u001b[39m,\n      [\u001b[32mSymbol(verified)\u001b[39m]: \u001b[33mtrue\u001b[39m,\n      [\u001b[32mSymbol(pendingSession)\u001b[39m]: \u001b[1mnull\u001b[22m,\n      [\u001b[32mSymbol(async_id_symbol)\u001b[39m]: \u001b[33m-1\u001b[39m,\n      [\u001b[32mSymbol(kHandle)\u001b[39m]: \u001b[36m[TLSWrap]\u001b[39m,\n      [\u001b[32mSymbol(lastWriteQueueSize)\u001b[39m]: \u001b[33m0\u001b[39m,\n      [\u001b[32mSymbol(timeout)\u001b[39m]: Timeout {\n        _idleTimeout: \u001b[33m5000\u001b[39m,\n        _idlePrev: \u001b[36m[TimersList]\u001b[39m,\n        _idleNext: \u001b[36m[TimersList]\u001b[39m,\n        _idleStart: \u001b[33m26547\u001b[39m,\n        _onTimeout: \u001b[36m[Function: bound ]\u001b[39m,\n        _timerArgs: \u001b[90mundefined\u001b[39m,\n        _repeat: \u001b[1mnull\u001b[22m,\n        _destroyed: \u001b[33mfalse\u001b[39m,\n        [\u001b[32mSymbol(refed)\u001b[39m]: \u001b[33mfalse\u001b[39m,\n        [\u001b[32mSymbol(kHasPrimitive)\u001b[39m]: \u001b[33mfalse\u001b[39m,\n        [\u001b[32mSymbol(asyncId)\u001b[39m]: \u001b[33m23892\u001b[39m,\n        [\u001b[32mSymbol(triggerId)\u001b[39m]: \u001b[33m23890\u001b[39m,\n        [\u001b[32mSymbol(kResourceStore)\u001b[39m]: \u001b[90mundefined\u001b[39m\n      },\n      [\u001b[32mSymbol(kBuffer)\u001b[39m]: \u001b[1mnull\u001b[22m,\n      [\u001b[32mSymbol(kBufferCb)\u001b[39m]: \u001b[1mnull\u001b[22m,\n      [\u001b[32mSymbol(kBufferGen)\u001b[39m]: \u001b[1mnull\u001b[22m,\n      [\u001b[32mSymbol(shapeMode)\u001b[39m]: \u001b[33mtrue\u001b[39m,\n      [\u001b[32mSymbol(kCapture)\u001b[39m]: \u001b[33mfalse\u001b[39m,\n      [\u001b[32mSymbol(kSetNoDelay)\u001b[39m]: \u001b[33mfalse\u001b[39m,\n      [\u001b[32mSymbol(kSetKeepAlive)\u001b[39m]: \u001b[33mtrue\u001b[39m,\n      [\u001b[32mSymbol(kSetKeepAliveInitialDelay)\u001b[39m]: \u001b[33m1\u001b[39m,\n      [\u001b[32mSymbol(kBytesRead)\u001b[39m]: \u001b[33m0\u001b[39m,\n      [\u001b[32mSymbol(kBytesWritten)\u001b[39m]: \u001b[33m0\u001b[39m,\n      [\u001b[32mSymbol(connect-options)\u001b[39m]: \u001b[36m[Object]\u001b[39m\n    },\n    _header: \u001b[32m'PUT /api/v1/credit/allocation/mode HTTP/1.1\\r\\n'\u001b[39m +\n      \u001b[32m'Accept: application/json, text/plain, */*\\r\\n'\u001b[39m +\n      \u001b[32m'Content-Type: application/json\\r\\n'\u001b[39m +\n      \u001b[32m'Authorization: eyJhbGciOiJSUzI1NiIsImtpZCI6IjkyZTg4M2NjNDY2M2E2MzMyYWRhNmJjMWU0N2YzZmY1ZTRjOGI1ZDciLCJ0eXAiOiJKV1QifQ.eyJpc3MiOiJodHRwczovL3NlY3VyZXRva2VuLmdvb2dsZS5jb20vb2hoZWxsby1kZXYtOTA5YTciLCJhdWQiOiJvaGhlbGxvLWRldi05MDlhNyIsImF1dGhfdGltZSI6MTc1NjI4MjcxNCwidXNlcl9pZCI6Ik1aQ2xWNG50OGxmSzVhV1AwaFNEcFM5d3plTTIiLCJzdWIiOiJNWkNsVjRudDhsZks1YVdQMGhTRHBTOXd6ZU0yIiwiaWF0IjoxNzU2MjgyNzE0LCJleHAiOjE3NTYyODYzMTQsImVtYWlsIjoic2VyZW5hK21lbnRlZUA1N2Jsb2Nrcy5jb20iLCJlbWFpbF92ZXJpZmllZCI6dHJ1ZSwiZmlyZWJhc2UiOnsiaWRlbnRpdGllcyI6eyJlbWFpbCI6WyJzZXJlbmErbWVudGVlQDU3YmxvY2tzLmNvbSJdfSwic2lnbl9pbl9wcm92aWRlciI6InBhc3N3b3JkIn19.L3I0vpMjwsMkZwcmUqSVF9obU7KulK02pKqkA4e3cct4vzdjlxz10w6ZL0UM0EP-pr9gTnlWFPXdkU3N3RaIKM1tItt2QeZqhOZUpWETFvGqgIvLervGpiY1IRPXuktDUdBkRz40ZPaQIVsHJ2mrvklBpAYiTQIb9-medzH7s7AZnpfFKPKYUWG3Up3t0WCHGZGrW2mKadtkSioebdmcn9eDmjZlVEddrbL3vJTvzVINS_9425LbJGHWWRMobI2dSF_GPEfyYLZZvgMyAnlLQqiVZV7fjSrTKT_nE4Ss8I3ZHleHab7wUPgsz0KDROBMU96hwHBgdD_z3KnPKisfRA\\r\\n'\u001b[39m +\n      \u001b[32m'User-Agent: axios/1.11.0\\r\\n'\u001b[39m +\n      \u001b[32m'Content-Length: 10\\r\\n'\u001b[39m +\n      \u001b[32m'Accept-Encoding: gzip, compress, deflate, br\\r\\n'\u001b[39m +\n      \u001b[32m'Host: ohhello-dev-909a7.web.app\\r\\n'\u001b[39m +\n      \u001b[32m'Connection: keep-alive\\r\\n'\u001b[39m +\n      \u001b[32m'\\r\\n'\u001b[39m,\n    _keepAliveTimeout: \u001b[33m0\u001b[39m,\n    _onPendingData: \u001b[36m[Function: nop]\u001b[39m,\n    agent: Agent {\n      _events: \u001b[36m[Object: null prototype]\u001b[39m,\n      _eventsCount: \u001b[33m2\u001b[39m,\n      _maxListeners: \u001b[90mundefined\u001b[39m,\n      defaultPort: \u001b[33m443\u001b[39m,\n      protocol: \u001b[32m'https:'\u001b[39m,\n      options: \u001b[36m[Object: null prototype]\u001b[39m,\n      requests: [Object: null prototype] {},\n      sockets: [Object: null prototype] {},\n      freeSockets: \u001b[36m[Object: null prototype]\u001b[39m,\n      keepAliveMsecs: \u001b[33m1000\u001b[39m,\n      keepAlive: \u001b[33mtrue\u001b[39m,\n      maxSockets: \u001b[33mInfinity\u001b[39m,\n      maxFreeSockets: \u001b[33m256\u001b[39m,\n      scheduling: \u001b[32m'lifo'\u001b[39m,\n      maxTotalSockets: \u001b[33mInfinity\u001b[39m,\n      totalSocketCount: \u001b[33m1\u001b[39m,\n      maxCachedSessions: \u001b[33m100\u001b[39m,\n      _sessionCache: \u001b[36m[Object]\u001b[39m,\n      [\u001b[32mSymbol(shapeMode)\u001b[39m]: \u001b[33mfalse\u001b[39m,\n      [\u001b[32mSymbol(kCapture)\u001b[39m]: \u001b[33mfalse\u001b[39m\n    },\n    socketPath: \u001b[90mundefined\u001b[39m,\n    method: \u001b[32m'PUT'\u001b[39m,\n    maxHeaderSize: \u001b[90mundefined\u001b[39m,\n    insecureHTTPParser: \u001b[90mundefined\u001b[39m,\n    joinDuplicateHeaders: \u001b[90mundefined\u001b[39m,\n    path: \u001b[32m'/api/v1/credit/allocation/mode'\u001b[39m,\n    _ended: \u001b[33mtrue\u001b[39m,\n    res: IncomingMessage {\n      _events: \u001b[36m[Object]\u001b[39m,\n      _readableState: \u001b[36m[ReadableState]\u001b[39m,\n      _maxListeners: \u001b[90mundefined\u001b[39m,\n      socket: \u001b[1mnull\u001b[22m,\n      httpVersionMajor: \u001b[33m1\u001b[39m,\n      httpVersionMinor: \u001b[33m1\u001b[39m,\n      httpVersion: \u001b[32m'1.1'\u001b[39m,\n      complete: \u001b[33mtrue\u001b[39m,\n      rawHeaders: \u001b[36m[Array]\u001b[39m,\n      rawTrailers: [],\n      joinDuplicateHeaders: \u001b[90mundefined\u001b[39m,\n      aborted: \u001b[33mfalse\u001b[39m,\n      upgrade: \u001b[33mfalse\u001b[39m,\n      url: \u001b[32m''\u001b[39m,\n      method: \u001b[1mnull\u001b[22m,\n      statusCode: \u001b[33m200\u001b[39m,\n      statusMessage: \u001b[32m'OK'\u001b[39m,\n      client: \u001b[36m[TLSSocket]\u001b[39m,\n      _consuming: \u001b[33mtrue\u001b[39m,\n      _dumped: \u001b[33mfalse\u001b[39m,\n      req: \u001b[36m[Circular *1]\u001b[39m,\n      _eventsCount: \u001b[33m4\u001b[39m,\n      responseUrl: \u001b[32m'https://ohhello-dev-909a7.web.app/api/v1/credit/allocation/mode'\u001b[39m,\n      redirects: [],\n      [\u001b[32mSymbol(shapeMode)\u001b[39m]: \u001b[33mtrue\u001b[39m,\n      [\u001b[32mSymbol(kCapture)\u001b[39m]: \u001b[33mfalse\u001b[39m,\n      [\u001b[32mSymbol(kHeaders)\u001b[39m]: \u001b[36m[Object]\u001b[39m,\n      [\u001b[32mSymbol(kHeadersCount)\u001b[39m]: \u001b[33m32\u001b[39m,\n      [\u001b[32mSymbol(kTrailers)\u001b[39m]: \u001b[1mnull\u001b[22m,\n      [\u001b[32mSymbol(kTrailersCount)\u001b[39m]: \u001b[33m0\u001b[39m\n    },\n    aborted: \u001b[33mfalse\u001b[39m,\n    timeoutCb: \u001b[1mnull\u001b[22m,\n    upgradeOrConnect: \u001b[33mfalse\u001b[39m,\n    parser: \u001b[1mnull\u001b[22m,\n    maxHeadersCount: \u001b[1mnull\u001b[22m,\n    reusedSocket: \u001b[33mfalse\u001b[39m,\n    host: \u001b[32m'ohhello-dev-909a7.web.app'\u001b[39m,\n    protocol: \u001b[32m'https:'\u001b[39m,\n    _redirectable: Writable {\n      _events: \u001b[36m[Object]\u001b[39m,\n      _writableState: \u001b[36m[WritableState]\u001b[39m,\n      _maxListeners: \u001b[90mundefined\u001b[39m,\n      _options: \u001b[36m[Object]\u001b[39m,\n      _ended: \u001b[33mtrue\u001b[39m,\n      _ending: \u001b[33mtrue\u001b[39m,\n      _redirectCount: \u001b[33m0\u001b[39m,\n      _redirects: [],\n      _requestBodyLength: \u001b[33m10\u001b[39m,\n      _requestBodyBuffers: [],\n      _eventsCount: \u001b[33m3\u001b[39m,\n      _onNativeResponse: \u001b[36m[Function (anonymous)]\u001b[39m,\n      _currentRequest: \u001b[36m[Circular *1]\u001b[39m,\n      _currentUrl: \u001b[32m'https://ohhello-dev-909a7.web.app/api/v1/credit/allocation/mode'\u001b[39m,\n      [\u001b[32mSymbol(shapeMode)\u001b[39m]: \u001b[33mtrue\u001b[39m,\n      [\u001b[32mSymbol(kCapture)\u001b[39m]: \u001b[33mfalse\u001b[39m\n    },\n    [\u001b[32mSymbol(shapeMode)\u001b[39m]: \u001b[33mfalse\u001b[39m,\n    [\u001b[32mSymbol(kCapture)\u001b[39m]: \u001b[33mfalse\u001b[39m,\n    [\u001b[32mSymbol(kBytesWritten)\u001b[39m]: \u001b[33m0\u001b[39m,\n    [\u001b[32mSymbol(kNeedDrain)\u001b[39m]: \u001b[33mfalse\u001b[39m,\n    [\u001b[32mSymbol(corked)\u001b[39m]: \u001b[33m0\u001b[39m,\n    [\u001b[32mSymbol(kOutHeaders)\u001b[39m]: [Object: null prototype] {\n      accept: \u001b[36m[Array]\u001b[39m,\n      \u001b[32m'content-type'\u001b[39m: \u001b[36m[Array]\u001b[39m,\n      authorization: \u001b[36m[Array]\u001b[39m,\n      \u001b[32m'user-agent'\u001b[39m: \u001b[36m[Array]\u001b[39m,\n      \u001b[32m'content-length'\u001b[39m: \u001b[36m[Array]\u001b[39m,\n      \u001b[32m'accept-encoding'\u001b[39m: \u001b[36m[Array]\u001b[39m,\n      host: \u001b[36m[Array]\u001b[39m\n    },\n    [\u001b[32mSymbol(errored)\u001b[39m]: \u001b[1mnull\u001b[22m,\n    [\u001b[32mSymbol(kHighWaterMark)\u001b[39m]: \u001b[33m16384\u001b[39m,\n    [\u001b[32mSymbol(kRejectNonStandardBodyWrites)\u001b[39m]: \u001b[33mfalse\u001b[39m,\n    [\u001b[32mSymbol(kUniqueHeaders)\u001b[39m]: \u001b[1mnull\u001b[22m\n  },\n  data: {}\n}\n"
-                        }
-                      ],
+                      "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2025-08-27T08:18:22.929Z",
+                      "steps": [
+                        {
+                          "title": "Verify page labels are visible",
+                          "duration": -1
+                        },
+                        {
+                          "title": "Verify input fields have correct default values",
+                          "duration": -1
+                        }
+                      ],
+                      "startTime": "2025-08-28T07:53:31.314Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -122,9 +122,107 @@
                   "status": "expected"
                 }
               ],
-              "id": "43ab864a453a8a4a6fae-476b2f87992f66a3bbc2",
-              "file": "credits.spec.js",
-              "line": 90,
+              "id": "f588c8907103e6dc7404-bc222e210592eef780aa",
+              "file": "mentor_settings.spec.js",
+              "line": 68,
+              "column": 5
+            },
+            {
+              "title": "Mentor can edit name",
+              "ok": false,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 16,
+                      "parallelIndex": 0,
+                      "status": "failed",
+                      "duration": 1388,
+                      "error": {
+                        "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m()\u001b[22m\n\nLocator: locator('.ant-input-suffix > .cursor-pointer').first()\nExpected: visible\nReceived: <element(s) not found>\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('.ant-input-suffix > .cursor-pointer').first()\u001b[22m\n",
+                        "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m()\u001b[22m\n\nLocator: locator('.ant-input-suffix > .cursor-pointer').first()\nExpected: visible\nReceived: <element(s) not found>\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('.ant-input-suffix > .cursor-pointer').first()\u001b[22m\n\n    at /Users/57block/workspace/OhHello/playwright_tests/tests/mentor_settings.spec.js:95:71\n    at /Users/57block/workspace/OhHello/playwright_tests/tests/mentor_settings.spec.js:94:14",
+                        "location": {
+                          "file": "/Users/57block/workspace/OhHello/playwright_tests/tests/mentor_settings.spec.js",
+                          "column": 71,
+                          "line": 95
+                        },
+                        "snippet": "\u001b[0m \u001b[90m 93 |\u001b[39m         \n \u001b[90m 94 |\u001b[39m         test\u001b[33m.\u001b[39mstep(\u001b[32m'Enter edit mode for name field'\u001b[39m\u001b[33m,\u001b[39m \u001b[36masync\u001b[39m () \u001b[33m=>\u001b[39m {\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 95 |\u001b[39m             \u001b[36mawait\u001b[39m expect(mentorSettingsPage\u001b[33m.\u001b[39mselectors\u001b[33m.\u001b[39mnameEditButton)\u001b[33m.\u001b[39mtoBeVisible()\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                                                                       \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 96 |\u001b[39m             \u001b[36mawait\u001b[39m mentorSettingsPage\u001b[33m.\u001b[39mselectors\u001b[33m.\u001b[39mnameEditButton\u001b[33m.\u001b[39mclick()\u001b[33m;\u001b[39m\n \u001b[90m 97 |\u001b[39m             \n \u001b[90m 98 |\u001b[39m             \u001b[90m// Verify name input is editable\u001b[39m\u001b[0m"
+                      },
+                      "errors": [
+                        {
+                          "location": {
+                            "file": "/Users/57block/workspace/OhHello/playwright_tests/tests/mentor_settings.spec.js",
+                            "column": 71,
+                            "line": 95
+                          },
+                          "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m()\u001b[22m\n\nLocator: locator('.ant-input-suffix > .cursor-pointer').first()\nExpected: visible\nReceived: <element(s) not found>\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('.ant-input-suffix > .cursor-pointer').first()\u001b[22m\n\n\n\u001b[0m \u001b[90m 93 |\u001b[39m         \n \u001b[90m 94 |\u001b[39m         test\u001b[33m.\u001b[39mstep(\u001b[32m'Enter edit mode for name field'\u001b[39m\u001b[33m,\u001b[39m \u001b[36masync\u001b[39m () \u001b[33m=>\u001b[39m {\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 95 |\u001b[39m             \u001b[36mawait\u001b[39m expect(mentorSettingsPage\u001b[33m.\u001b[39mselectors\u001b[33m.\u001b[39mnameEditButton)\u001b[33m.\u001b[39mtoBeVisible()\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                                                                       \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 96 |\u001b[39m             \u001b[36mawait\u001b[39m mentorSettingsPage\u001b[33m.\u001b[39mselectors\u001b[33m.\u001b[39mnameEditButton\u001b[33m.\u001b[39mclick()\u001b[33m;\u001b[39m\n \u001b[90m 97 |\u001b[39m             \n \u001b[90m 98 |\u001b[39m             \u001b[90m// Verify name input is editable\u001b[39m\u001b[0m\n\u001b[2m    at /Users/57block/workspace/OhHello/playwright_tests/tests/mentor_settings.spec.js:95:71\u001b[22m\n\u001b[2m    at /Users/57block/workspace/OhHello/playwright_tests/tests/mentor_settings.spec.js:94:14\u001b[22m"
+                        }
+                      ],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "steps": [
+                        {
+                          "title": "Enter edit mode for name field",
+                          "duration": 474,
+                          "error": {
+                            "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m()\u001b[22m\n\nLocator: locator('.ant-input-suffix > .cursor-pointer').first()\nExpected: visible\nReceived: <element(s) not found>\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('.ant-input-suffix > .cursor-pointer').first()\u001b[22m\n",
+                            "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m()\u001b[22m\n\nLocator: locator('.ant-input-suffix > .cursor-pointer').first()\nExpected: visible\nReceived: <element(s) not found>\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('.ant-input-suffix > .cursor-pointer').first()\u001b[22m\n\n    at /Users/57block/workspace/OhHello/playwright_tests/tests/mentor_settings.spec.js:95:71\n    at /Users/57block/workspace/OhHello/playwright_tests/tests/mentor_settings.spec.js:94:14",
+                            "location": {
+                              "file": "/Users/57block/workspace/OhHello/playwright_tests/tests/mentor_settings.spec.js",
+                              "column": 71,
+                              "line": 95
+                            },
+                            "snippet": "\u001b[0m \u001b[90m 93 |\u001b[39m         \n \u001b[90m 94 |\u001b[39m         test\u001b[33m.\u001b[39mstep(\u001b[32m'Enter edit mode for name field'\u001b[39m\u001b[33m,\u001b[39m \u001b[36masync\u001b[39m () \u001b[33m=>\u001b[39m {\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 95 |\u001b[39m             \u001b[36mawait\u001b[39m expect(mentorSettingsPage\u001b[33m.\u001b[39mselectors\u001b[33m.\u001b[39mnameEditButton)\u001b[33m.\u001b[39mtoBeVisible()\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                                                                       \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 96 |\u001b[39m             \u001b[36mawait\u001b[39m mentorSettingsPage\u001b[33m.\u001b[39mselectors\u001b[33m.\u001b[39mnameEditButton\u001b[33m.\u001b[39mclick()\u001b[33m;\u001b[39m\n \u001b[90m 97 |\u001b[39m             \n \u001b[90m 98 |\u001b[39m             \u001b[90m// Verify name input is editable\u001b[39m\u001b[0m"
+                          }
+                        },
+                        {
+                          "title": "Update name value",
+                          "duration": 374
+                        },
+                        {
+                          "title": "Save changes",
+                          "duration": 472,
+                          "error": {
+                            "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m()\u001b[22m\n\nLocator: locator('svg:nth-child(2) > path')\nExpected: visible\nReceived: <element(s) not found>\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('svg:nth-child(2) > path')\u001b[22m\n",
+                            "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m()\u001b[22m\n\nLocator: locator('svg:nth-child(2) > path')\nExpected: visible\nReceived: <element(s) not found>\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('svg:nth-child(2) > path')\u001b[22m\n\n    at /Users/57block/workspace/OhHello/playwright_tests/tests/mentor_settings.spec.js:112:74\n    at /Users/57block/workspace/OhHello/playwright_tests/tests/mentor_settings.spec.js:111:14",
+                            "location": {
+                              "file": "/Users/57block/workspace/OhHello/playwright_tests/tests/mentor_settings.spec.js",
+                              "column": 74,
+                              "line": 112
+                            },
+                            "snippet": "\u001b[0m \u001b[90m 110 |\u001b[39m\n \u001b[90m 111 |\u001b[39m         test\u001b[33m.\u001b[39mstep(\u001b[32m'Save changes'\u001b[39m\u001b[33m,\u001b[39m \u001b[36masync\u001b[39m () \u001b[33m=>\u001b[39m {\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 112 |\u001b[39m             \u001b[36mawait\u001b[39m expect(mentorSettingsPage\u001b[33m.\u001b[39mselectors\u001b[33m.\u001b[39msaveChangesbutton)\u001b[33m.\u001b[39mtoBeVisible()\u001b[33m;\u001b[39m\n \u001b[90m     |\u001b[39m                                                                          \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 113 |\u001b[39m             \u001b[36mawait\u001b[39m mentorSettingsPage\u001b[33m.\u001b[39mselectors\u001b[33m.\u001b[39msaveChangesbutton\u001b[33m.\u001b[39mclick()\u001b[33m;\u001b[39m\n \u001b[90m 114 |\u001b[39m             \n \u001b[90m 115 |\u001b[39m             \u001b[90m// Wait for save operation to complete\u001b[39m\u001b[0m"
+                          }
+                        }
+                      ],
+                      "startTime": "2025-08-28T07:53:48.093Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "screenshot",
+                          "contentType": "image/png",
+                          "path": "/Users/57block/workspace/OhHello/playwright_tests/screenshots/mentor_settings-Mentor---S-5a851--Tests-Mentor-can-edit-name-chromium/test-failed-1.png"
+                        }
+                      ],
+                      "errorLocation": {
+                        "file": "/Users/57block/workspace/OhHello/playwright_tests/tests/mentor_settings.spec.js",
+                        "column": 71,
+                        "line": 95
+                      }
+                    }
+                  ],
+                  "status": "unexpected"
+                }
+              ],
+              "id": "f588c8907103e6dc7404-f5560a342df81292054c",
+              "file": "mentor_settings.spec.js",
+              "line": 92,
               "column": 5
             }
           ]
@@ -134,11 +232,11 @@
   ],
   "errors": [],
   "stats": {
-    "startTime": "2025-08-27T08:18:20.133Z",
-    "duration": 29227.859999999404,
+    "startTime": "2025-08-28T07:53:26.877Z",
+    "duration": 24144.748999997973,
     "expected": 1,
     "skipped": 0,
-    "unexpected": 0,
+    "unexpected": 1,
     "flaky": 0
   }
 }

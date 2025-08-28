@@ -1,5 +1,5 @@
 const { test, expect } = require('@playwright/test');
-const MenteeLoginPage = require('../pages/mentee_login_page');
+const LoginPage = require('../pages/login_page');
 const AccountSetupPage = require('../pages/admin/account_setup');
 const { mentee_login_data } = require('../config/test_data');
 const AdminApi = require('../helpers/admin_api');
@@ -16,7 +16,7 @@ test.describe('Admin - Account Setup Page Tests', () => {
         page = await context.newPage();
         
         // 登录
-        const loginPage = new MenteeLoginPage(page);
+        const loginPage = new LoginPage(page);
         await loginPage.loginWithRole(mentee_login_data.email, mentee_login_data.password, 'admin');
         await page.waitForURL(`${BASE_URL_UI}/admin/dashboard`);
         

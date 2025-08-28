@@ -1,5 +1,5 @@
 const { test, expect } = require('@playwright/test');
-const MenteeLoginPage = require('../pages/mentee_login_page');
+const LoginPage = require('../pages/login_page');
 const { mentee_login_data } = require('../config/test_data');
 const CreditsPage = require('../pages/admin/credits');
 const AdminApi = require('../helpers/admin_api');
@@ -15,7 +15,7 @@ test.describe('Admin - Credits Page Tests', () => {
         page = await context.newPage();
         
         // 登录
-        const loginPage = new MenteeLoginPage(page);
+        const loginPage = new LoginPage(page);
         await loginPage.loginWithRole(mentee_login_data.email, mentee_login_data.password, 'admin');
         await page.waitForLoadState('networkidle');
         
@@ -148,7 +148,6 @@ test.describe('Admin - Credits Page Tests', () => {
             expect(newCreditsNumber).toBe(initialCredits - 1);
         });
     });
-
 
     test.afterAll(async () => {
             const response = await adminApi.setAllocationMode('fcfs');

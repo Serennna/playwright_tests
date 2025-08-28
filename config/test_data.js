@@ -19,15 +19,22 @@ const owner_user = {
     password: 'Ohhello123456',
 }
 
+const mentor_user = {
+    email: 'serena+mentor@57blocks.com',
+    password: 'Ohhello123456',
+    name: 'Serena Leclerc',
+}
 const mentee_role_user = {
     email: 'serena+1rolementee@57blocks.com',
     password: 'Qq123456',
 }
+
 
 module.exports = {
     mentee_login_data,
     mentor_login_data,
     admin_user,
     owner_user,
+    mentor_user,
     mentee_role_user
 };

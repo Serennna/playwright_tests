@@ -1,5 +1,5 @@
 const { test, expect } = require('@playwright/test');
-const MenteeLoginPage = require('../pages/mentee_login_page');
+const LoginPage = require('../pages/login_page');
 const { admin_user, owner_user, mentee_role_user} = require('../config/test_data');
 const { BASE_URL_UI } = require('../config/api_config');
 
@@ -16,7 +16,7 @@ test.describe('Admin - Role Permissions Tests', () => {
 
     test('Admin can not access Credits page', async () => {
         // login with admin role
-        const adminLoginPage = new MenteeLoginPage(page);
+        const adminLoginPage = new LoginPage(page);
         await adminLoginPage.loginWithRole(admin_user.email, admin_user.password, 'admin');
         await page.waitForURL(`${BASE_URL_UI}/admin/dashboard`);
         
@@ -31,7 +31,7 @@ test.describe('Admin - Role Permissions Tests', () => {
 
     test('Admin can not access Subscription page', async () => {
         // login with admin role
-        const adminLoginPage = new MenteeLoginPage(page);
+        const adminLoginPage = new LoginPage(page);
         await adminLoginPage.loginWithRole(admin_user.email, admin_user.password, 'admin');
         await page.waitForURL(`${BASE_URL_UI}/admin/dashboard`);
 
@@ -44,7 +44,7 @@ test.describe('Admin - Role Permissions Tests', () => {
 
     test('Owner can access Credits page', async () => {
         // login with owner role
-        const ownerLoginPage = new MenteeLoginPage(page);
+        const ownerLoginPage = new LoginPage(page);
         await ownerLoginPage.loginWithRole(owner_user.email, owner_user.password, 'admin');
         await page.waitForLoadState('networkidle');
         await expect(page.getByRole('link', { name: 'Credits' })).toBeVisible();
@@ -57,7 +57,7 @@ test.describe('Admin - Role Permissions Tests', () => {
 
     test('Owner can access Subscription page', async () => {
         // login with owner role
-        const ownerLoginPage = new MenteeLoginPage(page);
+        const ownerLoginPage = new LoginPage(page);
         await ownerLoginPage.loginWithRole(owner_user.email, owner_user.password, 'admin');
         await page.waitForLoadState('networkidle');
         await expect(page.getByRole('link', { name: 'Subscription' })).toBeVisible();
@@ -71,7 +71,7 @@ test.describe('Admin - Role Permissions Tests', () => {
 
     test('User with only one mentee role do not display role switch button', async () => {
         // login with mentee role
-        const menteeLoginPage = new MenteeLoginPage(page);
+        const menteeLoginPage = new LoginPage(page);
         await menteeLoginPage.login(mentee_role_user.email, mentee_role_user.password);
         await page.waitForURL(`${BASE_URL_UI}/mentee/find_mentors/mentors`);
         // verify the user is not redirected to the multiple role switch pages

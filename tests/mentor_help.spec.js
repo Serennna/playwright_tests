@@ -1,10 +1,10 @@
 const { test, expect } = require('@playwright/test');
 const LoginPage = require('../pages/login_page');
 const FAQHelpPage = require('../pages/admin/faq_help');
-const { admin_user} = require('../config/test_data');
+const { mentor_user } = require('../config/test_data');
 const { BASE_URL_UI } = require('../config/api_config');
 
-test.describe('Admin - Help Page - Tests', () => {
+test.describe('Mentor - Help Page - Tests', () => {
     let context;
     let page;
     let faqHelpPage;
@@ -13,20 +13,20 @@ test.describe('Admin - Help Page - Tests', () => {
         // 创建共享的浏览器上下文
         context = await browser.newContext();
         page = await context.newPage();
-        const adminLoginPage = new LoginPage(page);
-        await adminLoginPage.loginWithRole(admin_user.email, admin_user.password, 'admin');
-        await page.waitForURL(`${BASE_URL_UI}/admin/dashboard`);
-        faqHelpPage = new FAQHelpPage(page, 'admin');
+        const adminLoginPage = new LoginPage(page,'mentor');
+        await adminLoginPage.loginWithRole(mentor_user.email, mentor_user.password, 'mentor');
+        await page.waitForURL(`${BASE_URL_UI}/mentor/meetings/upcoming_meetings`);
+        faqHelpPage = new FAQHelpPage(page, 'mentor');
         await faqHelpPage.ensureSidebarVisible();
     })
 
-    test('Admin can access Help page', async () => {
+    test('Mentor can access Help page', async () => {
         // login with admin role
         await page.getByRole('button', { name: 'Help' }).click();
-        await page.waitForURL(`${BASE_URL_UI}/admin/faq`);
-        const faq_title = 'Frequently Asked Questions for Admins';
-        const faq_question = 'What is OhHello and why should my organization use it?';
-        const faq_answer = 'OhHello is an AI-driven mentorship platform that boosts employee engagement, retention, and productivity. By providing on-demand access to top-tier mentors, you empower your workforce to navigate challenges and develop skills in a hybrid or remote environment.';
+        await page.waitForURL(`${BASE_URL_UI}/mentor/faq`);
+        const faq_title = 'Frequently Asked Questions for Mentors';
+        const faq_question = 'What is OhHello and how does it work for me as a mentor?';
+        const faq_answer = 'OhHello is an AI-powered platform that connects you with mentees seeking professional guidance. You create a profile highlighting your expertise, and our AI matches you with mentees who align with your skill set. Sessions are conducted via integrated video calls, and you manage your availability through your mentor dashboard.';
         await expect(page.getByText(`${faq_title}`)).toBeVisible();
         await expect(page.getByText(`${faq_question}`)).toBeVisible();
         await expect(page.getByText(`${faq_answer}`)).toBeVisible();
@@ -48,7 +48,7 @@ test.describe('Admin - Help Page - Tests', () => {
 
         // verify the contact support icon is visible
         await expect(page.getByText('Contact Support')).toBeVisible();
-        await expect(faqHelpPage.selectors.emailInput).toHaveValue(`${admin_user.email}`);
+        await expect(faqHelpPage.selectors.emailInput).toHaveValue(`${mentor_user.email}`);
 
         // fill in the form
         await faqHelpPage.selectors.describeProblemInput.fill('Just for testing - I have a question about the platform');
@@ -64,22 +64,22 @@ test.describe('Admin - Help Page - Tests', () => {
 
         // verify the contact support icon is visible
         await expect(page.getByText('Contact Support')).toBeVisible();
-        await expect(faqHelpPage.selectors.nameInput).toHaveValue(`${admin_user.name}`);
-        await expect(faqHelpPage.selectors.emailInput).toHaveValue(`${admin_user.email}`);
+        await expect(faqHelpPage.selectors.nameInput).toHaveValue(`${mentor_user.name}`);
+        await expect(faqHelpPage.selectors.emailInput).toHaveValue(`${mentor_user.email}`);
 
         // fill in the form
         await expect(faqHelpPage.selectors.describeProblemInput).toHaveAttribute('placeholder', 'Tell us what you need help with...');
     })
 
-    test('Admin can submit contact support', async () => {
+    test('Mentor can submit contact support', async () => {
         await faqHelpPage.clickHelpButton();
         // click contact support icon
         await faqHelpPage.clickContactSupportIcon();
 
         // verify the contact support icon is visible
         await expect(page.getByText('Contact Support')).toBeVisible();
-        await expect(faqHelpPage.selectors.nameInput).toHaveValue(`${admin_user.name}`);
-        await expect(faqHelpPage.selectors.emailInput).toHaveValue(`${admin_user.email}`);
+        await expect(faqHelpPage.selectors.nameInput).toHaveValue(`${mentor_user.name}`);
+        await expect(faqHelpPage.selectors.emailInput).toHaveValue(`${mentor_user.email}`);
 
         await faqHelpPage.submitContactSupportForm('Just for testing - I have a question about the platform');
     })
