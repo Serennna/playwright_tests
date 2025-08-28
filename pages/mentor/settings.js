@@ -44,9 +44,61 @@ class MentorSettingsPage extends BasePage {
             currentPasswordInput : page.getByRole('textbox', { name: 'Current Password *' })
         };
     }
+    // actions
 
     async navigate() {
         await this.goto(this.url);
+    }
+
+    async enableNameEditMode() {
+        await this.selectors.nameEditButton.click();
+    }
+
+    async enablePasswordEditMode() {
+        await this.selectors.passwordEditButton.click();
+    }
+
+    async enterNewName(newName) {
+        await this.selectors.nameInput.fill(newName);
+    }
+
+    async saveChanges() {
+        await this.selectors.saveChangesbutton.click();
+    }
+
+    async cancelChanges() {
+        await this.selectors.cancelChangesbutton.click();
+    }
+
+    // functions
+    async changeMentorName(newName) {
+        await this.enableNameEditMode();
+        await this.enterNewName(newName);
+        await this.saveChanges();
+    }
+
+    async changeMentorPassword(currentPassword, newPassword, confirmPassword) {
+        await this.enablePasswordEditMode();
+        await this.enterCurrentPassword(currentPassword);
+        await this.enterNewPassword(newPassword);
+        await this.enterConfirmPassword(confirmPassword);
+        await this.submitPasswordChange();
+    }
+
+    async enterCurrentPassword(currentPassword) {
+        await this.selectors.currentPasswordInput.fill(currentPassword);
+    }
+
+    async enterNewPassword(newPassword) {
+        await this.selectors.newPasswordInput.fill(newPassword);
+    }
+
+    async enterConfirmPassword(confirmPassword) {
+        await this.selectors.confirmNewPasswordInput.fill(confirmPassword);
+    }
+
+    async submitPasswordChange() {
+        await this.selectors.confirmModalButton.click();
     }
 }
 
