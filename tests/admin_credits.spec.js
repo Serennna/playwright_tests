@@ -1,8 +1,8 @@
 const { test, expect } = require('@playwright/test');
-const LoginPage = require('../pages/login_page');
 const { mentee_login_data } = require('../config/test_data');
+const LoginPage = require('../pages/login_page');
 const CreditsPage = require('../pages/admin/credits');
-const AdminApi = require('../helpers/admin_api');
+const AdminApi = require('../api/admin_api');
 test.describe('Admin - Credits Page Tests', () => {
     let context;
     let page;

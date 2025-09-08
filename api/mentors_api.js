@@ -21,6 +21,13 @@ class MentorsAPI extends BaseAPI {
     return response
   }
 
+  async updateMentorName(mentorId, updatedName) {
+    // mentorId, updatedName
+    const response = await this.put(urls.mentors.settings, {mentorId, updatedName})
+    return response
+  }
+
+  
 }
 
 module.exports = MentorsAPI

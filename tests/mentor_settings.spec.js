@@ -21,6 +21,8 @@ test.describe('Mentor - Settings Page - Tests', () => {
         // 初始化页面对象
         mentorSettingsPage = new MentorSettingsPage(page);
         await mentorSettingsPage.navigate();
+        mentorApi = new MentorsAPI(mentor_user.email, mentor_user.password);
+        await mentorApi.login();
     });
 
     test.beforeEach(async ({ browser },) => {
@@ -53,9 +55,11 @@ test.describe('Mentor - Settings Page - Tests', () => {
     });
 
     test.afterAll(async () => {
+        await mentorApi.updateMentorName(mentor_user.id, mentor_user.name);
         try {
             if (context) {
                 await context.close();
+
             }
         } catch (error) {
             // Context might already be closed, ignore the error
@@ -117,5 +121,7 @@ test.describe('Mentor - Settings Page - Tests', () => {
             console.log('Name update completed');
         });
     });
+ 
+
 
 })

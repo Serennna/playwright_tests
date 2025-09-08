@@ -22,6 +22,7 @@ module.exports = {
         },
         mentors:{
             findMentors:`${BASE_URL}/users/mentors`,
+            settings:`${BASE_URL}/users`,
         },
         auth: {
             login: `${BASE_URL}/auth/login`,
