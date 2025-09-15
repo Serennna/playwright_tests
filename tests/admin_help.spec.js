@@ -84,4 +84,16 @@ test.describe('Admin - Help Page - Tests', () => {
         await faqHelpPage.submitContactSupportForm('Just for testing - I have a question about the platform');
     })
 
+    test('Admin can not submit contact support with empty name', async () => {
+        await faqHelpPage.clickHelpButton();
+        await faqHelpPage.clickContactSupportIcon();
+        await expect(page.getByText('Contact Support')).toBeVisible();
+        await faqHelpPage.selectors.nameInput.fill('');
+        await faqHelpPage.selectors.emailInput.fill('test@test.com');
+        await faqHelpPage.selectors.describeProblemInput.fill('Just for testing - I have a question about the platform');
+        await expect(faqHelpPage.selectors.submitButton).toBeDisabled();
+
+        await faqHelpPage.selectors.nameInput.fill('test name');
+        await expect(faqHelpPage.selectors.submitButton).toBeEnabled();
+    })
 })

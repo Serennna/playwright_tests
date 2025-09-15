@@ -19,6 +19,7 @@ class FAQHelpPage extends BasePage {
             describeProblemInput: page.getByRole('textbox', { name: 'Describe Problem *' }),
             closeButton: page.getByRole('button', { name: 'Close' }),
             contactSupportIcon: page.getByRole('main').getByRole('button').filter({ hasText: /^$/ }),
+            submitButton: page.getByRole('button', { name: 'Submit' }),
           };
     }
 

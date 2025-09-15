@@ -1,7 +1,7 @@
 {
   "config": {
-    "configFile": "/Users/57block/workspace/OhHello/playwright_tests/playwright.config.js",
-    "rootDir": "/Users/57block/workspace/OhHello/playwright_tests/tests",
+    "configFile": "/Users/57block/Workspace/OhHello/playwright_tests/playwright.config.js",
+    "rootDir": "/Users/57block/Workspace/OhHello/playwright_tests/tests",
     "forbidOnly": false,
     "fullyParallel": false,
     "globalSetup": null,
@@ -9,7 +9,7 @@
     "globalTimeout": 0,
     "grep": {},
     "grepInvert": null,
-    "maxFailures": 0,
+    "maxFailures": 1,
     "metadata": {
       "actualWorkers": 1
     },
@@ -46,7 +46,7 @@
     "quiet": false,
     "projects": [
       {
-        "outputDir": "/Users/57block/workspace/OhHello/playwright_tests/screenshots",
+        "outputDir": "/Users/57block/Workspace/OhHello/playwright_tests/screenshots",
         "repeatEach": 1,
         "retries": 0,
         "metadata": {
@@ -54,22 +54,733 @@
         },
         "id": "chromium",
         "name": "chromium",
-        "testDir": "/Users/57block/workspace/OhHello/playwright_tests/tests",
+        "testDir": "/Users/57block/Workspace/OhHello/playwright_tests/tests",
         "testIgnore": [],
         "testMatch": [
           "/.*\\.spec\\.js$/"
         ],
-        "timeout": 30000
+        "timeout": 0
       }
     ],
     "shard": null,
     "updateSnapshots": "missing",
-    "updateSourceMethod": "3way",
+    "updateSourceMethod": "patch",
     "version": "1.53.2",
     "workers": 1,
     "webServer": null
   },
   "suites": [
+    {
+      "title": "admin_account_setup.spec.js",
+      "file": "admin_account_setup.spec.js",
+      "column": 0,
+      "line": 0,
+      "specs": [],
+      "suites": [
+        {
+          "title": "Admin - Account Setup Page Tests",
+          "file": "admin_account_setup.spec.js",
+          "line": 7,
+          "column": 6,
+          "specs": [
+            {
+              "title": "Account Setup Page Elements are Visible",
+              "ok": false,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 0,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "failed",
+                      "duration": 0,
+                      "error": {
+                        "message": "Error: page.goto: Target page, context or browser has been closed\nCall log:\n\u001b[2m  - navigating to \"https://ohhello-dev-909a7.web.app/mentee/sign_in\", waiting until \"load\"\u001b[22m\n",
+                        "stack": "Error: page.goto: Target page, context or browser has been closed\nCall log:\n\u001b[2m  - navigating to \"https://ohhello-dev-909a7.web.app/mentee/sign_in\", waiting until \"load\"\u001b[22m\n\n    at LoginPage.goto (/Users/57block/Workspace/OhHello/playwright_tests/pages/base_page.js:8:25)\n    at LoginPage.navigate (/Users/57block/Workspace/OhHello/playwright_tests/pages/login_page.js:29:20)\n    at LoginPage.login (/Users/57block/Workspace/OhHello/playwright_tests/pages/login_page.js:78:20)\n    at LoginPage.loginWithRole (/Users/57block/Workspace/OhHello/playwright_tests/pages/login_page.js:129:20)\n    at /Users/57block/Workspace/OhHello/playwright_tests/tests/admin_account_setup.spec.js:20:25",
+                        "location": {
+                          "file": "/Users/57block/Workspace/OhHello/playwright_tests/pages/base_page.js",
+                          "column": 25,
+                          "line": 8
+                        },
+                        "snippet": "\u001b[90m   at \u001b[39m../pages/base_page.js:8\n\n\u001b[0m \u001b[90m  6 |\u001b[39m     \u001b[90m// Navigate to the specified URL\u001b[39m\n \u001b[90m  7 |\u001b[39m     \u001b[36masync\u001b[39m goto(url) {\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m  8 |\u001b[39m         \u001b[36mawait\u001b[39m \u001b[36mthis\u001b[39m\u001b[33m.\u001b[39mpage\u001b[33m.\u001b[39mgoto(url)\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                         \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m  9 |\u001b[39m         \u001b[36mawait\u001b[39m \u001b[36mthis\u001b[39m\u001b[33m.\u001b[39mpage\u001b[33m.\u001b[39mwaitForLoadState(\u001b[32m'networkidle'\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m 10 |\u001b[39m     }\n \u001b[90m 11 |\u001b[39m\u001b[0m"
+                      },
+                      "errors": [
+                        {
+                          "location": {
+                            "file": "/Users/57block/Workspace/OhHello/playwright_tests/pages/base_page.js",
+                            "column": 25,
+                            "line": 8
+                          },
+                          "message": "Error: page.goto: Target page, context or browser has been closed\nCall log:\n\u001b[2m  - navigating to \"https://ohhello-dev-909a7.web.app/mentee/sign_in\", waiting until \"load\"\u001b[22m\n\n\n\u001b[90m   at \u001b[39m../pages/base_page.js:8\n\n\u001b[0m \u001b[90m  6 |\u001b[39m     \u001b[90m// Navigate to the specified URL\u001b[39m\n \u001b[90m  7 |\u001b[39m     \u001b[36masync\u001b[39m goto(url) {\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m  8 |\u001b[39m         \u001b[36mawait\u001b[39m \u001b[36mthis\u001b[39m\u001b[33m.\u001b[39mpage\u001b[33m.\u001b[39mgoto(url)\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                         \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m  9 |\u001b[39m         \u001b[36mawait\u001b[39m \u001b[36mthis\u001b[39m\u001b[33m.\u001b[39mpage\u001b[33m.\u001b[39mwaitForLoadState(\u001b[32m'networkidle'\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m 10 |\u001b[39m     }\n \u001b[90m 11 |\u001b[39m\u001b[0m\n\u001b[2m    at LoginPage.goto (/Users/57block/Workspace/OhHello/playwright_tests/pages/base_page.js:8:25)\u001b[22m\n\u001b[2m    at LoginPage.navigate (/Users/57block/Workspace/OhHello/playwright_tests/pages/login_page.js:29:20)\u001b[22m\n\u001b[2m    at LoginPage.login (/Users/57block/Workspace/OhHello/playwright_tests/pages/login_page.js:78:20)\u001b[22m\n\u001b[2m    at LoginPage.loginWithRole (/Users/57block/Workspace/OhHello/playwright_tests/pages/login_page.js:129:20)\u001b[22m\n\u001b[2m    at /Users/57block/Workspace/OhHello/playwright_tests/tests/admin_account_setup.spec.js:20:25\u001b[22m"
+                        },
+                        {
+                          "location": {
+                            "file": "/Users/57block/Workspace/OhHello/playwright_tests/tests/admin_account_setup.spec.js",
+                            "column": 28,
+                            "line": 276
+                          },
+                          "message": "TypeError: Cannot read properties of undefined (reading 'cleanupTestEmployees')\n\n\u001b[0m \u001b[90m 274 |\u001b[39m     test\u001b[33m.\u001b[39mafterAll(\u001b[36masync\u001b[39m () \u001b[33m=>\u001b[39m {\n \u001b[90m 275 |\u001b[39m         \u001b[36mif\u001b[39m (context) {\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 276 |\u001b[39m             \u001b[36mawait\u001b[39m adminApi\u001b[33m.\u001b[39mcleanupTestEmployees()\u001b[33m;\u001b[39m\n \u001b[90m     |\u001b[39m                            \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 277 |\u001b[39m             \u001b[36mawait\u001b[39m context\u001b[33m.\u001b[39mclose()\u001b[33m;\u001b[39m\n \u001b[90m 278 |\u001b[39m         }\n \u001b[90m 279 |\u001b[39m     })\u001b[33m;\u001b[39m\u001b[0m\n\u001b[2m    at /Users/57block/Workspace/OhHello/playwright_tests/tests/admin_account_setup.spec.js:276:28\u001b[22m"
+                        }
+                      ],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2025-09-15T02:24:51.193Z",
+                      "annotations": [],
+                      "attachments": [],
+                      "errorLocation": {
+                        "file": "/Users/57block/Workspace/OhHello/playwright_tests/pages/base_page.js",
+                        "column": 25,
+                        "line": 8
+                      }
+                    }
+                  ],
+                  "status": "unexpected"
+                }
+              ],
+              "id": "bfbabcd8f398858c09e9-6379c5c417b21a0f445e",
+              "file": "admin_account_setup.spec.js",
+              "line": 64,
+              "column": 5
+            },
+            {
+              "title": "Search Functionality Works Correctly",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 0,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "bfbabcd8f398858c09e9-fd89808f27ee4b1f8a2e",
+              "file": "admin_account_setup.spec.js",
+              "line": 81,
+              "column": 5
+            },
+            {
+              "title": "Add employee modal opens and closes correctly",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 0,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "bfbabcd8f398858c09e9-97dc47fce51031ae16db",
+              "file": "admin_account_setup.spec.js",
+              "line": 91,
+              "column": 5
+            },
+            {
+              "title": "Add employee with valid data",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 0,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "bfbabcd8f398858c09e9-7b62522fc880e6dda875",
+              "file": "admin_account_setup.spec.js",
+              "line": 116,
+              "column": 5
+            },
+            {
+              "title": "Add employee with empty fields shows submit button disabled",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 0,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "bfbabcd8f398858c09e9-e130f1c53cd7436198e0",
+              "file": "admin_account_setup.spec.js",
+              "line": 155,
+              "column": 5
+            },
+            {
+              "title": "Add employee with empty name shows error message",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 0,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "bfbabcd8f398858c09e9-20cdbce9a2faeb2cd083",
+              "file": "admin_account_setup.spec.js",
+              "line": 174,
+              "column": 5
+            },
+            {
+              "title": "Add employee with empty email shows error message",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 0,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "bfbabcd8f398858c09e9-7c15256d33335e610170",
+              "file": "admin_account_setup.spec.js",
+              "line": 191,
+              "column": 5
+            },
+            {
+              "title": "Add employee with invalid email format shows error",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 0,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "bfbabcd8f398858c09e9-d748514b7dea94ee6a4f",
+              "file": "admin_account_setup.spec.js",
+              "line": 211,
+              "column": 5
+            },
+            {
+              "title": "Add employee with existing email shows error",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 0,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "bfbabcd8f398858c09e9-3011a7ff940215932674",
+              "file": "admin_account_setup.spec.js",
+              "line": 230,
+              "column": 5
+            },
+            {
+              "title": "Upload icon is clickable",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 0,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "bfbabcd8f398858c09e9-01ecec83a2a3dbef5299",
+              "file": "admin_account_setup.spec.js",
+              "line": 254,
+              "column": 5
+            },
+            {
+              "title": "Download template icon is clickable",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 0,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "bfbabcd8f398858c09e9-4c70525daa43c6613543",
+              "file": "admin_account_setup.spec.js",
+              "line": 262,
+              "column": 5
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "admin_credits.spec.js",
+      "file": "admin_credits.spec.js",
+      "column": 0,
+      "line": 0,
+      "specs": [],
+      "suites": [
+        {
+          "title": "Admin - Credits Page Tests",
+          "file": "admin_credits.spec.js",
+          "line": 6,
+          "column": 6,
+          "specs": [
+            {
+              "title": "First-come,first-served mode switch to cherry-pick mode",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 0,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "4ba0c9bc066985ba80db-5965ccc5c67f9ca74c0d",
+              "file": "admin_credits.spec.js",
+              "line": 62,
+              "column": 5
+            },
+            {
+              "title": "Switch to cherry-pick mode and work with cherry-pick mode",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 0,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "4ba0c9bc066985ba80db-4b65def4c8e06c99bae9",
+              "file": "admin_credits.spec.js",
+              "line": 98,
+              "column": 5
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "admin_help.spec.js",
+      "file": "admin_help.spec.js",
+      "column": 0,
+      "line": 0,
+      "specs": [],
+      "suites": [
+        {
+          "title": "Admin - Help Page - Tests",
+          "file": "admin_help.spec.js",
+          "line": 7,
+          "column": 6,
+          "specs": [
+            {
+              "title": "Admin can access Help page",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 0,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "e59d25e7a9d868eede0b-76170e8d773f508b7fef",
+              "file": "admin_help.spec.js",
+              "line": 23,
+              "column": 5
+            },
+            {
+              "title": "Contact Support interactions works as expected",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 0,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "e59d25e7a9d868eede0b-b65310eeb393c2eb7d2a",
+              "file": "admin_help.spec.js",
+              "line": 42,
+              "column": 5
+            },
+            {
+              "title": "Admin can submit contact support",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 0,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "e59d25e7a9d868eede0b-3885df0ed5002a21f317",
+              "file": "admin_help.spec.js",
+              "line": 74,
+              "column": 5
+            },
+            {
+              "title": "Admin can not submit contact support with empty name",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 0,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "e59d25e7a9d868eede0b-41fa9f0d0d73cbc0577f",
+              "file": "admin_help.spec.js",
+              "line": 87,
+              "column": 5
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "api/account_api.spec.js",
+      "file": "api/account_api.spec.js",
+      "column": 0,
+      "line": 0,
+      "specs": [],
+      "suites": [
+        {
+          "title": "Account API Tests",
+          "file": "api/account_api.spec.js",
+          "line": 6,
+          "column": 6,
+          "specs": [
+            {
+              "title": "API: Get employees list",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 0,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "7a6cab4b31e01bcf15b4-90920ab6ca9bc2b558db",
+              "file": "api/account_api.spec.js",
+              "line": 35,
+              "column": 5
+            },
+            {
+              "title": "API: Add new employee",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 0,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "7a6cab4b31e01bcf15b4-45a82d6523c783ddc148",
+              "file": "api/account_api.spec.js",
+              "line": 51,
+              "column": 5
+            },
+            {
+              "title": "API: Find employee by email",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 0,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "7a6cab4b31e01bcf15b4-10d7d39632fec65d8743",
+              "file": "api/account_api.spec.js",
+              "line": 85,
+              "column": 5
+            },
+            {
+              "title": "API: Update employee information",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 0,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "7a6cab4b31e01bcf15b4-4193be799620523a0621",
+              "file": "api/account_api.spec.js",
+              "line": 113,
+              "column": 5
+            },
+            {
+              "title": "API: Delete Test employees",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 0,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "7a6cab4b31e01bcf15b4-f998d7c8dbc66a9fea08",
+              "file": "api/account_api.spec.js",
+              "line": 141,
+              "column": 5
+            },
+            {
+              "title": "API: Set employee as admin",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 0,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "7a6cab4b31e01bcf15b4-cd6a05c323ea22d809f9",
+              "file": "api/account_api.spec.js",
+              "line": 151,
+              "column": 5
+            },
+            {
+              "title": "API: Batch operations",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 0,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "7a6cab4b31e01bcf15b4-fe0bffb2c5f464edf6b8",
+              "file": "api/account_api.spec.js",
+              "line": 178,
+              "column": 5
+            },
+            {
+              "title": "API: Wait for condition",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 0,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "7a6cab4b31e01bcf15b4-8ccea735ca682d606de0",
+              "file": "api/account_api.spec.js",
+              "line": 205,
+              "column": 5
+            },
+            {
+              "title": "API: Data validation",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 0,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "7a6cab4b31e01bcf15b4-864c2f6917cd1a38c757",
+              "file": "api/account_api.spec.js",
+              "line": 226,
+              "column": 5
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "mentor_help.spec.js",
+      "file": "mentor_help.spec.js",
+      "column": 0,
+      "line": 0,
+      "specs": [],
+      "suites": [
+        {
+          "title": "Mentor - Help Page - Tests",
+          "file": "mentor_help.spec.js",
+          "line": 7,
+          "column": 6,
+          "specs": [
+            {
+              "title": "Mentor can access Help page",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 0,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "280f297289e3ffd47ad6-b3d84652df5e77932cdf",
+              "file": "mentor_help.spec.js",
+              "line": 23,
+              "column": 5
+            },
+            {
+              "title": "Contact Support interactions works as expected",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 0,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "280f297289e3ffd47ad6-85c085cb623aa605ddd3",
+              "file": "mentor_help.spec.js",
+              "line": 42,
+              "column": 5
+            },
+            {
+              "title": "Mentor can submit contact support",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 0,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "280f297289e3ffd47ad6-e84367f04361074636ed",
+              "file": "mentor_help.spec.js",
+              "line": 74,
+              "column": 5
+            }
+          ]
+        }
+      ]
+    },
     {
       "title": "mentor_settings.spec.js",
       "file": "mentor_settings.spec.js",
@@ -89,140 +800,155 @@
               "tags": [],
               "tests": [
                 {
-                  "timeout": 30000,
+                  "timeout": 0,
                   "annotations": [],
                   "expectedStatus": "passed",
                   "projectId": "chromium",
                   "projectName": "chromium",
-                  "results": [
-                    {
-                      "workerIndex": 16,
-                      "parallelIndex": 0,
-                      "status": "passed",
-                      "duration": 1578,
-                      "errors": [],
-                      "stdout": [],
-                      "stderr": [],
-                      "retry": 0,
-                      "steps": [
-                        {
-                          "title": "Verify page labels are visible",
-                          "duration": -1
-                        },
-                        {
-                          "title": "Verify input fields have correct default values",
-                          "duration": -1
-                        }
-                      ],
-                      "startTime": "2025-08-28T07:53:31.314Z",
-                      "annotations": [],
-                      "attachments": []
-                    }
-                  ],
-                  "status": "expected"
+                  "results": [],
+                  "status": "skipped"
                 }
               ],
               "id": "f588c8907103e6dc7404-bc222e210592eef780aa",
               "file": "mentor_settings.spec.js",
-              "line": 68,
+              "line": 70,
               "column": 5
             },
             {
               "title": "Mentor can edit name",
-              "ok": false,
+              "ok": true,
               "tags": [],
               "tests": [
                 {
-                  "timeout": 30000,
+                  "timeout": 0,
                   "annotations": [],
                   "expectedStatus": "passed",
                   "projectId": "chromium",
                   "projectName": "chromium",
-                  "results": [
-                    {
-                      "workerIndex": 16,
-                      "parallelIndex": 0,
-                      "status": "failed",
-                      "duration": 1388,
-                      "error": {
-                        "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m()\u001b[22m\n\nLocator: locator('.ant-input-suffix > .cursor-pointer').first()\nExpected: visible\nReceived: <element(s) not found>\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('.ant-input-suffix > .cursor-pointer').first()\u001b[22m\n",
-                        "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m()\u001b[22m\n\nLocator: locator('.ant-input-suffix > .cursor-pointer').first()\nExpected: visible\nReceived: <element(s) not found>\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('.ant-input-suffix > .cursor-pointer').first()\u001b[22m\n\n    at /Users/57block/workspace/OhHello/playwright_tests/tests/mentor_settings.spec.js:95:71\n    at /Users/57block/workspace/OhHello/playwright_tests/tests/mentor_settings.spec.js:94:14",
-                        "location": {
-                          "file": "/Users/57block/workspace/OhHello/playwright_tests/tests/mentor_settings.spec.js",
-                          "column": 71,
-                          "line": 95
-                        },
-                        "snippet": "\u001b[0m \u001b[90m 93 |\u001b[39m         \n \u001b[90m 94 |\u001b[39m         test\u001b[33m.\u001b[39mstep(\u001b[32m'Enter edit mode for name field'\u001b[39m\u001b[33m,\u001b[39m \u001b[36masync\u001b[39m () \u001b[33m=>\u001b[39m {\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 95 |\u001b[39m             \u001b[36mawait\u001b[39m expect(mentorSettingsPage\u001b[33m.\u001b[39mselectors\u001b[33m.\u001b[39mnameEditButton)\u001b[33m.\u001b[39mtoBeVisible()\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                                                                       \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 96 |\u001b[39m             \u001b[36mawait\u001b[39m mentorSettingsPage\u001b[33m.\u001b[39mselectors\u001b[33m.\u001b[39mnameEditButton\u001b[33m.\u001b[39mclick()\u001b[33m;\u001b[39m\n \u001b[90m 97 |\u001b[39m             \n \u001b[90m 98 |\u001b[39m             \u001b[90m// Verify name input is editable\u001b[39m\u001b[0m"
-                      },
-                      "errors": [
-                        {
-                          "location": {
-                            "file": "/Users/57block/workspace/OhHello/playwright_tests/tests/mentor_settings.spec.js",
-                            "column": 71,
-                            "line": 95
-                          },
-                          "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m()\u001b[22m\n\nLocator: locator('.ant-input-suffix > .cursor-pointer').first()\nExpected: visible\nReceived: <element(s) not found>\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('.ant-input-suffix > .cursor-pointer').first()\u001b[22m\n\n\n\u001b[0m \u001b[90m 93 |\u001b[39m         \n \u001b[90m 94 |\u001b[39m         test\u001b[33m.\u001b[39mstep(\u001b[32m'Enter edit mode for name field'\u001b[39m\u001b[33m,\u001b[39m \u001b[36masync\u001b[39m () \u001b[33m=>\u001b[39m {\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 95 |\u001b[39m             \u001b[36mawait\u001b[39m expect(mentorSettingsPage\u001b[33m.\u001b[39mselectors\u001b[33m.\u001b[39mnameEditButton)\u001b[33m.\u001b[39mtoBeVisible()\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                                                                       \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 96 |\u001b[39m             \u001b[36mawait\u001b[39m mentorSettingsPage\u001b[33m.\u001b[39mselectors\u001b[33m.\u001b[39mnameEditButton\u001b[33m.\u001b[39mclick()\u001b[33m;\u001b[39m\n \u001b[90m 97 |\u001b[39m             \n \u001b[90m 98 |\u001b[39m             \u001b[90m// Verify name input is editable\u001b[39m\u001b[0m\n\u001b[2m    at /Users/57block/workspace/OhHello/playwright_tests/tests/mentor_settings.spec.js:95:71\u001b[22m\n\u001b[2m    at /Users/57block/workspace/OhHello/playwright_tests/tests/mentor_settings.spec.js:94:14\u001b[22m"
-                        }
-                      ],
-                      "stdout": [],
-                      "stderr": [],
-                      "retry": 0,
-                      "steps": [
-                        {
-                          "title": "Enter edit mode for name field",
-                          "duration": 474,
-                          "error": {
-                            "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m()\u001b[22m\n\nLocator: locator('.ant-input-suffix > .cursor-pointer').first()\nExpected: visible\nReceived: <element(s) not found>\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('.ant-input-suffix > .cursor-pointer').first()\u001b[22m\n",
-                            "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m()\u001b[22m\n\nLocator: locator('.ant-input-suffix > .cursor-pointer').first()\nExpected: visible\nReceived: <element(s) not found>\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('.ant-input-suffix > .cursor-pointer').first()\u001b[22m\n\n    at /Users/57block/workspace/OhHello/playwright_tests/tests/mentor_settings.spec.js:95:71\n    at /Users/57block/workspace/OhHello/playwright_tests/tests/mentor_settings.spec.js:94:14",
-                            "location": {
-                              "file": "/Users/57block/workspace/OhHello/playwright_tests/tests/mentor_settings.spec.js",
-                              "column": 71,
-                              "line": 95
-                            },
-                            "snippet": "\u001b[0m \u001b[90m 93 |\u001b[39m         \n \u001b[90m 94 |\u001b[39m         test\u001b[33m.\u001b[39mstep(\u001b[32m'Enter edit mode for name field'\u001b[39m\u001b[33m,\u001b[39m \u001b[36masync\u001b[39m () \u001b[33m=>\u001b[39m {\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 95 |\u001b[39m             \u001b[36mawait\u001b[39m expect(mentorSettingsPage\u001b[33m.\u001b[39mselectors\u001b[33m.\u001b[39mnameEditButton)\u001b[33m.\u001b[39mtoBeVisible()\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                                                                       \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 96 |\u001b[39m             \u001b[36mawait\u001b[39m mentorSettingsPage\u001b[33m.\u001b[39mselectors\u001b[33m.\u001b[39mnameEditButton\u001b[33m.\u001b[39mclick()\u001b[33m;\u001b[39m\n \u001b[90m 97 |\u001b[39m             \n \u001b[90m 98 |\u001b[39m             \u001b[90m// Verify name input is editable\u001b[39m\u001b[0m"
-                          }
-                        },
-                        {
-                          "title": "Update name value",
-                          "duration": 374
-                        },
-                        {
-                          "title": "Save changes",
-                          "duration": 472,
-                          "error": {
-                            "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m()\u001b[22m\n\nLocator: locator('svg:nth-child(2) > path')\nExpected: visible\nReceived: <element(s) not found>\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('svg:nth-child(2) > path')\u001b[22m\n",
-                            "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m()\u001b[22m\n\nLocator: locator('svg:nth-child(2) > path')\nExpected: visible\nReceived: <element(s) not found>\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('svg:nth-child(2) > path')\u001b[22m\n\n    at /Users/57block/workspace/OhHello/playwright_tests/tests/mentor_settings.spec.js:112:74\n    at /Users/57block/workspace/OhHello/playwright_tests/tests/mentor_settings.spec.js:111:14",
-                            "location": {
-                              "file": "/Users/57block/workspace/OhHello/playwright_tests/tests/mentor_settings.spec.js",
-                              "column": 74,
-                              "line": 112
-                            },
-                            "snippet": "\u001b[0m \u001b[90m 110 |\u001b[39m\n \u001b[90m 111 |\u001b[39m         test\u001b[33m.\u001b[39mstep(\u001b[32m'Save changes'\u001b[39m\u001b[33m,\u001b[39m \u001b[36masync\u001b[39m () \u001b[33m=>\u001b[39m {\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 112 |\u001b[39m             \u001b[36mawait\u001b[39m expect(mentorSettingsPage\u001b[33m.\u001b[39mselectors\u001b[33m.\u001b[39msaveChangesbutton)\u001b[33m.\u001b[39mtoBeVisible()\u001b[33m;\u001b[39m\n \u001b[90m     |\u001b[39m                                                                          \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 113 |\u001b[39m             \u001b[36mawait\u001b[39m mentorSettingsPage\u001b[33m.\u001b[39mselectors\u001b[33m.\u001b[39msaveChangesbutton\u001b[33m.\u001b[39mclick()\u001b[33m;\u001b[39m\n \u001b[90m 114 |\u001b[39m             \n \u001b[90m 115 |\u001b[39m             \u001b[90m// Wait for save operation to complete\u001b[39m\u001b[0m"
-                          }
-                        }
-                      ],
-                      "startTime": "2025-08-28T07:53:48.093Z",
-                      "annotations": [],
-                      "attachments": [
-                        {
-                          "name": "screenshot",
-                          "contentType": "image/png",
-                          "path": "/Users/57block/workspace/OhHello/playwright_tests/screenshots/mentor_settings-Mentor---S-5a851--Tests-Mentor-can-edit-name-chromium/test-failed-1.png"
-                        }
-                      ],
-                      "errorLocation": {
-                        "file": "/Users/57block/workspace/OhHello/playwright_tests/tests/mentor_settings.spec.js",
-                        "column": 71,
-                        "line": 95
-                      }
-                    }
-                  ],
-                  "status": "unexpected"
+                  "results": [],
+                  "status": "skipped"
                 }
               ],
               "id": "f588c8907103e6dc7404-f5560a342df81292054c",
               "file": "mentor_settings.spec.js",
-              "line": 92,
+              "line": 94,
+              "column": 5
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "role_permissions.spec.js",
+      "file": "role_permissions.spec.js",
+      "column": 0,
+      "line": 0,
+      "specs": [],
+      "suites": [
+        {
+          "title": "Admin - Role Permissions Tests",
+          "file": "role_permissions.spec.js",
+          "line": 6,
+          "column": 6,
+          "specs": [
+            {
+              "title": "Admin can not access Credits page",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 0,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "4e0bb6ac80d0c47eb2d1-0617b7a48acf2cadf8ee",
+              "file": "role_permissions.spec.js",
+              "line": 17,
+              "column": 5
+            },
+            {
+              "title": "Admin can not access Subscription page",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 0,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "4e0bb6ac80d0c47eb2d1-9515f647c94f4e35bf99",
+              "file": "role_permissions.spec.js",
+              "line": 32,
+              "column": 5
+            },
+            {
+              "title": "Owner can access Credits page",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 0,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "4e0bb6ac80d0c47eb2d1-a33049c401691a65d55f",
+              "file": "role_permissions.spec.js",
+              "line": 45,
+              "column": 5
+            },
+            {
+              "title": "Owner can access Subscription page",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 0,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "4e0bb6ac80d0c47eb2d1-3d954f8b4daf2362af66",
+              "file": "role_permissions.spec.js",
+              "line": 58,
+              "column": 5
+            },
+            {
+              "title": "User with only one mentee role do not display role switch button",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 0,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "4e0bb6ac80d0c47eb2d1-ffeabb0cda57239fa730",
+              "file": "role_permissions.spec.js",
+              "line": 72,
               "column": 5
             }
           ]
@@ -230,12 +956,16 @@
       ]
     }
   ],
-  "errors": [],
+  "errors": [
+    {
+      "message": "\u001b[31mTesting stopped early after 1 maximum allowed failures.\u001b[39m"
+    }
+  ],
   "stats": {
-    "startTime": "2025-08-28T07:53:26.877Z",
-    "duration": 24144.748999997973,
-    "expected": 1,
-    "skipped": 0,
+    "startTime": "2025-09-15T02:24:50.915Z",
+    "duration": 23363.752,
+    "expected": 0,
+    "skipped": 35,
     "unexpected": 1,
     "flaky": 0
   }

@@ -2,7 +2,7 @@ const { test, expect } = require('@playwright/test');
 const LoginPage = require('../pages/login_page');
 const AccountSetupPage = require('../pages/admin/account_setup');
 const { mentee_login_data } = require('../config/test_data');
-const AdminApi = require('../helpers/admin_api');
+const AdminApi = require('../api/admin_api');
 
 test.describe('Admin - Account Setup Page Tests', () => {
     let context;
